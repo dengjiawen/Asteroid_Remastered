@@ -1,11 +1,13 @@
 /**
- * Created by freddeng on 2017-04-24.
+ * Created by Jiawen (Fred) Deng on 2017-04-24.
+ * DO NOT REDISTRIBUTE WITHOUT PERMISSION
+ * COPYRIGHT 2017
+ *
+ * Revision 1.2.4
  */
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
