@@ -220,11 +220,7 @@ class resources {
 
 class data {
 
-    public static final Font name = new Font("Calibri",Font.BOLD,20);
-    public static final Font points = new Font("Calibri",Font.BOLD,50);
-    public static final Font emphasis = new Font("Calibri",Font.BOLD,18);
     public static final Font standard = new Font("Calibri",Font.PLAIN,13);
-    public static final Font bold = new Font("Calibri",Font.BOLD,10);
 
     public static int total_points = 0;
 
@@ -335,7 +331,6 @@ class HUD extends JPanel{
 
     public static Timer hud_1_frameUpdate;
     public static Timer normal_health;
-    public static Timer weapon_overheat;
 
     BufferedImage frame_Update;
     BufferedImage logo;
@@ -348,8 +343,6 @@ class HUD extends JPanel{
     int low_health_frameCount;
     int health_number_frameCount;
     int weapon_state_frameCount;
-
-    String[] weapon_state = {"normal", "engage"};
 
     JLabel health_number;
 
@@ -783,10 +776,10 @@ class BulletPane extends JPanel {
     protected void paintComponent(Graphics g){
 
         super.paintComponent(g);
-        for (int i = 0; i < bullets.size(); i++){
-            if (bullets.get(i) != null) {
-                g.drawImage(bullets.get(i).bullet_sprite, bullets.get(i).bullet_properties.x,
-                            bullets.get(i).bullet_properties.y, this);
+        for (Bullet bullet : bullets) {
+            if (bullet != null) {
+                g.drawImage(bullet.bullet_sprite, bullet.bullet_properties.x,
+                        bullet.bullet_properties.y, this);
             }
         }
     }
@@ -826,7 +819,6 @@ class Blockade implements Enemy {
     public final CharacterProperties enemy_properties;
 
     private double y_increment = 1;
-    private double x_increment = 1;
 
     private int onFire_frameCount;
     private int explosion_frameCount;
@@ -848,7 +840,6 @@ class Blockade implements Enemy {
         onFire_frameCount = 0;
         explosion_frameCount = 0;
         enemyNumber = EnemyPane.enemyCount;
-        x_increment = 1;
         y_increment = 1;
         collisionDeath = false;
 
@@ -1125,9 +1116,6 @@ class Karmakazi implements Enemy {
     public Point targetPoint;
     public final CharacterProperties enemy_properties;
 
-    private double y_increment = 1;
-    private double x_increment = 1;
-
     private int onFire_frameCount;
     private int explosion_frameCount;
     private final int enemyNumber;
@@ -1151,8 +1139,6 @@ class Karmakazi implements Enemy {
         onFire_frameCount = 0;
         explosion_frameCount = 0;
         enemyNumber = EnemyPane.enemyCount;
-        x_increment = 2;
-        y_increment = 2;
         collisionDeath = false;
 
         movement_frameUpdate = new Timer(resources.REFRESH_RATE, null);
@@ -1578,7 +1564,6 @@ class Player extends JPanel implements MouseListener, MouseMotionListener, Actio
     private boolean warningAlreadyStarted;
     public static boolean isFiring;
     public static boolean over_heating;
-    private static boolean over_heating_notified;
 
     MouseAdapter over_heat_warning;
 
@@ -1598,7 +1583,6 @@ class Player extends JPanel implements MouseListener, MouseMotionListener, Actio
         warningAlreadyStarted = false;
         isFiring = false;
         over_heating = false;
-        over_heating_notified = false;
 
         player_data = new CharacterProperties(500, 650, 800, 0);
         player_sprite = resources.player_sprite;
