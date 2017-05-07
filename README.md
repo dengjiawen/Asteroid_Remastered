@@ -1,9 +1,3 @@
-# WARNING
-PLEASE DO NOT DOWNLOAD THIS PROJECT RIGHT NOW.
-IN THE LAST SEVERAL COMMITS, A MISTAKE HAD BEEN MADE, 
-CAUSING AN INFINITE AMOUNT OF ENEMIES TO SPAWN.
-DOWNLOAD ONLY IF YOU WANT YOUR PC TO BLOW UP.
-
 # Kill_Everyone
 A modern take on the decade old game "Asteroid"..
 This is the result of over 1 week of development,
@@ -14,7 +8,7 @@ It will be constantly improved upon with new features and GUI.
 The HUD function for the game had been partially activated.
 HUD elements on the left hand side of the game is now visible.
 However, the left-side HUD is only for cosmetic purposes.
-Functional HUD will arrive in future updates.
+Only the right-side HUD is functional.
 
 # BASIC CONTROLS
 Arrow Keys: Up, Down, Left, Right
