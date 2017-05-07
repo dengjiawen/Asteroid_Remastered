@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KillEveryone.java" afterPath="$PROJECT_DIR$/src/KillEveryone.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/resources/source/sequence/Adobe After Effects Auto-Save/health auto-save 2.aep" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,67 +17,14 @@
       <file leaf-file-name="KillEveryone.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/KillEveryone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="1872" column="15" lean-forward="false" selection-start-line="1872" selection-start-column="15" selection-end-line="1872" selection-end-column="15" />
+            <state relative-caret-position="174">
+              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="class#launcher#0" expanded="false" />
-                <element signature="class#resources#0" expanded="false" />
-                <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-                <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-                <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-                <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-                <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-                <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-                <element signature="class#data#0" expanded="false" />
-                <element signature="class#MainWindow#0" expanded="false" />
-                <element signature="class#BootConfirmationGUI#0" expanded="false" />
-                <element signature="e#12938#13150#0" expanded="true" />
-                <element signature="e#13149#13150#0" expanded="true" />
-                <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-                <element signature="class#HUD#0" expanded="false" />
-                <element signature="class#SpaceBackground#0" expanded="false" />
-                <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-                <element signature="class#Status#0" expanded="false" />
-                <element signature="class#CharacterProperties#0" expanded="false" />
-                <element signature="class#BulletProperties#0" expanded="false" />
-                <element signature="class#Bullet#0" expanded="false" />
-                <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-                <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-                <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-                <element signature="class#BulletPane#0" expanded="false" />
-                <element signature="e#26027#26035#0" expanded="true" />
-                <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-                <element signature="class#Blockade#0" expanded="false" />
-                <element signature="e#29534#29715#0" expanded="false" />
-                <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-                <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-                <element signature="class#Ocelot#0" expanded="false" />
-                <element signature="e#32491#33791#0" expanded="false" />
-                <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-                <element signature="class#Karmakazi#0" expanded="false" />
-                <element signature="class#RegularEnemy#0" expanded="false" />
-                <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-                <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-                <element signature="class#EnemyPane#0" expanded="false" />
-                <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-                <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-                <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-                <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-                <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-                <element signature="class#Player#0" expanded="false" />
-                <element signature="e#49519#50362#0" expanded="false" />
-                <element signature="e#50440#50640#0" expanded="true" />
-                <element signature="e#50639#50640#0" expanded="true" />
-                <element signature="class#51881:53103" expanded="false" />
-                <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-                <element signature="class#53166:54520" expanded="false" />
-                <element signature="class#54551:54962" expanded="false" />
-                <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-                <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-                <element signature="class#PlayerPane#0" expanded="false" />
-                <element signature="class#Enemy#0" expanded="false" />
+                <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+                <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+                <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -89,69 +32,12 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>collision</find>
-      <find>==</find>
-      <find>enemy_location.get</find>
-      <find>fire</find>
-      <find>spawn</find>
-      <find>hitBox</find>
-      <find>enemy</find>
-      <find>cleanU</find>
-      <find>intersects</find>
-      <find>cleanUp_frameUpdate</find>
-      <find>/resources</find>
-      <find>cleanUp</find>
-      <find>explosionSound</find>
-      <find>resources.mouseLocation</find>
-      <find>hit_notify</find>
-      <find>DrawBullet</find>
-      <find>EnemyShip</find>
-      <find>CharacterData</find>
-      <find>Bullet</find>
-      <find>bulletNumber</find>
-      <find>PlayerPane</find>
-      <find>TODO</find>
-      <find>FRAME_RATE</find>
-      <find>regular_enemy_sprite</find>
-      <find>(int)</find>
-      <find>bulletSound</find>
-      <find>Clip</find>
-      <find>Player.player_data.health</find>
-      <find>repaint</find>
-      <find>500</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>resources.mouse_location</replace>
-      <replace>Enemy</replace>
-      <replace>PlayerPane</replace>
-      <replace>EnemyPane</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="PUSH_TAGS">
-      <GitPushTagMode />
-    </option>
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/GameWindow.java" />
         <option value="$PROJECT_DIR$/src/KillEveryone.java" />
       </list>
     </option>
@@ -165,61 +51,6 @@
   <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Android</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Correctness</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Performance</id>
-          </State>
-          <State>
-            <id>CorrectnessLintAndroid</id>
-          </State>
-          <State>
-            <id>GSPGrailsGroovy</id>
-          </State>
-          <State>
-            <id>General</id>
-          </State>
-          <State>
-            <id>GrailsGroovy</id>
-          </State>
-          <State>
-            <id>Groovy</id>
-          </State>
-          <State>
-            <id>Kotlin</id>
-          </State>
-          <State>
-            <id>LintAndroid</id>
-          </State>
-          <State>
-            <id>Maven</id>
-          </State>
-          <State>
-            <id>Plugin DevKit</id>
-          </State>
-          <State>
-            <id>XPath</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Android</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -712,17 +543,6 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/awt/event/ActionListener.java" />
-    <property name="FullScreen" value="true" />
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -736,66 +556,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.launcher">
-    <configuration default="false" name="KillEveryone" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="KillEveryone" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="KillEveryone" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="mainclass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="mainclass" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="KillEveryone" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="mainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="mainClass" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="KillEveryone" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Shoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Shoot" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="KillEveryone" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="launcher" />
@@ -1048,7 +808,6 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1177,12 +936,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1198,20 +951,12 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.KillEveryone" />
-      <item index="1" class="java.lang.String" itemvalue="Application.mainclass" />
-      <item index="2" class="java.lang.String" itemvalue="Application.mainClass" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Shoot" />
-      <item index="4" class="java.lang.String" itemvalue="Application.launcher" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.launcher" />
     </list>
     <recent_temporary>
-      <list size="5">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.launcher" />
-        <item index="1" class="java.lang.String" itemvalue="Application.KillEveryone" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Shoot" />
-        <item index="3" class="java.lang.String" itemvalue="Application.mainClass" />
-        <item index="4" class="java.lang.String" itemvalue="Application.mainclass" />
       </list>
     </recent_temporary>
   </component>
@@ -1219,95 +964,10 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="" />
-      <created>1493084560942</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1493084560942</updated>
-      <workItem from="1493084563821" duration="3484000" />
-      <workItem from="1493127171038" duration="210000" />
-      <workItem from="1493130238041" duration="126000" />
-      <workItem from="1493132120027" duration="5232000" />
-      <workItem from="1493151638670" duration="4836000" />
-      <workItem from="1493169276793" duration="13000" />
-      <workItem from="1493169327955" duration="2816000" />
-      <workItem from="1493211832882" duration="3698000" />
-      <workItem from="1493216957004" duration="36000" />
-      <workItem from="1493221850237" duration="2248000" />
-      <workItem from="1493239070515" duration="4064000" />
-      <workItem from="1493303281967" duration="178000" />
-      <workItem from="1493310428603" duration="212000" />
-      <workItem from="1493326380722" duration="383000" />
-      <workItem from="1493335668856" duration="5388000" />
-      <workItem from="1493341822424" duration="4594000" />
-      <workItem from="1493383399007" duration="794000" />
-      <workItem from="1493385124197" duration="328000" />
-      <workItem from="1493394712756" duration="2185000" />
-      <workItem from="1493432841908" duration="132000" />
-      <workItem from="1493432997885" duration="235000" />
-      <workItem from="1493492203721" duration="1499000" />
-      <workItem from="1493584002975" duration="2235000" />
-      <workItem from="1493586445503" duration="1475000" />
-      <workItem from="1493588941685" duration="2315000" />
-      <workItem from="1493593582052" duration="60000" />
-      <workItem from="1493599485735" duration="1002000" />
-      <workItem from="1493648686445" duration="4438000" />
-      <workItem from="1493669668830" duration="6834000" />
-      <workItem from="1493683624141" duration="7210000" />
-      <workItem from="1493691060880" duration="169000" />
-      <workItem from="1493691381575" duration="96000" />
-      <workItem from="1493729009314" duration="5058000" />
-      <workItem from="1493740482202" duration="13000" />
-      <workItem from="1493740670912" duration="177000" />
-      <workItem from="1493740854370" duration="90000" />
-      <workItem from="1493757307408" duration="13574000" />
-      <workItem from="1493772830040" duration="447000" />
-      <workItem from="1493773745384" duration="3341000" />
-      <workItem from="1493821634255" duration="177000" />
-      <workItem from="1493823267411" duration="569000" />
-      <workItem from="1493826673587" duration="1740000" />
-      <workItem from="1493828469718" duration="526000" />
-      <workItem from="1493837941878" duration="838000" />
-      <workItem from="1493838968394" duration="58000" />
-      <workItem from="1493843816231" duration="12121000" />
-      <workItem from="1493859157398" duration="2511000" />
-      <workItem from="1493865074884" duration="295000" />
-      <workItem from="1493901776872" duration="4305000" />
-      <workItem from="1493913138572" duration="1526000" />
-      <workItem from="1493930274187" duration="2274000" />
-      <workItem from="1493933239331" duration="52000" />
-      <workItem from="1493934296847" duration="1147000" />
-      <workItem from="1493935864128" duration="96000" />
-      <workItem from="1493941666705" duration="5182000" />
-      <workItem from="1493951115585" duration="8000" />
-      <workItem from="1493994002217" duration="360000" />
-      <workItem from="1493994704066" duration="1532000" />
-      <workItem from="1493997874975" duration="1343000" />
-      <workItem from="1493999873635" duration="1806000" />
-      <workItem from="1494015691049" duration="4180000" />
-      <workItem from="1494022682564" duration="9705000" />
-      <workItem from="1494083075036" duration="2499000" />
-      <workItem from="1494088062309" duration="88000" />
-      <workItem from="1494095590201" duration="1000000" />
-      <workItem from="1494096777600" duration="7297000" />
-      <workItem from="1494108768973" duration="987000" />
-      <workItem from="1494112822724" duration="114000" />
-      <workItem from="1494114751910" duration="5762000" />
-      <workItem from="1494166388387" duration="483000" />
-    </task>
-    <task id="LOCAL-00001" summary="Removed unnecessary importing of DocumentListener library.&#10;Included updated copyright message.">
-      <created>1494086125980</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1494086125980</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161806000" />
+    <option name="totallyTimeSpent" value="153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1316,14 +976,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49166667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.4888889" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.53055555" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.51111114" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.46944445" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.46944445" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1346,19 +1006,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
-  </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed unnecessary importing of DocumentListener library.&#10;Included updated copyright message." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary importing of DocumentListener library.&#10;Included updated copyright message." />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="61" />
@@ -1377,62 +1024,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1444,62 +1038,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1511,62 +1052,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1578,62 +1066,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1645,62 +1080,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1712,62 +1094,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1779,62 +1108,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1846,62 +1122,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1913,62 +1136,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1980,62 +1150,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2047,62 +1164,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2114,62 +1178,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2181,62 +1192,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2248,62 +1206,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2315,62 +1220,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2382,62 +1234,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2449,62 +1248,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2516,62 +1262,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2583,62 +1276,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2650,62 +1290,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2717,62 +1304,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2784,62 +1318,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2851,62 +1332,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2918,62 +1346,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2985,62 +1360,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3052,62 +1374,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -3187,156 +1456,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="1872" column="15" lean-forward="false" selection-start-line="1872" selection-start-column="15" selection-end-line="1872" selection-end-column="15" />
+        <state relative-caret-position="174">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="class#launcher#0" expanded="false" />
-            <element signature="class#resources#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
-            <element signature="class#data#0" expanded="false" />
-            <element signature="class#MainWindow#0" expanded="false" />
-            <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#12938#13150#0" expanded="true" />
-            <element signature="e#13149#13150#0" expanded="true" />
-            <element signature="method#paintComponent#0;class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="method#SpaceBackground#0;class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
-            <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#importAudioResource#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#26027#26035#0" expanded="true" />
-            <element signature="method#fireLargeBullet#0;class#BulletPane#0" expanded="false" />
-            <element signature="class#Blockade#0" expanded="false" />
-            <element signature="e#29534#29715#0" expanded="false" />
-            <element signature="method#explode#0;class#Blockade#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Blockade#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="e#32491#33791#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#RegularEnemy#0" expanded="false" />
-            <element signature="class#EnemyPane#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="e#49519#50362#0" expanded="false" />
-            <element signature="e#50440#50640#0" expanded="true" />
-            <element signature="e#50639#50640#0" expanded="true" />
-            <element signature="class#51881:53103" expanded="false" />
-            <element signature="method#keyPressed#0;class#51881:53103" expanded="false" />
-            <element signature="class#53166:54520" expanded="false" />
-            <element signature="class#54551:54962" expanded="false" />
-            <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#Player#0" expanded="false" />
-            <element signature="class#PlayerPane#0" expanded="false" />
-            <element signature="class#Enemy#0" expanded="false" />
+            <marker date="1494175473000" expanded="true" signature="56786:56791" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="56825:57033" ph="{...}" />
+            <marker date="1494175473000" expanded="false" signature="57050:57210" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="Copyright.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>KillEveryone</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
