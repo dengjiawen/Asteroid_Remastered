@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 import kuusisto.tinysound.TinySound;
@@ -48,6 +49,15 @@ class resources {
     private static final BufferedImage[] aimed_cursor = new BufferedImage[60];
     public static final BufferedImage[] player_on_fire = new BufferedImage[44];
     public static final BufferedImage[] HUD_1 = new BufferedImage[731];
+    public static final BufferedImage[] HUD_logo = new BufferedImage[2 * 150];
+    public static final BufferedImage[] health_number = new BufferedImage[21 + 80];
+    public static final BufferedImage[] normal_health = new BufferedImage[80];
+    public static final BufferedImage[] low_health_warning = new BufferedImage[30];
+    public static final BufferedImage[] health_init = new BufferedImage[60];
+    public static final BufferedImage[] weapon_state_engage = new BufferedImage[180];
+    public static final BufferedImage[] weapon_state_normal = new BufferedImage[180];
+    public static final BufferedImage[] weapon_state_init = new BufferedImage[60];
+    public static final BufferedImage[] weapon_state_overHeat = new BufferedImage[30];
     public static BufferedImage bullet_sprite;
     public static BufferedImage large_bullet;
     public static BufferedImage player_sprite;
@@ -175,6 +185,32 @@ class resources {
             for (int i = 0; i < 731; i++) {
                 HUD_1[i] = ImageIO.read(resources.class.getResource("/resources/sequence/dev_hud_1/" + i + ".png"));
             }
+            for (int i = 0; i < 150; i++){
+                HUD_logo[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_logo/init/" + i + ".png"));
+                HUD_logo[150 + i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_logo/loop/" + i + ".png"));
+            }
+            for (int i = 0; i < 21; i++){
+                health_number[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_health/low_health_number/" + i + ".png"));
+            }
+            for (int i = 21; i < 21+80; i++){
+                health_number[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_health/normal_health_number/normal" +
+                        new DecimalFormat("00000").format(i-21) + ".png"));
+            }
+            for (int i = 0; i < 30; i++){
+                low_health_warning[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_health/low_health_pane/" + i + ".png"));
+                weapon_state_overHeat[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_weapon/over_heat/" + i + ".png"));
+            }
+            for (int i = 0; i < 80; i++){
+                normal_health[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_health/normal_health/" + i + ".png"));
+            }
+            for (int i = 0; i < 60; i++){
+                health_init[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_health/health_init/" + i + ".png"));
+                weapon_state_init[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_weapon/init/" + i + ".png"));
+            }
+            for (int i = 0; i < 180; i++){
+                weapon_state_normal[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_weapon/normal/" + i + ".png"));
+                weapon_state_engage[i] = ImageIO.read(resources.class.getResource("/resources/sequence/sub_hud_weapon/engage/" + i + ".png"));
+            }
         } catch (java.io.IOException e) {
             System.out.println(e.getMessage());
         }
@@ -184,13 +220,16 @@ class resources {
 
 class data {
 
-    public static Font name = new Font("Calibri",Font.BOLD,20);
-    public static Font points = new Font("Calibri",Font.BOLD,50);
-    public static Font emphasis = new Font("Calibri",Font.BOLD,18);
-    public static Font standard = new Font("Calibri",Font.PLAIN,10);
-    public static Font bold = new Font("Calibri",Font.BOLD,10);
+    public static final Font name = new Font("Calibri",Font.BOLD,20);
+    public static final Font points = new Font("Calibri",Font.BOLD,50);
+    public static final Font emphasis = new Font("Calibri",Font.BOLD,18);
+    public static final Font standard = new Font("Calibri",Font.PLAIN,13);
+    public static final Font bold = new Font("Calibri",Font.BOLD,10);
 
     public static int total_points = 0;
+
+    public static final Color techno_RED = Color.decode("#ed3737");
+    public static final Color techno_BLUE = Color.decode("#2bede6");
 
 }
 
@@ -216,11 +255,13 @@ class MainWindow extends JFrame{
         enemy_pane = new EnemyPane();
         bullet_pane = new BulletPane();
         SpaceBackground space = new SpaceBackground();
+        //Status devBar = new Status();
         HUD hud = new HUD();
         boot_confirmation = new BootConfirmationGUI();
 
         resources.music.play(true);
 
+        //add(devBar);
         add(boot_confirmation);
         add(hud);
         add(enemy_pane);
@@ -293,16 +334,40 @@ class BootConfirmationGUI extends JPanel{
 class HUD extends JPanel{
 
     public static Timer hud_1_frameUpdate;
+    public static Timer normal_health;
+    public static Timer weapon_overheat;
+
     BufferedImage frame_Update;
+    BufferedImage logo;
+    BufferedImage health_bar;
+    public static BufferedImage weapon_box;
     int frameCount;
+    int logo_frameCount;
+    int number_frameCount;
+    int bar_init_frameCount;
+    int low_health_frameCount;
+    int health_number_frameCount;
+    int weapon_state_frameCount;
+
+    String[] weapon_state = {"normal", "engage"};
+
+    JLabel health_number;
 
     HUD(){
 
-        setBounds(0,0,1200, 750);
+        setBounds(0,0,1280, 750);
         setLayout(null);
         setOpaque(false);
 
+        health_number = new JLabel();
+        health_number.setBounds(995,186,50,29);
+        health_number.setFont(data.standard);
+
         frameCount = 0;
+        logo_frameCount = 0;
+        number_frameCount = 0;
+        bar_init_frameCount = 0;
+        weapon_state_frameCount = 0;
         hud_1_frameUpdate = new Timer(resources.REFRESH_RATE, e -> {
             frame_Update = resources.HUD_1[frameCount];
             if (frameCount < 730){
@@ -310,7 +375,75 @@ class HUD extends JPanel{
             } else {
                 frameCount = 345;
             }
+            logo = resources.HUD_logo[logo_frameCount];
+            if (logo_frameCount < 299){
+                logo_frameCount ++;
+            } else {
+                logo_frameCount = 150;
+            }
+            health_number.setForeground(data.techno_BLUE);
+            health_number.setText("    " + number_frameCount);
+            if (number_frameCount < 100){
+                number_frameCount ++;
+            } else {}
+            health_bar = resources.health_init[bar_init_frameCount];
+            weapon_box = resources.weapon_state_init[bar_init_frameCount];
+            if (bar_init_frameCount < 59){
+                bar_init_frameCount ++;
+            } else {
+                health_bar = resources.normal_health[79];
+                normal_health.start();
+            }
+
         });
+        health_number_frameCount = 100;
+        normal_health = new Timer(resources.REFRESH_RATE, e -> {
+            if (Player.player_data.health > 800){
+                Player.player_data.health = 800;
+            } else if (Player.player_data.health < 0){
+                Player.player_data.health = 0;
+            }
+            int healthPercent = Math.round((Player.player_data.health / 800f) * 100);
+            if (healthPercent > 20){
+                if (healthPercent > health_number_frameCount){
+                    health_number_frameCount ++;
+                } else if (healthPercent < health_number_frameCount){
+                    health_number_frameCount --;
+                }
+                health_bar = resources.normal_health[health_number_frameCount - 21];
+                health_number.setForeground(data.techno_BLUE);
+                health_number.setText("    " + health_number_frameCount);
+            } else if (healthPercent <= 20) {
+                health_bar = resources.low_health_warning[low_health_frameCount];
+                if (low_health_frameCount < 29){
+                    low_health_frameCount ++;
+                } else {
+                    low_health_frameCount = 0;
+                }
+                health_number.setForeground(data.techno_RED);
+                health_number.setText("    " + healthPercent);
+            }
+
+            if (Player.over_heating) {
+                weapon_box = resources.weapon_state_overHeat[weapon_state_frameCount];
+                if (weapon_state_frameCount < 29) {
+                    weapon_state_frameCount++;
+                } else {
+                    weapon_state_frameCount = 0;
+                }
+            } else {
+                if (Player.isFiring){
+                    if (Player.bullet_heat_factor <= 179) {
+                        weapon_box = resources.weapon_state_engage[Player.bullet_heat_factor];
+                    } else {}
+                } else {
+                    weapon_box = resources.weapon_state_normal[Player.bullet_heat_factor];
+                }
+            }
+        });
+
+        add(health_number);
+
     }
 
     @Override
@@ -319,6 +452,9 @@ class HUD extends JPanel{
         super.paintComponent(g);
 
         g.drawImage(frame_Update, 0, 0, this);
+        g.drawImage(logo, 1000, 30, this);
+        g.drawImage(health_bar, 1048, 186, this);
+        g.drawImage(weapon_box, 1000, 225, this);
 
     }
 
@@ -575,7 +711,7 @@ class Bullet {
                     Player.player_data.health -= 70;
                     large_explosion_frameUpdate.start();
                 } else {
-                    Player.player_data.health -= 10;
+                    Player.player_data.health -= 5;
                     mini_explosion_frameUpdate.start();
                 }
             }
@@ -922,7 +1058,7 @@ class Ocelot implements Enemy {
 
         movement_frameUpdate.stop();
         if (!collisionDeath){
-            Player.player_data.health += 50;
+            Player.player_data.health += 200;
         }
 
         explode_frameUpdate.addActionListener(e -> {
@@ -1072,7 +1208,7 @@ class Karmakazi implements Enemy {
 
         movement_frameUpdate.stop();
         if (!collisionDeath){
-            Player.player_data.health += 80;
+            Player.player_data.health += 150;
         }
 
         explode_frameUpdate.addActionListener(e -> {
@@ -1224,7 +1360,7 @@ class RegularEnemy implements Enemy {
 
         movement_frameUpdate.stop();
         if (!collisionDeath){
-            Player.player_data.health += 30;
+            Player.player_data.health += 80;
         }
 
         explode_frameUpdate.addActionListener(e -> {
@@ -1304,7 +1440,7 @@ class EnemyPane extends JPanel {
             }
 
             if (allDead) {
-                spawnMoreEnemy(1);
+                spawnMoreEnemy(2);
             }
         });
 
@@ -1410,28 +1546,41 @@ class EnemyPane extends JPanel {
 
         Timer delay = new Timer(10, null);
         delay.addActionListener(e -> {
-            spawnMoreEnemy(1);
+            spawnMoreEnemy(2);
             scheduledSpawn.start();
         });
 
         delay.setInitialDelay(5000);
+
+        //*** Delete this one line of code and execute the program.
+        //*** There will be a beautiful bug.
+        delay.setRepeats(false);
+
         delay.start();
     }
 
 }
 
-class Player extends JPanel implements MouseListener, MouseMotionListener {
+class Player extends JPanel implements MouseListener, MouseMotionListener, ActionListener {
 
     public static CharacterProperties player_data;
     public static final Rectangle hitBox = new Rectangle();
     private static BufferedImage player_sprite;
     private static int onFire_frameCount;
+    public static int bullet_heat_factor;
+    private static int secondary_heat_factor;
 
     private static Timer perpendicular_frameUpdate;
     private static Timer lateral_frameUpdate;
     private static Timer fire_bullet;
+    private static Timer heat_factor;
 
     private boolean warningAlreadyStarted;
+    public static boolean isFiring;
+    public static boolean over_heating;
+    private static boolean over_heating_notified;
+
+    MouseAdapter over_heat_warning;
 
     Player() {
 
@@ -1444,15 +1593,21 @@ class Player extends JPanel implements MouseListener, MouseMotionListener {
         requestFocus();
 
         onFire_frameCount = 0;
+        bullet_heat_factor = 0;
+        secondary_heat_factor = 0;
         warningAlreadyStarted = false;
+        isFiring = false;
+        over_heating = false;
+        over_heating_notified = false;
 
-        player_data = new CharacterProperties(500, 650, 500, 0);
+        player_data = new CharacterProperties(500, 650, 800, 0);
         player_sprite = resources.player_sprite;
         hitBox.setBounds(player_data.x, player_data.y, 50, 50);
 
         perpendicular_frameUpdate = new Timer(resources.REFRESH_RATE, null);
         lateral_frameUpdate = new Timer(resources.REFRESH_RATE, null);
         fire_bullet = new Timer(180, null);
+        heat_factor = new Timer(resources.REFRESH_RATE, null);
         Timer health_frameUpdate = new Timer(resources.REFRESH_RATE, null);
 
         health_frameUpdate.addActionListener(e -> {
@@ -1460,6 +1615,7 @@ class Player extends JPanel implements MouseListener, MouseMotionListener {
             if (player_data.health <= 100) {
                 if (!warningAlreadyStarted){
                     resources.low_health.play(true);
+                    warningAlreadyStarted = true;
                 }
                 player_sprite = resources.player_on_fire[onFire_frameCount];
 
@@ -1480,13 +1636,46 @@ class Player extends JPanel implements MouseListener, MouseMotionListener {
 
             }
         });
-        fire_bullet.addActionListener(e -> {
 
-            MainWindow.bullet_pane.fireBullet(
-                    new Point(player_data.x, player_data.y), resources.mouse_location, false);
+        fire_bullet.addActionListener(this);
 
-            repaint();
+        over_heat_warning = new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                resources.lock_on.play();
+            }
+        };
 
+        heat_factor.addActionListener(e -> {
+            if (fire_bullet.isRunning()){
+                secondary_heat_factor ++;
+                isFiring = true;
+            } else {
+                secondary_heat_factor -= 3;
+                isFiring = false;
+            }
+            if (secondary_heat_factor < 0){
+                bullet_heat_factor = 0;
+                secondary_heat_factor = 0;
+            } else if (secondary_heat_factor > 179 && !over_heating){
+                bullet_heat_factor = 179;
+                secondary_heat_factor = 280;
+                if (!over_heating){
+                    resources.lock_on.play();
+                    over_heating = true;
+                    fire_bullet.stop();
+                    removeMouseListener(this);
+                    addMouseListener(over_heat_warning);
+                }
+            } else if (secondary_heat_factor <= 179) {
+                bullet_heat_factor = secondary_heat_factor;
+                if (over_heating){
+                    over_heating = false;
+                    removeMouseListener(over_heat_warning);
+                    addMouseListener(this);
+                }
+            }
         });
 
         //lateral control
@@ -1595,6 +1784,7 @@ class Player extends JPanel implements MouseListener, MouseMotionListener {
         perpendicular_frameUpdate.start();
         lateral_frameUpdate.start();
         health_frameUpdate.start();
+        heat_factor.start();
 
     }
 
@@ -1647,7 +1837,17 @@ class Player extends JPanel implements MouseListener, MouseMotionListener {
     }
     public void mouseExited(MouseEvent e) {}
     public void mouseClicked(MouseEvent e) {}
-    public void mouseDragged(MouseEvent e) {}
+    public void mouseDragged(MouseEvent e) {
+        resources.mouse_location = e.getPoint();
+        repaint();
+    }
+    public void actionPerformed(ActionEvent e){
+        MainWindow.bullet_pane.fireBullet(
+                new Point(player_data.x, player_data.y), resources.mouse_location, false);
+
+
+        repaint();
+    }
 
 
 }
