@@ -1565,6 +1565,8 @@ class Player extends JPanel implements MouseListener, MouseMotionListener, Actio
     public static boolean isFiring;
     public static boolean over_heating;
 
+    public static Robot robot;
+
     MouseAdapter over_heat_warning;
 
     Player() {
@@ -1583,6 +1585,12 @@ class Player extends JPanel implements MouseListener, MouseMotionListener, Actio
         warningAlreadyStarted = false;
         isFiring = false;
         over_heating = false;
+
+        try {
+            robot = new Robot();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
         player_data = new CharacterProperties(500, 650, 800, 0);
         player_sprite = resources.player_sprite;
@@ -1674,24 +1682,23 @@ class Player extends JPanel implements MouseListener, MouseMotionListener, Actio
 
                     lateral_frameUpdate.addActionListener(e14 -> {
 
-                        if (player_data.x >= 0) {
-                            player_data.x -= 1;
+                        if (player_data.x > 10) {
+                            player_data.x -= 2;
                             repaint();
                         } else {
-                            player_data.x = 0;
-                            lateral_frameUpdate.addActionListener(null);
-                        }
+                            player_data.x = 10;
+                            robot.keyPress(KeyEvent.VK_RIGHT);
 
-                    });
+                    }});
                 } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 
                     lateral_frameUpdate.addActionListener(e13 -> {
-                        if (player_data.x <= 1280) {
-                            player_data.x += 1;
+                        if (player_data.x <= 1270) {
+                            player_data.x += 2;
                             repaint();
                         } else {
-                            player_data.x = 1280;
-                            lateral_frameUpdate.addActionListener(null);
+                            player_data.x = 1270;
+                            robot.keyPress(KeyEvent.VK_LEFT);
                         }
                     });
                 }
@@ -1713,11 +1720,11 @@ class Player extends JPanel implements MouseListener, MouseMotionListener, Actio
 
                     perpendicular_frameUpdate.addActionListener(e12 -> {
                         if (player_data.y >= 60) {
-                            player_data.y -= 1;
+                            player_data.y -= 2;
                             repaint();
                         } else {
                             player_data.y = 60;
-                            perpendicular_frameUpdate.addActionListener(null);
+                            robot.keyPress(KeyEvent.VK_DOWN);
                         }
                     });
 
@@ -1727,11 +1734,11 @@ class Player extends JPanel implements MouseListener, MouseMotionListener, Actio
 
                     perpendicular_frameUpdate.addActionListener(e1 -> {
                         if (player_data.y <= 750) {
-                            player_data.y += 1;
+                            player_data.y += 2;
                             repaint();
                         } else {
                             player_data.y = 750;
-                            perpendicular_frameUpdate.addActionListener(null);
+                            robot.keyPress(KeyEvent.VK_UP);
                         }
                     });
 
@@ -1747,12 +1754,17 @@ class Player extends JPanel implements MouseListener, MouseMotionListener, Actio
         addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
+
             }
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyCode() == KeyEvent.VK_SPACE){
-                    launcher.game.enemy_pane.init();
+                if (e.getKeyCode() == KeyEvent.VK_ESCAPE){
+                    try {
+                        Thread.sleep(Integer.MAX_VALUE);
+                    } catch (Exception f){
+                        System.out.println(f.getMessage());
+                    }
                 }
             }
 
@@ -1856,9 +1868,9 @@ class PlayerPane extends JPanel {
 
 interface Enemy{
 
-    public CharacterProperties enemy_properties();
-    public BufferedImage enemy_sprite();
-    public Point targetPoint();
-    public Rectangle hitBox();
+    CharacterProperties enemy_properties();
+    BufferedImage enemy_sprite();
+    Point targetPoint();
+    Rectangle hitBox();
 
 }
