@@ -5,82 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/PlayerPane.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/KillEveryone.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/sound/lock_on.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/background_tile.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/bullet_sprite.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/crosshair.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/fire-explosion-animation-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/crosshair auto-save 1.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/crosshair auto-save 2.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/enemy1_on_fire auto-save 1.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/explosion auto-save 1.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/explosion auto-save 2.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/explosion auto-save 3.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/health auto-save 3.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/health auto-save 4.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/health auto-save 5.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/health auto-save 6.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/health auto-save 7.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/karmakazi_on_fire auto-save 1.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/karmakazi_on_fire auto-save 2.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/ocelot_on_fire auto-save 1.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/ocelot_on_fire auto-save 2.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/weapon_hud auto-save 4.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/weapon_hud auto-save 5.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/weapon_hud auto-save 6.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/weapon_hud auto-save 7.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/Adobe After Effects Auto-Save/weapon_hud auto-save 8.aep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/crosshair.aep Logs/AE 2017-05-01 8-16-14 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/enemy1_on_fire.aep Logs/AE 2017-05-04 9-22-38 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/explosion.aep Logs/AE 2017-05-02 9-03-11 AM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/explosion.aep Logs/AE 2017-05-02 9-05-08 AM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/health.aep Logs/AE 2017-05-06 4-35-58 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/health.aep Logs/AE 2017-05-06 4-41-27 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/health.aep Logs/AE 2017-05-06 4-50-30 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/health.aep Logs/AE 2017-05-06 4-51-36 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/health.aep Logs/AE 2017-05-06 5-14-13 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/karmakazi_on_fire.aep Logs/AE 2017-05-04 9-24-08 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/ocelot_candidate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/ocelot_on_fire.aep Logs/AE 2017-05-04 10-18-04 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/weapon_hud.aep Logs/AE 2017-05-06 10-21-53 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/weapon_hud.aep Logs/AE 2017-05-06 10-27-11 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/weapon_hud.aep Logs/AE 2017-05-06 10-41-44 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/weapon_hud.aep Logs/AE 2017-05-06 9-28-11 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/weapon_hud.aep Logs/AE 2017-05-06 9-37-44 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sequence/weapon_hud.aep Logs/AE 2017-05-06 9-42-28 PM EDT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sound/SOS_distress.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sound/enemy_fire.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sound/friendly_fire.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sound/lock_on.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/sound/low_health_warning.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/tutorial/commander_candidate.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/source/tutorial/commander_candidate.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Blockade.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Blockade.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BootConfirmationGUI$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BootConfirmationGUI$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BootConfirmationGUI.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BootConfirmationGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Enemy.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Enemy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/MainWindow.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/MainWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/SpaceBackground.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/SpaceBackground.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Status.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Status.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/data.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/data.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/launcher.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/launcher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/resources.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/resources.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,8 +21,8 @@
       <file leaf-file-name="Untitled_Project.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Untitled_Project.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="2347" column="0" lean-forward="true" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="2347" column="0" lean-forward="false" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
               <folding>
                 <element signature="class#launcher#0" expanded="false" />
                 <element signature="method#main#0;class#launcher#0" expanded="false" />
@@ -114,7 +38,11 @@
                 <element signature="class#data#0" expanded="false" />
                 <element signature="class#MainWindow#0" expanded="false" />
                 <element signature="class#BootConfirmationGUI#0" expanded="false" />
+                <element signature="e#14731#14943#0" expanded="true" />
+                <element signature="e#14942#14943#0" expanded="true" />
                 <element signature="class#CheatGUI#0" expanded="false" />
+                <element signature="e#16859#17060#0" expanded="true" />
+                <element signature="e#17059#17060#0" expanded="true" />
                 <element signature="class#HUD#0" expanded="false" />
                 <element signature="e#22220#22546#0" expanded="true" />
                 <element signature="e#22545#22546#0" expanded="true" />
@@ -124,6 +52,7 @@
                 <element signature="e#26764#27430#0" expanded="false" />
                 <element signature="e#27486#27730#0" expanded="false" />
                 <element signature="e#27787#28027#0" expanded="false" />
+                <element signature="e#30009#30017#0" expanded="true" />
                 <element signature="e#30394#31906#0" expanded="true" />
                 <element signature="e#31905#31906#0" expanded="true" />
                 <element signature="class#Blockade#0" expanded="false" />
@@ -140,10 +69,18 @@
                 <element signature="class#Player#0" expanded="false" />
                 <element signature="class#60206:61160" expanded="false" />
                 <element signature="e#62224#63067#0" expanded="false" />
+                <element signature="e#63145#63347#0" expanded="true" />
+                <element signature="e#63346#63347#0" expanded="true" />
+                <element signature="e#64576#64803#0" expanded="true" />
+                <element signature="e#64802#64803#0" expanded="true" />
+                <element signature="e#64856#65893#0" expanded="true" />
                 <element signature="e#65065#65379#0" expanded="false" />
                 <element signature="e#65507#65848#0" expanded="false" />
+                <element signature="e#65892#65893#0" expanded="true" />
+                <element signature="e#65952#67130#0" expanded="true" />
                 <element signature="e#66165#66502#0" expanded="false" />
                 <element signature="e#66692#67028#0" expanded="false" />
+                <element signature="e#67129#67130#0" expanded="true" />
                 <element signature="class#FriendlyPane#0" expanded="false" />
                 <element signature="class#Enemy#0" expanded="false" />
               </folding>
@@ -214,7 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -728,6 +664,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1189,11 +1126,12 @@
       <workItem from="1495223430221" duration="1866000" />
       <workItem from="1495241504600" duration="3123000" />
       <workItem from="1495286701903" duration="2830000" />
+      <workItem from="1495291341525" duration="31000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33083000" />
+    <option name="totallyTimeSpent" value="33114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1202,7 +1140,6 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.46666667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1227,6 +1164,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.46666667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1350,8 +1288,8 @@
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
     <entry file="file://$PROJECT_DIR$/src/Untitled_Project.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="2347" column="0" lean-forward="true" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="2347" column="0" lean-forward="false" selection-start-line="2347" selection-start-column="0" selection-end-line="2347" selection-end-column="0" />
           <folding>
             <element signature="class#launcher#0" expanded="false" />
             <element signature="method#main#0;class#launcher#0" expanded="false" />
@@ -1367,7 +1305,11 @@
             <element signature="class#data#0" expanded="false" />
             <element signature="class#MainWindow#0" expanded="false" />
             <element signature="class#BootConfirmationGUI#0" expanded="false" />
+            <element signature="e#14731#14943#0" expanded="true" />
+            <element signature="e#14942#14943#0" expanded="true" />
             <element signature="class#CheatGUI#0" expanded="false" />
+            <element signature="e#16859#17060#0" expanded="true" />
+            <element signature="e#17059#17060#0" expanded="true" />
             <element signature="class#HUD#0" expanded="false" />
             <element signature="e#22220#22546#0" expanded="true" />
             <element signature="e#22545#22546#0" expanded="true" />
@@ -1377,6 +1319,7 @@
             <element signature="e#26764#27430#0" expanded="false" />
             <element signature="e#27486#27730#0" expanded="false" />
             <element signature="e#27787#28027#0" expanded="false" />
+            <element signature="e#30009#30017#0" expanded="true" />
             <element signature="e#30394#31906#0" expanded="true" />
             <element signature="e#31905#31906#0" expanded="true" />
             <element signature="class#Blockade#0" expanded="false" />
@@ -1393,10 +1336,18 @@
             <element signature="class#Player#0" expanded="false" />
             <element signature="class#60206:61160" expanded="false" />
             <element signature="e#62224#63067#0" expanded="false" />
+            <element signature="e#63145#63347#0" expanded="true" />
+            <element signature="e#63346#63347#0" expanded="true" />
+            <element signature="e#64576#64803#0" expanded="true" />
+            <element signature="e#64802#64803#0" expanded="true" />
+            <element signature="e#64856#65893#0" expanded="true" />
             <element signature="e#65065#65379#0" expanded="false" />
             <element signature="e#65507#65848#0" expanded="false" />
+            <element signature="e#65892#65893#0" expanded="true" />
+            <element signature="e#65952#67130#0" expanded="true" />
             <element signature="e#66165#66502#0" expanded="false" />
             <element signature="e#66692#67028#0" expanded="false" />
+            <element signature="e#67129#67130#0" expanded="true" />
             <element signature="class#FriendlyPane#0" expanded="false" />
             <element signature="class#Enemy#0" expanded="false" />
           </folding>
