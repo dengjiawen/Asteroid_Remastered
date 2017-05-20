@@ -73,7 +73,7 @@ class resources {
     public static BufferedImage[] weapon_state_init = new BufferedImage[60];
 
     public static BufferedImage bullet_sprite;
-    public static BufferedImage large_bullet;
+    public static BufferedImage large_bullet_sprite;
     public static BufferedImage player_sprite;
     public static BufferedImage regular_enemy_sprite;
     public static BufferedImage karmakazi_sprite;
@@ -103,6 +103,9 @@ class resources {
     public static Sound over_heat = TinySound.loadSound(resources.class.getResource("/resources/sound/over_heat.wav"));
     public static Music music = TinySound.loadMusic(resources.class.getResource("/resources/sound/music.wav"));
     public static Music low_health = TinySound.loadMusic(resources.class.getResource("/resources/sound/low_health_warning.wav"));
+
+    public static boolean infinite_health = false;
+    public static boolean large_bullet = false;
 
     private static void importCursorResources() {
 
@@ -161,7 +164,7 @@ class resources {
 
         try {
             bullet_sprite = ImageIO.read(resources.class.getResource("/resources/bullet_sprite.png"));
-            large_bullet = ImageIO.read(resources.class.getResource("/resources/large_bullet.png"));
+            large_bullet_sprite = ImageIO.read(resources.class.getResource("/resources/large_bullet.png"));
             for (int i = 0; i < 9; i++) {
                 bullet_impact[i] = ImageIO.read(resources.class.getResource("/resources/sequence/hit_notify/" + i + ".png"));
             }
@@ -372,9 +375,7 @@ class HUD extends JPanel{
     private Timer logo_hud_frameUpdate;
     private Timer left_hud_frameUpdate;
     private Timer health_meter_frameUpdate;
-
-    public Timer runTime_frameUpdate;
-    public Timer cleanUp = new Timer(10000, null);
+    private Timer weapon_state_frameUpdate;
 
     private BufferedImage left_hud;
     private BufferedImage logo_hud;
@@ -458,9 +459,11 @@ class HUD extends JPanel{
                 health_meter_init = null;
                 health_meter_frameCount = 0;
                 health_meter_frameUpdate.start();
+                weapon_state_frameUpdate.start();
             }
 
             health_meter = resources.health_init[health_meter_frameCount];
+            weapon_state = resources.weapon_state_init[health_meter_frameCount];
             if (health_meter_frameCount < 59) {
                 health_meter_frameCount++;
             }
@@ -498,25 +501,22 @@ class HUD extends JPanel{
             }
         });
 
-        /*
-
-            if (Player.over_heating) {
-                weapon_box = resources.weapon_state_overHeat[weapon_state_frameCount];
+        weapon_state_frameUpdate = new Timer(resources.REFRESH_RATE, e -> {
+            if (Player.overHeating) {
+                weapon_state = resources.weapon_state_overHeat[weapon_state_frameCount];
                 if (weapon_state_frameCount < 29) {
                     weapon_state_frameCount++;
                 } else {
                     weapon_state_frameCount = 0;
                 }
-            } else {
-                if (Player.isFiring){
-                    if (Player.bullet_heat_factor <= 179) {
-                        weapon_box = resources.weapon_state_engage[Player.bullet_heat_factor];
-                    } else {}
-                } else {
-                    weapon_box = resources.weapon_state_normal[Player.bullet_heat_factor];
+            } else if (Player.isFiring) {
+                if (Player.bullet_heat_factor <= 179) {
+                    weapon_state = resources.weapon_state_engage[Player.bullet_heat_factor];
                 }
+            } else {
+                weapon_state = resources.weapon_state_normal[Player.bullet_heat_factor];
             }
-        });*/
+        });
 
         add(health_number);
 
@@ -588,74 +588,13 @@ class SpaceBackground extends JPanel {
 
 }
 
-class Status extends JPanel {
-
-    private BufferedImage devBar;
-
-    private final JLabel FPS = new JLabel();
-    private final JLabel xcord = new JLabel();
-    private final JLabel ycord = new JLabel();
-    private final JLabel health = new JLabel();
-
-    private int Frames = 0;
-
-    Status() {
-
-        setBounds(0, 0, 600, 30);
-        setLayout(null);
-
-        try {
-            devBar = ImageIO.read(getClass().getResource("/resources/devBar.png"));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-        Timer fpsCheck = new Timer(500, e -> {
-            Frames = resources.FRAME_RATE + ThreadLocalRandom.current().nextInt(-5, 5 + 1);
-
-            FPS.setText("" + Frames);
-
-            xcord.setText("" + Player.player_data.x / 2);
-            ycord.setText("" + Player.player_data.y / 2);
-
-            health.setText("" + Player.player_data.health);
-        });
-
-        fpsCheck.start();
-
-        xcord.setBounds(400, 10, 50, 10);
-        ycord.setBounds(460, 10, 50, 10);
-        health.setBounds(500, 10, 50, 10);
-
-        FPS.setText("" + Frames);
-        FPS.setBounds(275, 10, 20, 10);
-
-        add(xcord);
-        add(ycord);
-        add(health);
-        add(FPS);
-
-    }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-
-        super.paintComponent(g);
-
-        g.drawImage(devBar, 0, 0, this);
-
-    }
-
-
-}
-
 class CharacterProperties {
 
-    int x;
-    int y;
-    int health;
+    public int x;
+    public int y;
+    public int health;
 
-    final int character_type;
+    public final int character_type;
     /* character_type key:
      * 0: player
      * 1: regular_enemy
@@ -666,7 +605,7 @@ class CharacterProperties {
      * 6: boss
      * 7: friendly
      */
-    boolean dead;
+    public boolean dead;
 
     CharacterProperties(int x, int y, int health, int character_type) {
 
@@ -682,19 +621,18 @@ class CharacterProperties {
 
 class BulletProperties {
 
-    int x;
-    int y;
-    private final int bullet_number;
-    final boolean enemy_fire;
+    public int x;
+    public int y;
+
+    public final boolean enemy_fire;
     public final boolean large_bullet;
 
-    BulletProperties(int x, int y, boolean enemy_fire, boolean large_bullet) {
+    BulletProperties(int x, int y, boolean enemy_fire) {
 
         this.x = x;
         this.y = y;
-        this.bullet_number = BulletPane.bulletCount;
         this.enemy_fire = enemy_fire;
-        this.large_bullet = large_bullet;
+        this.large_bullet = resources.large_bullet;
 
     }
 
@@ -702,18 +640,12 @@ class BulletProperties {
 
 class Bullet {
 
-    private static final double targetTime = 1000;
+    private final int targetTime;
 
-    private double currentTime;
-    private final double x1;
-    private final double x2;
-    private final double y1;
-    private final double y2;
-
-    private final int bulletNumber;
     private int explosion_frameCount;
-
+    private double currentTime;
     public BufferedImage bullet_sprite;
+
     public final Rectangle hitBox;
     public final BulletProperties bullet_properties;
 
@@ -722,29 +654,21 @@ class Bullet {
     public final Timer mini_explosion_frameUpdate;
     public final Timer large_explosion_frameUpdate;
 
-    int CHEAT = 10;
+    Bullet(Point origin, Point target, boolean enemy_fire) {
 
+        playBulletSound(enemy_fire);
 
-    Bullet(Point origin, Point target, boolean enemy_fire, boolean large_bullet) {
-
-        importAudioResource(enemy_fire);
-
+        targetTime = 800;
+        currentTime = 0;
+        explosion_frameCount = 0;
         hitBox = new Rectangle();
-        bullet_properties = new BulletProperties(origin.x, origin.y, enemy_fire, large_bullet);
+        bullet_properties = new BulletProperties(origin.x, origin.y, enemy_fire);
 
         if (bullet_properties.large_bullet){
-            bullet_sprite = resources.large_bullet;
+            bullet_sprite = resources.large_bullet_sprite;
         } else {
             bullet_sprite = resources.bullet_sprite;
         }
-
-        x1 = origin.x;
-        y1 = origin.y;
-        x2 = target.x;
-        y2 = target.y;
-        explosion_frameCount = 0;
-        bulletNumber = BulletPane.bulletCount;
-        currentTime = 0;
 
         bullet_frameUpdate = new Timer(resources.REFRESH_RATE, null);
         collision_detection = new Timer(resources.REFRESH_RATE, null);
@@ -753,8 +677,8 @@ class Bullet {
 
         bullet_frameUpdate.addActionListener(e -> {
 
-            bullet_properties.x = (int) (x1 + currentTime * (x2 - x1) / targetTime);
-            bullet_properties.y = (int) (y1 + currentTime * (y2 - y1) / targetTime);
+            bullet_properties.x = (int) (origin.x + currentTime * (target.x - origin.x) / targetTime);
+            bullet_properties.y = (int) (origin.y + currentTime * (target.y - origin.y) / targetTime);
 
             currentTime += 33;
 
@@ -790,7 +714,7 @@ class Bullet {
             }
 
         });
- /*       collision_detection.addActionListener(e -> {
+        collision_detection.addActionListener(e -> {
 
             if (hitBox.intersects(Player.hitBox) && bullet_properties.enemy_fire) {
                 if (bullet_properties.large_bullet) {
@@ -806,7 +730,7 @@ class Bullet {
                 for (int i = 0; i < EnemyPane.enemies.size(); i++) {
                     if (EnemyPane.enemies.get(i) != null){
                         if (hitBox.intersects(EnemyPane.enemies.get(i).hitBox()) && !EnemyPane.enemies.get(i).enemy_properties().dead) {
-                            EnemyPane.enemies.get(i).enemy_properties().health -= CHEAT;
+                            EnemyPane.enemies.get(i).enemy_properties().health -= 10;
                             System.out.println("EnemyPane " + i + " Health " + EnemyPane.enemies.get(i).enemy_properties().health);
 
                             bullet_frameUpdate.stop();
@@ -818,15 +742,15 @@ class Bullet {
 
             }
 
-        });*/
+        });
 
 
         bullet_frameUpdate.start();
-        //collision_detection.start();
+        collision_detection.start();
 
     }
 
-    private void importAudioResource(boolean enemy_fire){
+    private void playBulletSound(boolean enemy_fire){
 
         if (enemy_fire) {
             resources.enemy_fire.play();
@@ -836,8 +760,6 @@ class Bullet {
     }
 
     private void cleanUp() {
-
-        System.out.println("Cleanup " + bulletNumber + " completed.");
 
         large_explosion_frameUpdate.stop();
         mini_explosion_frameUpdate.stop();
@@ -861,46 +783,6 @@ class BulletPane extends JPanel {
         setOpaque(false);
         setLayout(null);
 
-        collisionDetection();
-
-    }
-
-    public static void collisionDetection() {
-
-        ScheduledExecutorService collision_detection = Executors.newScheduledThreadPool(4);
-        collision_detection.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                bullets.parallelStream().forEach(e -> {
-
-                    if (e.hitBox.intersects(Player.hitBox) && e.bullet_properties.enemy_fire) {
-                        if (e.bullet_properties.large_bullet) {
-                            Player.player_data.health -= 70;
-                            e.large_explosion_frameUpdate.start();
-                        } else {
-                            Player.player_data.health -= 5;
-                            e.mini_explosion_frameUpdate.start();
-                        }
-                    }
-
-                    if (!e.bullet_properties.enemy_fire) {
-                        for (int i = 0; i < EnemyPane.enemies.size(); i++) {
-                            if (EnemyPane.enemies.get(i) != null) {
-                                if (e.hitBox.intersects(EnemyPane.enemies.get(i).hitBox()) && !EnemyPane.enemies.get(i).enemy_properties().dead) {
-                                    EnemyPane.enemies.get(i).enemy_properties().health -= e.CHEAT;
-                                    System.out.println("EnemyPane " + i + " Health " + EnemyPane.enemies.get(i).enemy_properties().health);
-
-                                    e.bullet_frameUpdate.stop();
-                                    e.mini_explosion_frameUpdate.start();
-                                }
-                            }
-                        }
-
-                    }
-
-                });
-            }
-        }, 0, resources.REFRESH_RATE, TimeUnit.MILLISECONDS);
     }
 
     @Override
@@ -917,18 +799,8 @@ class BulletPane extends JPanel {
 
     public void fireBullet(Point origin, Point target, boolean enemy_fire){
 
-        bullets.add(new Bullet(origin, target, enemy_fire, false));
+        bullets.add(new Bullet(origin, target, enemy_fire));
         System.out.println("Bullet " + bulletCount + "fired");
-        bulletCount++;
-
-        repaint();
-
-    }
-
-    public void fireLargeBullet(Point origin, Point target, boolean enemy_fire){
-
-        bullets.add(new Bullet(origin, target, enemy_fire, true));
-        System.out.println("Large Bullet " + bulletCount + "fired");
         bulletCount++;
 
         repaint();
@@ -1616,7 +1488,7 @@ class Boss implements Enemy {
 
         fire_bullet.addActionListener(e -> {
 
-                MainWindow.bullet_pane.fireLargeBullet(
+                MainWindow.bullet_pane.fireBullet(
                         new Point(enemy_properties.x + 512, enemy_properties.y + 512),
                         //new Point(enemy_properties.x + 512 + i, (int) (Math.sqrt(800 * 800 - (enemy_properties.x + 512 + i) * (enemy_properties.x + 512 + i)))), true);
                         new Point(enemy_properties.x + ThreadLocalRandom.current().nextInt(-1024, 1024), ThreadLocalRandom.current().nextInt(500,700)), true);

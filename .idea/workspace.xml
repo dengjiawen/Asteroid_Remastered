@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/data.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Blockade.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/SpaceBackground.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/resources.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Untitled_Project.java" afterPath="$PROJECT_DIR$/src/Untitled_Project.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,42 +28,36 @@
       <file leaf-file-name="Untitled_Project.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Untitled_Project.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1824">
-              <caret line="2020" column="32" lean-forward="false" selection-start-line="2020" selection-start-column="32" selection-end-line="2020" selection-end-column="32" />
+            <state relative-caret-position="271">
+              <caret line="1405" column="28" lean-forward="false" selection-start-line="1405" selection-start-column="28" selection-end-line="1405" selection-end-column="28" />
               <folding>
-                <element signature="class#resources#0" expanded="false" />
+                <element signature="class#launcher#0" expanded="false" />
                 <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
                 <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-                <element signature="e#5383#6536#0" expanded="true" />
-                <element signature="e#6535#6536#0" expanded="true" />
-                <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
+                <element signature="e#5490#6643#0" expanded="true" />
+                <element signature="e#6642#6643#0" expanded="true" />
                 <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
                 <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
                 <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
                 <element signature="method#cleanUpAnimation#0;class#resources#0" expanded="false" />
                 <element signature="class#MainWindow#0" expanded="false" />
                 <element signature="class#BootConfirmationGUI#0" expanded="false" />
-                <element signature="e#13631#13756#0" expanded="false" />
-                <element signature="e#14033#14079#0" expanded="false" />
-                <element signature="e#15729#16051#0" expanded="false" />
-                <element signature="e#16119#16362#0" expanded="false" />
-                <element signature="e#16424#16746#0" expanded="false" />
-                <element signature="e#16814#17057#0" expanded="false" />
-                <element signature="e#17123#17741#0" expanded="false" />
-                <element signature="e#17813#19156#0" expanded="false" />
+                <element signature="e#13745#13870#0" expanded="false" />
+                <element signature="e#14147#14193#0" expanded="false" />
+                <element signature="class#HUD#0" expanded="false" />
+                <element signature="e#15797#16119#0" expanded="false" />
+                <element signature="e#16187#16430#0" expanded="false" />
+                <element signature="e#16492#16814#0" expanded="false" />
+                <element signature="e#16882#17125#0" expanded="false" />
+                <element signature="e#17191#17940#0" expanded="false" />
+                <element signature="e#18012#19355#0" expanded="false" />
+                <element signature="e#19428#20095#0" expanded="false" />
                 <element signature="method#paintComponent#0;class#HUD#0" expanded="false" />
-                <element signature="method#init#0;class#HUD#0" expanded="false" />
                 <element signature="class#SpaceBackground#0" expanded="false" />
-                <element signature="class#Status#0" expanded="false" />
                 <element signature="class#CharacterProperties#0" expanded="false" />
                 <element signature="class#BulletProperties#0" expanded="false" />
-                <element signature="class#Bullet#0" expanded="false" />
-                <element signature="e#25147#25813#0" expanded="false" />
-                <element signature="e#26169#26409#0" expanded="false" />
-                <element signature="class#BulletPane#0" expanded="false" />
-                <element signature="e#28391#28399#0" expanded="true" />
-                <element signature="e#28776#30288#0" expanded="true" />
-                <element signature="e#30287#30288#0" expanded="true" />
+                <element signature="e#24651#24891#0" expanded="false" />
+                <element signature="e#26788#26796#0" expanded="true" />
                 <element signature="class#Blockade#0" expanded="false" />
                 <element signature="class#Ocelot#0" expanded="false" />
                 <element signature="class#Karmakazi#0" expanded="false" />
@@ -70,19 +69,20 @@
                 <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
                 <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
                 <element signature="method#init#0;class#EnemyPane#0" expanded="false" />
-                <element signature="class#58607:59561" expanded="false" />
-                <element signature="e#61759#61961#0" expanded="true" />
-                <element signature="e#61960#61961#0" expanded="true" />
-                <element signature="e#63185#63412#0" expanded="true" />
-                <element signature="e#63411#63412#0" expanded="true" />
-                <element signature="e#63465#64502#0" expanded="true" />
-                <element signature="e#63674#63988#0" expanded="false" />
-                <element signature="e#64116#64457#0" expanded="false" />
-                <element signature="e#64501#64502#0" expanded="true" />
-                <element signature="e#64561#65739#0" expanded="true" />
-                <element signature="e#64774#65111#0" expanded="false" />
-                <element signature="e#65301#65637#0" expanded="false" />
-                <element signature="e#65738#65739#0" expanded="true" />
+                <element signature="class#Player#0" expanded="false" />
+                <element signature="class#54933:55887" expanded="false" />
+                <element signature="e#58085#58287#0" expanded="true" />
+                <element signature="e#58286#58287#0" expanded="true" />
+                <element signature="e#59511#59738#0" expanded="true" />
+                <element signature="e#59737#59738#0" expanded="true" />
+                <element signature="e#59791#60828#0" expanded="true" />
+                <element signature="e#60000#60314#0" expanded="false" />
+                <element signature="e#60442#60783#0" expanded="false" />
+                <element signature="e#60827#60828#0" expanded="true" />
+                <element signature="e#60887#62065#0" expanded="true" />
+                <element signature="e#61100#61437#0" expanded="false" />
+                <element signature="e#61627#61963#0" expanded="false" />
+                <element signature="e#62064#62065#0" expanded="true" />
                 <element signature="class#FriendlyPane#0" expanded="false" />
                 <element signature="class#Enemy#0" expanded="false" />
               </folding>
@@ -166,28 +166,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="KillEveryone" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KillEveryone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KillEveryone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Untitled_Project.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Status" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1089,12 +1067,12 @@
       <workItem from="1495286701903" duration="2830000" />
       <workItem from="1495291341525" duration="31000" />
       <workItem from="1495313062265" duration="53000" />
-      <workItem from="1495314875901" duration="4377000" />
+      <workItem from="1495314875901" duration="6020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37544000" />
+    <option name="totallyTimeSpent" value="39187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1103,13 +1081,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.45833334" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.45277777" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.59166664" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5472222" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.40833333" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.40833333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1251,42 +1229,36 @@
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
     <entry file="file://$PROJECT_DIR$/src/Untitled_Project.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1824">
-          <caret line="2020" column="32" lean-forward="false" selection-start-line="2020" selection-start-column="32" selection-end-line="2020" selection-end-column="32" />
+        <state relative-caret-position="271">
+          <caret line="1405" column="28" lean-forward="false" selection-start-line="1405" selection-start-column="28" selection-end-line="1405" selection-end-column="28" />
           <folding>
-            <element signature="class#resources#0" expanded="false" />
+            <element signature="class#launcher#0" expanded="false" />
             <element signature="method#importCursorResources#0;class#resources#0" expanded="false" />
             <element signature="method#cursor_frameUpdate#0;class#resources#0" expanded="false" />
-            <element signature="e#5383#6536#0" expanded="true" />
-            <element signature="e#6535#6536#0" expanded="true" />
-            <element signature="method#importBulletResources#0;class#resources#0" expanded="false" />
+            <element signature="e#5490#6643#0" expanded="true" />
+            <element signature="e#6642#6643#0" expanded="true" />
             <element signature="method#importEnemyResources#0;class#resources#0" expanded="false" />
             <element signature="method#importPlayerResources#0;class#resources#0" expanded="false" />
             <element signature="method#importHUDResources#0;class#resources#0" expanded="false" />
             <element signature="method#cleanUpAnimation#0;class#resources#0" expanded="false" />
             <element signature="class#MainWindow#0" expanded="false" />
             <element signature="class#BootConfirmationGUI#0" expanded="false" />
-            <element signature="e#13631#13756#0" expanded="false" />
-            <element signature="e#14033#14079#0" expanded="false" />
-            <element signature="e#15729#16051#0" expanded="false" />
-            <element signature="e#16119#16362#0" expanded="false" />
-            <element signature="e#16424#16746#0" expanded="false" />
-            <element signature="e#16814#17057#0" expanded="false" />
-            <element signature="e#17123#17741#0" expanded="false" />
-            <element signature="e#17813#19156#0" expanded="false" />
+            <element signature="e#13745#13870#0" expanded="false" />
+            <element signature="e#14147#14193#0" expanded="false" />
+            <element signature="class#HUD#0" expanded="false" />
+            <element signature="e#15797#16119#0" expanded="false" />
+            <element signature="e#16187#16430#0" expanded="false" />
+            <element signature="e#16492#16814#0" expanded="false" />
+            <element signature="e#16882#17125#0" expanded="false" />
+            <element signature="e#17191#17940#0" expanded="false" />
+            <element signature="e#18012#19355#0" expanded="false" />
+            <element signature="e#19428#20095#0" expanded="false" />
             <element signature="method#paintComponent#0;class#HUD#0" expanded="false" />
-            <element signature="method#init#0;class#HUD#0" expanded="false" />
             <element signature="class#SpaceBackground#0" expanded="false" />
-            <element signature="class#Status#0" expanded="false" />
             <element signature="class#CharacterProperties#0" expanded="false" />
             <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="class#Bullet#0" expanded="false" />
-            <element signature="e#25147#25813#0" expanded="false" />
-            <element signature="e#26169#26409#0" expanded="false" />
-            <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="e#28391#28399#0" expanded="true" />
-            <element signature="e#28776#30288#0" expanded="true" />
-            <element signature="e#30287#30288#0" expanded="true" />
+            <element signature="e#24651#24891#0" expanded="false" />
+            <element signature="e#26788#26796#0" expanded="true" />
             <element signature="class#Blockade#0" expanded="false" />
             <element signature="class#Ocelot#0" expanded="false" />
             <element signature="class#Karmakazi#0" expanded="false" />
@@ -1298,19 +1270,20 @@
             <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
             <element signature="method#addBlockade#0;class#EnemyPane#0" expanded="false" />
             <element signature="method#init#0;class#EnemyPane#0" expanded="false" />
-            <element signature="class#58607:59561" expanded="false" />
-            <element signature="e#61759#61961#0" expanded="true" />
-            <element signature="e#61960#61961#0" expanded="true" />
-            <element signature="e#63185#63412#0" expanded="true" />
-            <element signature="e#63411#63412#0" expanded="true" />
-            <element signature="e#63465#64502#0" expanded="true" />
-            <element signature="e#63674#63988#0" expanded="false" />
-            <element signature="e#64116#64457#0" expanded="false" />
-            <element signature="e#64501#64502#0" expanded="true" />
-            <element signature="e#64561#65739#0" expanded="true" />
-            <element signature="e#64774#65111#0" expanded="false" />
-            <element signature="e#65301#65637#0" expanded="false" />
-            <element signature="e#65738#65739#0" expanded="true" />
+            <element signature="class#Player#0" expanded="false" />
+            <element signature="class#54933:55887" expanded="false" />
+            <element signature="e#58085#58287#0" expanded="true" />
+            <element signature="e#58286#58287#0" expanded="true" />
+            <element signature="e#59511#59738#0" expanded="true" />
+            <element signature="e#59737#59738#0" expanded="true" />
+            <element signature="e#59791#60828#0" expanded="true" />
+            <element signature="e#60000#60314#0" expanded="false" />
+            <element signature="e#60442#60783#0" expanded="false" />
+            <element signature="e#60827#60828#0" expanded="true" />
+            <element signature="e#60887#62065#0" expanded="true" />
+            <element signature="e#61100#61437#0" expanded="false" />
+            <element signature="e#61627#61963#0" expanded="false" />
+            <element signature="e#62064#62065#0" expanded="true" />
             <element signature="class#FriendlyPane#0" expanded="false" />
             <element signature="class#Enemy#0" expanded="false" />
           </folding>
