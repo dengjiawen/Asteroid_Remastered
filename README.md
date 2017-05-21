@@ -48,4 +48,5 @@ Let go every few seconds in order for the weapon to cool down.
 ### Newly Added Controls
 * Right Click: Teleport to the cursor's locatioN
 * Shift: Initiate Protective Shielding
+
 Both features are currently under development.
