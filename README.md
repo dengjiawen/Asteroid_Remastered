@@ -4,6 +4,12 @@ This is the result of over 1 week of development,
 and tens of minutes of manpower.
 It will be constantly improved upon with new features and GUI.
 
+# Upcoming Improvements
+The coding for the program is currently being optimized and simplified.
+We had managed to shrink the code from over 5,000 lines down to a mere 1,450 lines.
+We are currently optimizing the Player class and the Enemy classes to make them even more efficient.
+Also, we are looking to implement more features, such as a Shockwave feature, as well as a "Call Backup" feature.
+
 # Multi-Threading Functionality
 Many of the program's power hungry logical classes had been moved
 to a new multi-threaded structure.
