@@ -10,7 +10,8 @@ The coding for the program is currently being optimized and simplified.
 **In future commits, we plan to:**
 - [x] Shrink code line count from 5,000 to 1,500
 - [x] Add teleportation and protective shield
-- [ ] Add shockwave and call backup
+- [x] Add shockwave
+- [ ] Add call backup feature
 - [ ] Add new enemy classes
 
 ### Multi-Threading Functionality
@@ -48,5 +49,6 @@ Let go every few seconds in order for the weapon to cool down.
 ### Newly Added Controls
 * Right Click: Teleport to the cursor's locatioN
 * Shift: Initiate Protective Shielding
+* Enter: Shockwave (NEW!)
 
-Both features are currently under development.
+All of these newly added features are still under development -- they may be buggy.
