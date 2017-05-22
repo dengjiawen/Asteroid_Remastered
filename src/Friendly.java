@@ -409,7 +409,7 @@ class Player extends JPanel implements ActionListener, Entitative {
                 });
             });
 
-            if (shockwaveSize > Resources.FRAME_WIDTH + 1500){
+            if (shockwaveSize > Resources.FRAME_WIDTH + 2000){
                 shockwaveSize = 0;
                 shockwaveX = 0;
                 shockwaveY = 0;

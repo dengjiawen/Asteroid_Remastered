@@ -182,6 +182,13 @@ class HUD extends JPanel{
                 health_number.setForeground(Resources.techno_BLUE);
                 health_number.setText("    " + health_percentage);
 
+                //FAILSAVE: IN CASE HEALTH IS OUT OF BOUNDS
+                if (Player.player_data.health < 0){
+                    Player.player_data.health = 0;
+                } else if (Player.player_data.health > 800){
+                    Player.player_data.health = 800;
+                }
+
                 health_meter = Resources.health_meter[this.health_percentage - 21];
             } else if (health_percentage <= 20) {
                 health_meter = Resources.low_health_meter[health_meter_frameCount];
@@ -232,6 +239,7 @@ class HUD extends JPanel{
         g.drawImage(logo_hud, 1000, 30, this);
         g.drawImage(health_meter, 1048, 186, this);
         g.drawImage(weapon_state, 1000, 225, this);
+        g.drawImage(Resources.point_slot,1000,500,this);
 
     }
 

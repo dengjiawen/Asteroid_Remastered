@@ -72,11 +72,13 @@ class Resources {
     public static BufferedImage regular_enemy_sprite;
     public static BufferedImage karmakazi_sprite;
     public static BufferedImage ocelot_sprite;
-    public static BufferedImage boot_confirmation;
     public static BufferedImage blockade_sprite;
     public static BufferedImage boss_sprite;
-    public static BufferedImage cheat;
     public static BufferedImage shockwave;
+
+    public static BufferedImage cheat;
+    public static BufferedImage boot_confirmation;
+    public static BufferedImage point_slot;
 
     public static Point mouse_location = new Point(0,0);
 
@@ -217,6 +219,7 @@ class Resources {
         try {
             boot_confirmation = ImageIO.read(Resources.class.getResource("/resources/gui/start_confirmation.png"));
             cheat = ImageIO.read(Resources.class.getResource("/resources/gui/cheat.png"));
+            point_slot = ImageIO.read(Resources.class.getResource("/resources/hud/point_slot.png"));
             for (int i = 0; i < 731; i++) {
                 left_hud[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/dev_hud_1/" + i + ".png"));
             }

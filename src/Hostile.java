@@ -483,7 +483,7 @@ class EnemyPane extends JPanel {
         setOpaque(false);
         setLayout(null);
 
-        scheduledSpawn = new Timer(3000, null);
+        scheduledSpawn = new Timer(5000, null);
         scheduledSpawn.addActionListener(e -> {
 
             allDead = true;
