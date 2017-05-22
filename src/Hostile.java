@@ -601,7 +601,7 @@ class EnemyPane extends JPanel {
 
         Timer delay = new Timer(10, null);
         delay.addActionListener(e -> {
-            spawnMoreEnemy(500);
+            spawnMoreEnemy(2);
             scheduledSpawn.start();
         });
 
