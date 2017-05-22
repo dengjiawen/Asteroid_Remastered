@@ -497,7 +497,7 @@ class EnemyPane extends JPanel {
             }
 
             if (allDead) {
-                spawnMoreEnemy(50);
+                spawnMoreEnemy(2);
             }
         });
 
@@ -601,7 +601,7 @@ class EnemyPane extends JPanel {
 
         Timer delay = new Timer(10, null);
         delay.addActionListener(e -> {
-            spawnMoreEnemy(50);
+            spawnMoreEnemy(500);
             scheduledSpawn.start();
         });
 

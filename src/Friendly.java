@@ -7,6 +7,8 @@ import java.util.concurrent.Executors;
 
 class Player extends JPanel implements ActionListener, Entitative {
 
+    ExecutorService intensive_task;
+
     public static CharacterProperties player_data;
     public static Rectangle hitBox;
     private static Rectangle shockwave_hitBox;
@@ -93,6 +95,8 @@ class Player extends JPanel implements ActionListener, Entitative {
         setOpaque(false);
         setFocusable(true);
         requestFocus();
+
+        intensive_task = Executors.newCachedThreadPool();
 
         onFire_frameCount = 0;
         bullet_heat_factor = 0;
@@ -279,33 +283,37 @@ class Player extends JPanel implements ActionListener, Entitative {
 
         teleport_appearance.addActionListener(e -> {
 
-            player_sprite = Resources.player_teleport[teleport_frameCount];
-            this.repaint();
+            intensive_task.submit(() -> {
+                player_sprite = Resources.player_teleport[teleport_frameCount];
+                this.repaint();
 
-            teleport_frameCount --;
+                teleport_frameCount--;
 
-            if (teleport_frameCount == 0){
-                player_sprite = Resources.player_sprite;
-                addMouseListener(mouseControl);
-                teleport_appearance.stop();
-                teleport_frameCount = 0;
-            }
+                if (teleport_frameCount == 0) {
+                    player_sprite = Resources.player_sprite;
+                    addMouseListener(mouseControl);
+                    teleport_appearance.stop();
+                    teleport_frameCount = 0;
+                }
+            });
 
         });
         teleport_disappearance.addActionListener(e -> {
 
-            player_sprite = Resources.player_teleport[teleport_frameCount];
-            this.repaint();
+            intensive_task.submit(() -> {
+                player_sprite = Resources.player_teleport[teleport_frameCount];
+                this.repaint();
 
-            teleport_frameCount ++;
+                teleport_frameCount++;
 
-            if (teleport_frameCount > 10){
-                teleport_disappearance.stop();
-                player_data.x = Resources.mouse_location.x;
-                player_data.y = Resources.mouse_location.y;
-                teleport_frameCount = 10;
-                teleport_appearance.start();
-            }
+                if (teleport_frameCount > 10) {
+                    teleport_disappearance.stop();
+                    player_data.x = Resources.mouse_location.x;
+                    player_data.y = Resources.mouse_location.y;
+                    teleport_frameCount = 10;
+                    teleport_appearance.start();
+                }
+            });
 
         });
 
@@ -374,8 +382,6 @@ class Player extends JPanel implements ActionListener, Entitative {
 
         shockwave = Resources.shockwave;
 
-        ExecutorService collision_detection = Executors.newCachedThreadPool();
-
         Timer shockwave_frameUpdate = new Timer(Resources.REFRESH_RATE, null);
         shockwave_frameUpdate.addActionListener(e -> {
 
@@ -387,7 +393,7 @@ class Player extends JPanel implements ActionListener, Entitative {
 
             this.repaint();
 
-            collision_detection.submit(() -> {
+            intensive_task.submit(() -> {
                 BulletPane.bullets.forEach(bullet -> {
                     if (shockwave_hitBox.intersects(bullet.hitBox())){
                         bullet.hitNothing();
@@ -395,7 +401,7 @@ class Player extends JPanel implements ActionListener, Entitative {
                 });
             });
 
-            collision_detection.submit(() -> {
+            intensive_task.submit(() -> {
                 EnemyPane.enemies.forEach(enemy -> {
                     if (shockwave_hitBox.intersects(enemy.hitBox()) && !(enemy.location().y < 0)){
                         enemy.explode(true);
@@ -409,7 +415,6 @@ class Player extends JPanel implements ActionListener, Entitative {
                 shockwaveY = 0;
                 shockwave = null;
                 shockwave_hitBox = new Rectangle();
-                collision_detection.shutdownNow();
                 shockwave_frameUpdate.stop();
                 System.out.println("stopped");
             }

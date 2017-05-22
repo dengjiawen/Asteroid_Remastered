@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/GameGUI.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/GameGUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/FriendlyPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/FriendlyPane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bullet.java" afterPath="$PROJECT_DIR$/src/Bullet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Friendly.java" afterPath="$PROJECT_DIR$/src/Friendly.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Hostile.java" afterPath="$PROJECT_DIR$/src/Hostile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Launcher.java" afterPath="$PROJECT_DIR$/src/Launcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Misc.java" afterPath="$PROJECT_DIR$/src/Misc.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hostile.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Hostile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hostile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-209">
-              <caret line="485" column="39" lean-forward="false" selection-start-line="485" selection-start-column="39" selection-end-line="485" selection-end-column="39" />
+            <state relative-caret-position="201">
+              <caret line="606" column="0" lean-forward="true" selection-start-line="606" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
               <folding>
                 <element signature="class#Karmakazi#0" expanded="false" />
                 <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
@@ -128,30 +129,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Friendly.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Friendly.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Friendly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="405" column="60" lean-forward="false" selection-start-line="405" selection-start-column="60" selection-end-line="405" selection-end-column="60" />
+            <state relative-caret-position="2954">
+              <caret line="416" column="51" lean-forward="false" selection-start-line="416" selection-start-column="51" selection-end-line="416" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#1377:2331" expanded="false" />
-                <element signature="e#1943#1944#0" expanded="true" />
-                <element signature="e#1992#1993#0" expanded="true" />
-                <element signature="e#2042#2043#0" expanded="true" />
-                <element signature="e#2089#2090#0" expanded="true" />
-                <element signature="e#2362#2363#0" expanded="true" />
-                <element signature="e#2424#2425#0" expanded="true" />
-                <element signature="e#3681#4660#0" expanded="false" />
-                <element signature="e#4981#6137#0" expanded="false" />
-                <element signature="e#6164#6499#0" expanded="true" />
-                <element signature="e#6498#6499#0" expanded="true" />
-                <element signature="e#6761#7079#0" expanded="false" />
-                <element signature="e#7207#7582#0" expanded="false" />
-                <element signature="e#7899#8236#0" expanded="false" />
-                <element signature="e#8426#8800#0" expanded="false" />
-                <element signature="e#15122#15123#0" expanded="true" />
-                <element signature="e#15202#15203#0" expanded="true" />
+                <element signature="class#1414:2368" expanded="false" />
+                <element signature="e#1980#1981#0" expanded="true" />
+                <element signature="e#2029#2030#0" expanded="true" />
+                <element signature="e#2079#2080#0" expanded="true" />
+                <element signature="e#2126#2127#0" expanded="true" />
+                <element signature="e#2399#2400#0" expanded="true" />
+                <element signature="e#2461#2462#0" expanded="true" />
+                <element signature="e#3777#4756#0" expanded="false" />
+                <element signature="e#5077#6233#0" expanded="false" />
+                <element signature="e#6260#6595#0" expanded="true" />
+                <element signature="e#6594#6595#0" expanded="true" />
+                <element signature="e#6857#7175#0" expanded="false" />
+                <element signature="e#7303#7678#0" expanded="false" />
+                <element signature="e#7995#8332#0" expanded="false" />
+                <element signature="e#8522#8896#0" expanded="false" />
+                <element signature="method#protect_init#0;class#Player#0" expanded="false" />
+                <element signature="e#15269#15270#0" expanded="true" />
+                <element signature="e#15349#15350#0" expanded="true" />
                 <element signature="class#FriendlyPane#0" expanded="false" />
               </folding>
             </state>
@@ -209,8 +211,8 @@
         <option value="$PROJECT_DIR$/src/Misc.java" />
         <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/src/Bullet.java" />
-        <option value="$PROJECT_DIR$/src/Hostile.java" />
         <option value="$PROJECT_DIR$/src/Friendly.java" />
+        <option value="$PROJECT_DIR$/src/Hostile.java" />
       </list>
     </option>
   </component>
@@ -754,20 +756,19 @@
       <workItem from="1495313062265" duration="53000" />
       <workItem from="1495314875901" duration="6020000" />
       <workItem from="1495381219963" duration="1473000" />
-      <workItem from="1495387438119" duration="18697000" />
+      <workItem from="1495387438119" duration="19619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59357000" />
+    <option name="totallyTimeSpent" value="60279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.6666667" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.675" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -779,11 +780,11 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.34652779" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.3361111" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.33333334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.325" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20902778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -806,7 +807,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="86" />
+      <option name="time" value="87" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1010,44 +1011,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Friendly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2954">
+          <caret line="416" column="51" lean-forward="false" selection-start-line="416" selection-start-column="51" selection-end-line="416" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#1414:2368" expanded="false" />
+            <element signature="e#1980#1981#0" expanded="true" />
+            <element signature="e#2029#2030#0" expanded="true" />
+            <element signature="e#2079#2080#0" expanded="true" />
+            <element signature="e#2126#2127#0" expanded="true" />
+            <element signature="e#2399#2400#0" expanded="true" />
+            <element signature="e#2461#2462#0" expanded="true" />
+            <element signature="e#3777#4756#0" expanded="false" />
+            <element signature="e#5077#6233#0" expanded="false" />
+            <element signature="e#6260#6595#0" expanded="true" />
+            <element signature="e#6594#6595#0" expanded="true" />
+            <element signature="e#6857#7175#0" expanded="false" />
+            <element signature="e#7303#7678#0" expanded="false" />
+            <element signature="e#7995#8332#0" expanded="false" />
+            <element signature="e#8522#8896#0" expanded="false" />
+            <element signature="method#protect_init#0;class#Player#0" expanded="false" />
+            <element signature="e#15269#15270#0" expanded="true" />
+            <element signature="e#15349#15350#0" expanded="true" />
+            <element signature="class#FriendlyPane#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Hostile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="485" column="39" lean-forward="false" selection-start-line="485" selection-start-column="39" selection-end-line="485" selection-end-column="39" />
+        <state relative-caret-position="201">
+          <caret line="606" column="0" lean-forward="true" selection-start-line="606" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
           <folding>
             <element signature="class#Karmakazi#0" expanded="false" />
             <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
             <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
             <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
             <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Friendly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="405" column="60" lean-forward="false" selection-start-line="405" selection-start-column="60" selection-end-line="405" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#1377:2331" expanded="false" />
-            <element signature="e#1943#1944#0" expanded="true" />
-            <element signature="e#1992#1993#0" expanded="true" />
-            <element signature="e#2042#2043#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-            <element signature="e#2362#2363#0" expanded="true" />
-            <element signature="e#2424#2425#0" expanded="true" />
-            <element signature="e#3681#4660#0" expanded="false" />
-            <element signature="e#4981#6137#0" expanded="false" />
-            <element signature="e#6164#6499#0" expanded="true" />
-            <element signature="e#6498#6499#0" expanded="true" />
-            <element signature="e#6761#7079#0" expanded="false" />
-            <element signature="e#7207#7582#0" expanded="false" />
-            <element signature="e#7899#8236#0" expanded="false" />
-            <element signature="e#8426#8800#0" expanded="false" />
-            <element signature="e#15122#15123#0" expanded="true" />
-            <element signature="e#15202#15203#0" expanded="true" />
-            <element signature="class#FriendlyPane#0" expanded="false" />
           </folding>
         </state>
       </provider>
