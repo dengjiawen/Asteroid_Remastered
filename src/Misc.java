@@ -20,7 +20,7 @@ class ConfirmStart extends JPanel{
 
         super();
 
-        setBounds(490,225,300, 309);
+        setBounds((Resources.FRAME_WIDTH - 300)/2,(Resources.FRAME_HEIGHT - 309)/2,300, 309);
         setOpaque(false);
         setLayout(null);
 
@@ -94,7 +94,7 @@ class HUD extends JPanel{
 
     public HUD(){
 
-        setBounds(0,0,1280, 750);
+        setBounds((Resources.FRAME_WIDTH - 1280)/2,(Resources.FRAME_HEIGHT - 750)/2,1280, 750);
         setLayout(null);
         setOpaque(false);
 
@@ -256,18 +256,18 @@ class Space extends JPanel {
 
         super();
 
-        setBounds(0, 0, 1280, 720);
+        setBounds(0, 0, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT);
         setLayout(null);
         setOpaque(false);
 
         y1 = 0;
-        y2 = -750;
+        y2 = -1 * Resources.FRAME_HEIGHT;
 
         background_frameUpdate = new Timer(Resources.REFRESH_RATE, e -> {
-            if (y1 == 750) {
-                y1 = -750;
-            } else if (y2 == 750) {
-                y2 = -750;
+            if (y1 == Resources.FRAME_HEIGHT) {
+                y1 = -1 * Resources.FRAME_HEIGHT;
+            } else if (y2 == Resources.FRAME_HEIGHT) {
+                y2 = -1 * Resources.FRAME_HEIGHT;
             }
 
             y1 += 2;
@@ -283,8 +283,8 @@ class Space extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        g.drawImage(Resources.space_background[0], 0, y1, this);
-        g.drawImage(Resources.space_background[1], 0, y2, this);
+        g.drawImage(Resources.space_background[0], 0, y1, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT, this);
+        g.drawImage(Resources.space_background[1], 0, y2, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT,this);
     }
 
 }

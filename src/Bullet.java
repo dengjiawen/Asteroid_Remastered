@@ -33,6 +33,8 @@ class Bullet implements Entitative {
     private int currentTime;
     private int explosion_frameCount;
 
+    private int x1,x2,y1,y2;
+
     private Rectangle hitBox;
     private BulletProperties bullet_properties;
 
@@ -49,6 +51,11 @@ class Bullet implements Entitative {
         hitBox = new Rectangle();
         bullet_properties = new BulletProperties(origin.x, origin.y, enemy_fire);
 
+        x1 = origin.x;
+        x2 = target.x;
+        y1 = origin.y;
+        y2 = target.y;
+
         if (bullet_properties.large_bullet){
             bullet_sprite = Resources.large_bullet_sprite;
         } else {
@@ -60,13 +67,13 @@ class Bullet implements Entitative {
 
         bullet_frameUpdate.addActionListener(e -> {
 
-            bullet_properties.x = origin.x + currentTime * (target.x - origin.x) / targetTime;
-            bullet_properties.y = origin.y + currentTime * (target.y - origin.y) / targetTime;
+            bullet_properties.x = x1 + currentTime * (x2 - x1) / targetTime;
+            bullet_properties.y = y1 + currentTime * (y2 - y1) / targetTime;
 
             currentTime += 33;
 
-            if (bullet_properties.x < -10 || bullet_properties.x > 1350 ||
-                    bullet_properties.y < -900 || bullet_properties.y > 780) {
+            if (bullet_properties.x < -10 || bullet_properties.x > Resources.FRAME_WIDTH + 50 ||
+                    bullet_properties.y < -10 || bullet_properties.y > Resources.FRAME_HEIGHT + 50) {
                 cleanUp();
             }
 
@@ -87,9 +94,7 @@ class Bullet implements Entitative {
 
     private void cleanUp() {
 
-        bullet_impact_frameUpdate.stop();
         bullet_frameUpdate.stop();
-
         BulletPane.bullets.remove(this);
 
     }
@@ -111,8 +116,17 @@ class Bullet implements Entitative {
     }
 
     public void hitEnemy(Hostile e){
+
         e.enemy_properties().health -= 10;
 
+        bullet_frameUpdate.stop();
+        bullet_impact_frameUpdate.start();
+
+        bullet_properties.hit = true;
+
+    }
+
+    public void hitNothing() {
         bullet_frameUpdate.stop();
         bullet_impact_frameUpdate.start();
 
@@ -153,7 +167,7 @@ class BulletPane extends JPanel {
 
     BulletPane() {
 
-        setBounds(0, 0, 1280, 750);
+        setBounds(0, 0, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT);
         setOpaque(false);
         setLayout(null);
 

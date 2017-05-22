@@ -2,13 +2,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 class Player extends JPanel implements ActionListener, Entitative {
 
     public static CharacterProperties player_data;
     public static Rectangle hitBox;
+    private static Rectangle shockwave_hitBox;
     private static BufferedImage player_sprite;
     public static BufferedImage protect_bubble;
+    private static BufferedImage shockwave;
     private static int onFire_frameCount;
     public static int bullet_heat_factor;
     private static int secondary_heat_factor;
@@ -21,6 +25,10 @@ class Player extends JPanel implements ActionListener, Entitative {
     private boolean warningAlreadyStarted;
     public static boolean isFiring;
     public static boolean overHeating;
+
+    private int shockwaveX = 0;
+    private int shockwaveY = 0;
+    private int shockwaveSize = 0;
 
     public static Robot robot;
 
@@ -80,7 +88,7 @@ class Player extends JPanel implements ActionListener, Entitative {
 
         super();
 
-        setBounds(0, 0, 1280, 750);
+        setBounds(0, 0, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT);
         setLayout(null);
         setOpaque(false);
         setFocusable(true);
@@ -99,9 +107,10 @@ class Player extends JPanel implements ActionListener, Entitative {
             System.out.println(e.getMessage());
         }
 
-        player_data = new CharacterProperties(500, 650, 800, 0);
+        player_data = new CharacterProperties((Resources.FRAME_WIDTH - Resources.player_sprite.getWidth())/2, 650, 800, 0);
         player_sprite = Resources.player_sprite;
         hitBox = new Rectangle();
+        shockwave_hitBox = new Rectangle();
 
         perpendicular_frameUpdate = new Timer(Resources.REFRESH_RATE, null);
         lateral_frameUpdate = new Timer(Resources.REFRESH_RATE, null);
@@ -189,6 +198,8 @@ class Player extends JPanel implements ActionListener, Entitative {
 
                 if (e.getKeyCode() == KeyEvent.VK_SHIFT) {
                     protect_init();
+                } else if (e.getKeyCode() == KeyEvent.VK_ENTER){
+                    shockWave(location());
                 }
             }
         });
@@ -214,11 +225,11 @@ class Player extends JPanel implements ActionListener, Entitative {
                 } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 
                     lateral_frameUpdate.addActionListener(e13 -> {
-                        if (player_data.x <= 1270) {
+                        if (player_data.x <= Resources.FRAME_WIDTH) {
                             player_data.x += 2;
                             repaint();
                         } else {
-                            player_data.x = 1270;
+                            player_data.x = Resources.FRAME_WIDTH;
                             robot.keyPress(KeyEvent.VK_LEFT);
                         }
                     });
@@ -250,11 +261,11 @@ class Player extends JPanel implements ActionListener, Entitative {
                 } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 
                     perpendicular_frameUpdate.addActionListener(e1 -> {
-                        if (player_data.y <= 750) {
+                        if (player_data.y <= Resources.FRAME_HEIGHT) {
                             player_data.y += 2;
                             repaint();
                         } else {
-                            player_data.y = 750;
+                            player_data.y = Resources.FRAME_HEIGHT;
                             robot.keyPress(KeyEvent.VK_UP);
                         }
                     });
@@ -339,6 +350,9 @@ class Player extends JPanel implements ActionListener, Entitative {
         g2d.drawImage(player_sprite, x, y, this);
         g2d.drawImage(protect_bubble, player_data.x - 35, player_data.y - 32, this);
 
+        g2d.rotate(-1 * Math.toRadians(rotation), width / 2, height / 2);
+        g2d.drawImage(shockwave,shockwaveX,shockwaveY,shockwaveSize,shockwaveSize,this);
+
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -356,10 +370,53 @@ class Player extends JPanel implements ActionListener, Entitative {
 
     }
 
-    public void shockWave (){
+    public void shockWave (Point Epicenter){
 
+        shockwave = Resources.shockwave;
 
+        ExecutorService collision_detection = Executors.newCachedThreadPool();
 
+        Timer shockwave_frameUpdate = new Timer(Resources.REFRESH_RATE, null);
+        shockwave_frameUpdate.addActionListener(e -> {
+
+            shockwaveSize += 30;
+            shockwaveX = Epicenter.x - (shockwaveSize - player_sprite.getWidth())/2;
+            shockwaveY = Epicenter.y - (shockwaveSize - player_sprite.getHeight())/2;
+
+            shockwave_hitBox.setBounds(shockwaveX + 100,shockwaveY + 90,shockwaveSize - 300, shockwaveSize - 300);
+
+            this.repaint();
+
+            collision_detection.submit(() -> {
+                BulletPane.bullets.forEach(bullet -> {
+                    if (shockwave_hitBox.intersects(bullet.hitBox())){
+                        bullet.hitNothing();
+                    }
+                });
+            });
+
+            collision_detection.submit(() -> {
+                EnemyPane.enemies.forEach(enemy -> {
+                    if (shockwave_hitBox.intersects(enemy.hitBox()) && !(enemy.location().y < 0)){
+                        enemy.explode(true);
+                    }
+                });
+            });
+
+            if (shockwaveSize > Resources.FRAME_WIDTH + 1500){
+                shockwaveSize = 0;
+                shockwaveX = 0;
+                shockwaveY = 0;
+                shockwave = null;
+                shockwave_hitBox = new Rectangle();
+                collision_detection.shutdownNow();
+                shockwave_frameUpdate.stop();
+                System.out.println("stopped");
+            }
+
+        });
+
+        shockwave_frameUpdate.start();
     }
 
     public void protect_init(){

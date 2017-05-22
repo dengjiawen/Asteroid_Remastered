@@ -55,13 +55,13 @@ class Ocelot implements Hostile {
             enemy_properties.x += x_increment;
             enemy_properties.y += y_increment;
 
-            if (enemy_properties.y > 600) {
+            if (enemy_properties.y > Resources.FRAME_HEIGHT - 50) {
                 y_increment = -5;
             } else if (enemy_properties.y < 50) {
                 y_increment = 5;
             }
 
-            if (enemy_properties.x > 1200) {
+            if (enemy_properties.x > Resources.FRAME_WIDTH - 50) {
                 x_increment = -5;
             } else if (enemy_properties.x < 50) {
                 x_increment = 5;
@@ -358,13 +358,13 @@ class RegularEnemy implements Hostile {
             enemy_properties.x += x_increment;
             enemy_properties.y += y_increment;
 
-            if (enemy_properties.y > 500) {
+            if (enemy_properties.y > Resources.FRAME_HEIGHT - 100) {
                 y_increment = -1;
             } else if (enemy_properties.y < 50) {
                 y_increment = 1;
             }
 
-            if (enemy_properties.x > 1200) {
+            if (enemy_properties.x > Resources.FRAME_WIDTH - 50) {
                 x_increment = -1;
             } else if (enemy_properties.x < 50) {
                 x_increment = 1;
@@ -479,11 +479,11 @@ class EnemyPane extends JPanel {
 
     EnemyPane() {
 
-        setBounds(0, 0, 1280, 750);
+        setBounds(0, 0, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT);
         setOpaque(false);
         setLayout(null);
 
-        scheduledSpawn = new Timer(1000, null);
+        scheduledSpawn = new Timer(3000, null);
         scheduledSpawn.addActionListener(e -> {
 
             allDead = true;
@@ -497,7 +497,7 @@ class EnemyPane extends JPanel {
             }
 
             if (allDead) {
-                spawnMoreEnemy(2);
+                spawnMoreEnemy(50);
             }
         });
 
@@ -601,7 +601,7 @@ class EnemyPane extends JPanel {
 
         Timer delay = new Timer(10, null);
         delay.addActionListener(e -> {
-            spawnMoreEnemy(2);
+            spawnMoreEnemy(50);
             scheduledSpawn.start();
         });
 

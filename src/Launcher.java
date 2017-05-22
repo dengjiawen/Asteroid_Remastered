@@ -1,8 +1,10 @@
+import com.sun.org.apache.regexp.internal.RE;
 import kuusisto.tinysound.Music;
 import kuusisto.tinysound.Sound;
 import kuusisto.tinysound.TinySound;
 
 import javax.imageio.ImageIO;
+import javax.naming.spi.ResolveResult;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -34,6 +36,9 @@ class Resources {
 
     public static final byte FRAME_RATE = 30;
     public static final byte REFRESH_RATE = (byte) (1000 / FRAME_RATE);
+
+    public static final int FRAME_WIDTH = 1450;
+    public static final int FRAME_HEIGHT = 800;
 
     public static final BufferedImage[] space_background = new BufferedImage[2];
     public static final BufferedImage[] bullet_impact = new BufferedImage[9];
@@ -71,6 +76,7 @@ class Resources {
     public static BufferedImage blockade_sprite;
     public static BufferedImage boss_sprite;
     public static BufferedImage cheat;
+    public static BufferedImage shockwave;
 
     public static Point mouse_location = new Point(0,0);
 
@@ -199,6 +205,7 @@ class Resources {
                 bubble[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/protective_bubble/" + i + ".png"));
             }
             player_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/spaceship_sprite.png"));
+            shockwave = ImageIO.read(Resources.class.getResource("/resources/shockwave.png"));
         } catch (java.io.IOException e) {
             fileNotFound(e);
         }
@@ -283,7 +290,6 @@ class Resources {
 
 class GameGUI extends JFrame{
 
-    public static FriendlyPane friendly_pane;
     public static EnemyPane enemy_pane;
     public static BulletPane bullet_pane;
     public static HUD hud;
@@ -297,14 +303,13 @@ class GameGUI extends JFrame{
 
         super();
 
-        setSize(1280, 750);
+        setSize(Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT);
         setUndecorated(true);
         setResizable(false);
         setLocationRelativeTo(null);
         setLayout(null);
         getContentPane().setBackground(Color.black);
 
-        friendly_pane = new FriendlyPane();
         enemy_pane = new EnemyPane();
         bullet_pane = new BulletPane();
         hud = new HUD();
