@@ -1,12 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CollisionLogic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Entitative.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/FriendlyPane.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/GameGUI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Hostile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Resources$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Resources.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Space.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Bullet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CollisionLogic.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Friendly.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Hostile.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Launcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Misc.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/launcher.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/launcher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/resources/shockwave.png" afterPath="$PROJECT_DIR$/out/production/KillEveryone/resources/shockwave.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/resources/shockwave_candidate1.png" afterPath="$PROJECT_DIR$/out/production/KillEveryone/resources/shockwave_candidate1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/shockwave.png" afterPath="$PROJECT_DIR$/src/resources/shockwave.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Friendly.java" afterPath="$PROJECT_DIR$/src/Friendly.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Hostile.java" afterPath="$PROJECT_DIR$/src/Hostile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Launcher.java" afterPath="$PROJECT_DIR$/src/Launcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Misc.java" afterPath="$PROJECT_DIR$/src/Misc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/shockwave_candidate1.png" afterPath="$PROJECT_DIR$/src/resources/shockwave_candidate1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,117 +53,46 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+      <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="235" column="13" lean-forward="true" selection-start-line="235" selection-start-column="13" selection-end-line="235" selection-end-column="13" />
+            <state relative-caret-position="345">
+              <caret line="767" column="0" lean-forward="true" selection-start-line="767" selection-start-column="0" selection-end-line="767" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="class#Launcher#0" expanded="false" />
-                <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#cursor_frameUpdate#0;class#Resources#0" expanded="false" />
+                <element signature="class#Resources#0" expanded="false" />
                 <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#importEnemyResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#importPlayerResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#cleanUpAnimation#0;class#Resources#0" expanded="false" />
-                <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
-                <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
+                <element signature="e#15986#15987#0" expanded="true" />
+                <element signature="e#16018#16019#0" expanded="true" />
                 <element signature="class#GameGUI#0" expanded="false" />
-                <element signature="method#init#0;class#GameGUI#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Misc.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Misc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="188" column="52" lean-forward="false" selection-start-line="188" selection-start-column="52" selection-end-line="188" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="class#ConfirmStart#0" expanded="false" />
-                <element signature="e#886#961#0" expanded="false" />
-                <element signature="e#1238#1282#0" expanded="false" />
-                <element signature="e#2949#3271#0" expanded="false" />
-                <element signature="e#3339#3582#0" expanded="false" />
-                <element signature="e#3644#3966#0" expanded="false" />
-                <element signature="e#4034#4277#0" expanded="false" />
-                <element signature="e#4343#5092#0" expanded="false" />
-                <element signature="e#6876#7543#0" expanded="false" />
-                <element signature="class#Space#0" expanded="false" />
+                <element signature="e#18603#18808#0" expanded="true" />
+                <element signature="e#18807#18808#0" expanded="true" />
+                <element signature="class#HUD#0" expanded="false" />
                 <element signature="class#CharacterProperties#0" expanded="false" />
-                <element signature="class#Entitative#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CollisionLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CollisionLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="57" column="58" lean-forward="false" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#871#1532#0" expanded="false" />
-                <element signature="e#1721#2098#0" expanded="false" />
-                <element signature="method#entityDistance#0;class#CollisionLogic#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bullet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bullet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="132" column="37" lean-forward="false" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="class#Space#0" expanded="false" />
                 <element signature="class#BulletProperties#0" expanded="false" />
+                <element signature="class#Bullet#0" expanded="false" />
                 <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-                <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
                 <element signature="method#hitPlayer#0;class#Bullet#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hostile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Hostile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="485" column="39" lean-forward="false" selection-start-line="485" selection-start-column="39" selection-end-line="485" selection-end-column="39" />
-              <folding>
+                <element signature="class#BulletPane#0" expanded="false" />
                 <element signature="class#Ocelot#0" expanded="false" />
                 <element signature="class#Karmakazi#0" expanded="false" />
                 <element signature="class#RegularEnemy#0" expanded="false" />
-                <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-                <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-                <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-                <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Friendly.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Friendly.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="411" column="60" lean-forward="false" selection-start-line="411" selection-start-column="60" selection-end-line="411" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#1414:2368" expanded="false" />
-                <element signature="e#3777#4756#0" expanded="false" />
-                <element signature="e#5077#6233#0" expanded="false" />
-                <element signature="e#6857#7175#0" expanded="false" />
-                <element signature="e#7303#7678#0" expanded="false" />
-                <element signature="e#7995#8332#0" expanded="false" />
-                <element signature="e#8522#8896#0" expanded="false" />
-                <element signature="method#protect_init#0;class#Player#0" expanded="false" />
+                <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
+                <element signature="method#collisionDeath#0;class#RegularEnemy#0" expanded="false" />
+                <element signature="method#explode#0;class#RegularEnemy#0" expanded="false" />
+                <element signature="class#EnemyPane#0" expanded="false" />
+                <element signature="class#Hostile#0" expanded="false" />
+                <element signature="class#CollisionLogic#0" expanded="false" />
+                <element signature="e#55924#55925#0" expanded="true" />
+                <element signature="e#55984#55985#0" expanded="true" />
+                <element signature="class#Entitative#0" expanded="false" />
+                <element signature="class#Player#0" expanded="false" />
+                <element signature="e#60107#60477#0" expanded="true" />
+                <element signature="e#60476#60477#0" expanded="true" />
+                <element signature="e#63321#63523#0" expanded="true" />
+                <element signature="e#63522#63523#0" expanded="true" />
                 <element signature="class#FriendlyPane#0" expanded="false" />
               </folding>
             </state>
@@ -156,12 +119,21 @@
       <find>teleport</find>
       <find>heat_factor</find>
       <find>protect_bubble</find>
-      <find>newScheduledThreadPool</find>
       <find>health_number</find>
       <find>weapon_box</find>
       <find>over_heating</find>
       <find>launcher</find>
       <find>Resources/</find>
+      <find>space</find>
+      <find>space_background</find>
+      <find>shockWave</find>
+      <find>heat</find>
+      <find>//</find>
+      <find>parallel</find>
+      <find>newScheduledThreadPool</find>
+      <find>forEach</find>
+      <find>delay</find>
+      <find>true</find>
     </findStrings>
     <replaceStrings>
       <replace>FriendlyPane</replace>
@@ -183,12 +155,15 @@
         <option value="$PROJECT_DIR$/src/KillEveryone.java" />
         <option value="$PROJECT_DIR$/src/Enemy.java" />
         <option value="$PROJECT_DIR$/src/Untitled_Project.java" />
-        <option value="$PROJECT_DIR$/src/CollisionLogic.java" />
+        <option value="$PROJECT_DIR$/src/Friendly.java" />
+        <option value="$PROJECT_DIR$/src/Misc.java" />
+        <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/src/Bullet.java" />
         <option value="$PROJECT_DIR$/src/Hostile.java" />
-        <option value="$PROJECT_DIR$/src/Friendly.java" />
-        <option value="$PROJECT_DIR$/src/Launcher.java" />
-        <option value="$PROJECT_DIR$/src/Misc.java" />
+        <option value="$PROJECT_DIR$/src/Space.java" />
+        <option value="$PROJECT_DIR$/src/CollisionLogic.java" />
+        <option value="$PROJECT_DIR$/Asteroid.java" />
+        <option value="$PROJECT_DIR$/src/Asteroid.java" />
       </list>
     </option>
   </component>
@@ -220,7 +195,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -249,8 +223,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -734,49 +709,93 @@
       <workItem from="1495381219963" duration="1473000" />
       <workItem from="1495387438119" duration="19619000" />
       <workItem from="1495420291711" duration="6000" />
-      <workItem from="1495460586793" duration="1302000" />
+      <workItem from="1495460586793" duration="5533000" />
+      <workItem from="1495482904712" duration="4474000" />
+      <workItem from="1495498841545" duration="1463000" />
+      <workItem from="1495501447767" duration="954000" />
+      <workItem from="1495549504322" duration="1870000" />
+      <workItem from="1495554936108" duration="73000" />
+      <workItem from="1495555344951" duration="704000" />
+      <workItem from="1495576310091" duration="12157000" />
+      <workItem from="1495593170821" duration="84000" />
+      <workItem from="1495629711714" duration="1520000" />
+      <workItem from="1495641500495" duration="1622000" />
+      <workItem from="1495643746219" duration="64000" />
+      <workItem from="1495722694195" duration="3686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61587000" />
+    <option name="totallyTimeSpent" value="94489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.33402777" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.37911302" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.6791667" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.444206" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.32083333" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.555794" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20902778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24391988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41686746" sideWeight="0.48855507" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.6791667" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49166667" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.33402777" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.32083333" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20902778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -786,7 +805,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="88" />
+      <option name="time" value="101" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -795,9 +814,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
-    <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
-    <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
@@ -894,107 +910,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="132" column="37" lean-forward="false" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#BulletProperties#0" expanded="false" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
-            <element signature="method#cleanUp#0;class#Bullet#0" expanded="false" />
-            <element signature="method#hitPlayer#0;class#Bullet#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CollisionLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="57" column="58" lean-forward="false" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#871#1532#0" expanded="false" />
-            <element signature="e#1721#2098#0" expanded="false" />
-            <element signature="method#entityDistance#0;class#CollisionLogic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hostile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="485" column="39" lean-forward="false" selection-start-line="485" selection-start-column="39" selection-end-line="485" selection-end-column="39" />
-          <folding>
-            <element signature="class#Ocelot#0" expanded="false" />
-            <element signature="class#Karmakazi#0" expanded="false" />
-            <element signature="class#RegularEnemy#0" expanded="false" />
-            <element signature="method#paintComponent#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addRegularEnemy#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addKarmakazi#0;class#EnemyPane#0" expanded="false" />
-            <element signature="method#addOcelot#0;class#EnemyPane#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Friendly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="411" column="60" lean-forward="false" selection-start-line="411" selection-start-column="60" selection-end-line="411" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#1414:2368" expanded="false" />
-            <element signature="e#3777#4756#0" expanded="false" />
-            <element signature="e#5077#6233#0" expanded="false" />
-            <element signature="e#6857#7175#0" expanded="false" />
-            <element signature="e#7303#7678#0" expanded="false" />
-            <element signature="e#7995#8332#0" expanded="false" />
-            <element signature="e#8522#8896#0" expanded="false" />
-            <element signature="method#protect_init#0;class#Player#0" expanded="false" />
-            <element signature="class#FriendlyPane#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="235" column="13" lean-forward="true" selection-start-line="235" selection-start-column="13" selection-end-line="235" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#Launcher#0" expanded="false" />
-            <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#cursor_frameUpdate#0;class#Resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#cleanUpAnimation#0;class#Resources#0" expanded="false" />
-            <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
-            <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
-            <element signature="class#GameGUI#0" expanded="false" />
-            <element signature="method#init#0;class#GameGUI#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Misc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="188" column="52" lean-forward="false" selection-start-line="188" selection-start-column="52" selection-end-line="188" selection-end-column="52" />
+        <state relative-caret-position="418">
+          <caret line="320" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Space.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="151" column="1" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="151" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="221" column="1" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="221" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hostile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="621" column="1" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="621" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CollisionLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="73" column="1" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="73" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Friendly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="512" column="1" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="512" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asteroid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="2263" column="1" lean-forward="false" selection-start-line="2263" selection-start-column="1" selection-end-line="2263" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="767" column="0" lean-forward="true" selection-start-line="767" selection-start-column="0" selection-end-line="767" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="class#Launcher#0" expanded="false" />
+            <element signature="class#Resources#0" expanded="false" />
+            <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
+            <element signature="e#15986#15987#0" expanded="true" />
+            <element signature="e#16018#16019#0" expanded="true" />
+            <element signature="class#GameGUI#0" expanded="false" />
             <element signature="class#ConfirmStart#0" expanded="false" />
-            <element signature="e#886#961#0" expanded="false" />
-            <element signature="e#1238#1282#0" expanded="false" />
-            <element signature="e#2949#3271#0" expanded="false" />
-            <element signature="e#3339#3582#0" expanded="false" />
-            <element signature="e#3644#3966#0" expanded="false" />
-            <element signature="e#4034#4277#0" expanded="false" />
-            <element signature="e#4343#5092#0" expanded="false" />
-            <element signature="e#6876#7543#0" expanded="false" />
-            <element signature="class#Space#0" expanded="false" />
+            <element signature="e#18603#18808#0" expanded="true" />
+            <element signature="e#18807#18808#0" expanded="true" />
+            <element signature="class#HUD#0" expanded="false" />
             <element signature="class#CharacterProperties#0" expanded="false" />
+            <element signature="class#Space#0" expanded="false" />
+            <element signature="class#BulletProperties#0" expanded="false" />
+            <element signature="class#Bullet#0" expanded="false" />
+            <element signature="method#Bullet#0;class#Bullet#0" expanded="false" />
+            <element signature="method#hitPlayer#0;class#Bullet#0" expanded="false" />
+            <element signature="class#BulletPane#0" expanded="false" />
+            <element signature="class#Ocelot#0" expanded="false" />
+            <element signature="class#Karmakazi#0" expanded="false" />
+            <element signature="class#RegularEnemy#0" expanded="false" />
+            <element signature="method#RegularEnemy#0;class#RegularEnemy#0" expanded="false" />
+            <element signature="method#collisionDeath#0;class#RegularEnemy#0" expanded="false" />
+            <element signature="method#explode#0;class#RegularEnemy#0" expanded="false" />
+            <element signature="class#EnemyPane#0" expanded="false" />
+            <element signature="class#Hostile#0" expanded="false" />
+            <element signature="class#CollisionLogic#0" expanded="false" />
+            <element signature="e#55924#55925#0" expanded="true" />
+            <element signature="e#55984#55985#0" expanded="true" />
             <element signature="class#Entitative#0" expanded="false" />
+            <element signature="class#Player#0" expanded="false" />
+            <element signature="e#60107#60477#0" expanded="true" />
+            <element signature="e#60476#60477#0" expanded="true" />
+            <element signature="e#63321#63523#0" expanded="true" />
+            <element signature="e#63522#63523#0" expanded="true" />
+            <element signature="class#FriendlyPane#0" expanded="false" />
           </folding>
         </state>
       </provider>
