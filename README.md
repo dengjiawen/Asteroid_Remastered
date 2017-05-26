@@ -11,6 +11,8 @@ The coding for the program is currently being optimized and simplified.
 - [x] Shrink code line count from 5,000 to 1,500
 - [x] Add teleportation and protective shield
 - [x] Add shockwave
+- [x] Add asteroids
+- [ ] Add functional asteroid fragments
 - [ ] Add call backup feature
 - [ ] Add new enemy classes
 
