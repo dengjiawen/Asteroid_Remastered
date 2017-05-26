@@ -4,11 +4,11 @@ import kuusisto.tinysound.TinySound;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.TimerTask;
+import java.util.*;
 import java.util.concurrent.*;
 
 class Launcher {
@@ -27,15 +27,13 @@ class Launcher {
         JOptionPane.showMessageDialog(null,"Close this window to start.","Close",JOptionPane.INFORMATION_MESSAGE);
 
         notify.addActionListener(e -> {
-            System.out.println("checking");
+
             if (player_loaded && enemy_loaded && hud_loaded && space_loaded){
 
                 SwingUtilities.invokeLater(() -> {
                     gameGUI = new GameGUI();
                     gameGUI.setVisible(true);
                 });
-
-                System.out.println("Woke");
 
                 notify.stop();
             }
@@ -86,6 +84,7 @@ class Resources {
     public static final BufferedImage[] weapon_state_overHeat = new BufferedImage[30];
 
     public static final BufferedImage[] asteroid_fire = new BufferedImage[180];
+    public static final BufferedImage[] asteroid_normal = new BufferedImage[180];
     public static final BufferedImage[] asteroid_ice = new BufferedImage[317];
 
     public static final BufferedImage[] player_teleport = new BufferedImage[11];
@@ -232,7 +231,6 @@ class Resources {
             }
 
             Launcher.enemy_loaded = true;
-            System.out.println(Launcher.enemy_loaded);
 
             enemy_resources.shutdownNow();
         });
@@ -261,7 +259,6 @@ class Resources {
             }
 
             Launcher.player_loaded = true;
-            System.out.println(Launcher.player_loaded);
 
             player_resources.shutdownNow();
         });
@@ -301,7 +298,6 @@ class Resources {
             }
 
             Launcher.hud_loaded = true;
-            System.out.println(Launcher.hud_loaded);
 
             HUD_resources.shutdownNow();
         });
@@ -316,6 +312,7 @@ class Resources {
                 }
                 for (int i = 0; i < 180; i++){
                     asteroid_fire[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/sequence/" + i + ".png"));
+                    asteroid_normal[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/sequence/" + i + ".png"));
                 }
                 for (int i = 0; i < 317; i++){
                     asteroid_ice[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/sequence/" + i + ".png"));
@@ -325,7 +322,6 @@ class Resources {
             }
 
             Launcher.space_loaded = true;
-            System.out.println(Launcher.space_loaded);
 
             space_resources.shutdownNow();
         });
@@ -347,7 +343,6 @@ class Resources {
 
     private static void fileNotFound(Exception e) {
 
-        System.out.println(e);
         JOptionPane.showMessageDialog(null,"One or more files required to run this program is missing.\n" +
                 "Please ensure that the \"resource\" folder is in the same folder as the java files.","Error",JOptionPane.ERROR_MESSAGE);
         System.exit(20);
@@ -395,8 +390,6 @@ class GameGUI extends JFrame{
 
         Resources.cursor_frameUpdate();
 
-        System.out.println(SwingUtilities.isEventDispatchThread());
-
         bullet_pane = new BulletPane();
         hud = new HUD();
 
@@ -404,7 +397,7 @@ class GameGUI extends JFrame{
         space = new Space();
         player = new Player(new Point((Resources.FRAME_WIDTH - Resources.player_sprite.getWidth())/2, 650));
         enemy_pane = new EnemyPane();
-        collision_logic = new CollisionLogic(EnemyPane.enemies, BulletPane.bullets,player);
+        collision_logic = new CollisionLogic(EnemyPane.enemies, BulletPane.bullets, Space.asteroids, player);
 
         Resources.music();
 
@@ -741,19 +734,22 @@ class Asteroid implements Entitative{
     private int asteroid_frameCount;
 
     private Timer asteroid_frameUpdate;
-
     private Timer explode_frameUpdate;
 
-    public Asteroid(Point origin, int asteroidType){
+    private int asteroidKey;
+
+    public Asteroid(Point origin, int asteroidType, int asteroidKey){
 
         explode_frameUpdate = new Timer(Resources.REFRESH_RATE,null);
 
         hitBox = new Rectangle();
 
+        this.asteroidKey = asteroidKey;
+
         asteroid_properties = new CharacterProperties(origin, 200, -1);
         asteroid_frameCount = 0;
 
-        asteroid_frameUpdate = new Timer((int)(Resources.REFRESH_RATE * 1.5),null);
+        asteroid_frameUpdate = new Timer(Resources.REFRESH_RATE,null);
         asteroid_frameUpdate.addActionListener(e -> {
 
             if (asteroid_properties.health <= 0){
@@ -766,7 +762,7 @@ class Asteroid implements Entitative{
 
                 asteroid_sprite = Resources.asteroid_ice[asteroid_frameCount];
 
-                hitBox.setBounds(asteroid_properties.getX() + 80, asteroid_properties.getY() + 80, 60,60);
+                hitBox.setBounds(asteroid_properties.getX() + 78, asteroid_properties.getY() + 78, 58,58);
 
                 if (asteroid_frameCount < Resources.asteroid_ice.length - 1) {
                     asteroid_frameCount++;
@@ -780,6 +776,16 @@ class Asteroid implements Entitative{
 
                 if (asteroid_frameCount < Resources.asteroid_fire.length - 1) {
                     asteroid_frameCount++;
+                } else {
+                    asteroid_frameCount = 0;
+                }
+            } else if (asteroidType == 3){
+                asteroid_sprite = Resources.asteroid_normal[asteroid_frameCount];
+
+                hitBox.setBounds(asteroid_properties.getX() + 14, asteroid_properties.getY() + 14, 58, 58);
+
+                if (asteroid_frameCount < Resources.asteroid_fire.length - 1){
+                    asteroid_frameCount ++;
                 } else {
                     asteroid_frameCount = 0;
                 }
@@ -815,6 +821,7 @@ class Asteroid implements Entitative{
             if (asteroid_frameCount < 21) {
                 asteroid_frameCount++;
             } else if (asteroid_frameCount >= 21) {
+                Space.asteroids.remove(asteroidKey);
                 explode_frameUpdate.stop();
             }
 
@@ -826,7 +833,121 @@ class Asteroid implements Entitative{
 
 }
 
+class AsteroidFragment implements Entitative {
+
+    public BufferedImage fragment_sprite;
+
+    private int targetTime;
+    private int currentTime;
+    private int explosion_frameCount;
+
+    private Rectangle hitBox;
+    private BulletProperties fragment_properties;
+
+    private Timer fragment_impact_frameUpdate;
+
+    private final int x1;
+    private final int x2;
+    private final int y1;
+    private final int y2;
+
+    public AsteroidFragment(Point origin, Point target, int fragmentKey, int fragmentType) {
+
+        x1 = origin.x;
+        x2 = target.x;
+        y1 = origin.y;
+        y2 = target.y;
+
+        targetTime = 800;
+        currentTime = 0;
+        explosion_frameCount = 0;
+        hitBox = new Rectangle();
+        fragment_properties = new BulletProperties(origin, null, fragmentKey);
+
+
+
+        fragment_impact_frameUpdate = new Timer(Resources.REFRESH_RATE, null);
+        fragment_impact_frameUpdate.addActionListener(e -> {
+            if (explosion_frameCount < 8) {
+                fragment_sprite = Resources.bullet_impact[explosion_frameCount];
+                explosion_frameCount++;
+            } else {
+                fragment_impact_frameUpdate.stop();
+                cleanUp();
+            }
+        });
+    }
+
+    private void cleanUp() {
+        BulletPane.bullets.remove(fragment_properties.bulletKey);
+    }
+
+    public void hitPlayer() {
+
+        GameGUI.player.changeHealth(-15);
+
+        fragment_properties.hit = true;
+    }
+
+    public void hitEnemy(Hostile e){
+
+        e.enemy_properties().health -= 25;
+
+        fragment_impact_frameUpdate.start();
+        fragment_properties.hit = true;
+    }
+
+    public void hitNothing() {
+        fragment_impact_frameUpdate.start();
+        fragment_properties.hit = true;
+    }
+
+    public void hitAsteroid(Asteroid a){
+
+        a.asteroid_properties.health -= 20;
+
+        fragment_impact_frameUpdate.start();
+        fragment_properties.hit = true;
+    }
+
+    public boolean isViableBullet(){
+        return !this.fragment_properties.hit;
+    }
+
+    public boolean isEnemyBullet(){
+        return this.fragment_properties.enemy_fire;
+    }
+
+    public Point location() {
+        return fragment_properties.location;
+    }
+
+    public Rectangle hitBox() {
+        updateHitBox();
+        return hitBox;
+    }
+
+    public void updateHitBox() {
+        hitBox.setBounds(fragment_properties.getX(), fragment_properties.getY(), 10, 10);
+    }
+
+    public void tickUpdate() {
+
+        fragment_properties.setLocation(
+                (x1 + currentTime * (x2 - x1) / targetTime),
+                (y1 + currentTime * (y2 - y1) / targetTime));
+
+        currentTime += 33;
+
+        if (fragment_properties.outOfFrame()) {
+            cleanUp();
+        }
+    }
+}
+
 class Space extends JPanel {
+
+    private int asteroidCount;
 
     private int y1;
     private int y2;
@@ -834,7 +955,7 @@ class Space extends JPanel {
     private Timer background_frameUpdate;
     private Timer spawn_asteroid;
 
-    public static ArrayList<Asteroid> asteroids = new ArrayList<>();
+    public static ConcurrentHashMap<Integer,Asteroid> asteroids = new ConcurrentHashMap<>();
 
     public Space() {
 
@@ -847,7 +968,9 @@ class Space extends JPanel {
         y1 = 0;
         y2 = -1 * Resources.FRAME_HEIGHT;
 
-        spawn_asteroid = new Timer(Resources.REFRESH_RATE * 5, e -> {
+        asteroidCount = 0;
+
+        spawn_asteroid = new Timer(Resources.REFRESH_RATE * 8, e -> {
             spawnAsteroid();
         });
         spawn_asteroid.start();
@@ -876,15 +999,14 @@ class Space extends JPanel {
         g.drawImage(Resources.space_background[1], 0, y2, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT,this);
 
         Graphics2D g2d = (Graphics2D)g;
-        g2d.setColor(new Color(255,0,0,150));
 
-        asteroids.forEach(asteroid -> {
+        asteroids.forEach((key,asteroid) -> {
             g.drawImage(asteroid.asteroid_sprite,asteroid.asteroid_properties.getX(),asteroid.asteroid_properties.getY(),this);
         });
     }
 
     private boolean isSpawnAsteroid() {
-        if (Math.random() < 0.7){
+        if (Math.random() < 0.95){
             return false;
         } else {
             return true;
@@ -893,12 +1015,27 @@ class Space extends JPanel {
 
     private void spawnAsteroid() {
 
-        int x = ThreadLocalRandom.current().nextInt(0, Resources.FRAME_WIDTH);
+        Point origin = new Point(ThreadLocalRandom.current().nextInt(0, Resources.FRAME_WIDTH),-200);
+        boolean spawn = true;
 
-        if (isSpawnAsteroid()) {
-            asteroids.add(new Asteroid(
-                    new Point(ThreadLocalRandom.current().nextInt(0, Resources.FRAME_WIDTH), -200),
-                    ThreadLocalRandom.current().nextInt(1, 2 + 1)));
+        for (int i = 0; i < asteroids.size(); i++){
+            if (asteroids.get(i) != null) {
+                if (CollisionLogic.entityDistance(asteroids.get(i).location(), origin) < 10) {
+                    spawn = false;
+                }
+            }
+        }
+
+
+        if (isSpawnAsteroid() && spawn) {
+            asteroids.put(asteroidCount,new Asteroid(origin,
+                    ThreadLocalRandom.current().nextInt(1, 3 + 1),asteroidCount));
+            asteroidCount ++;
+
+            if (asteroidCount == Integer.MAX_VALUE){
+                asteroidCount = 0;
+            }
+
             this.repaint();
         }
     }
@@ -909,16 +1046,18 @@ class BulletProperties {
 
     public Point location;
 
-    public final boolean enemy_fire;
+    public final Boolean enemy_fire;
     public final boolean large_bullet;
 
     public boolean hit;
+    public int bulletKey;
 
-    public BulletProperties(Point location, boolean enemy_fire) {
+    public BulletProperties(Point location, Boolean enemy_fire, int bulletKey) {
         this.location = location;
         this.enemy_fire = enemy_fire;
         this.large_bullet = Resources.large_bullet;
         this.hit = false;
+        this.bulletKey = bulletKey;
     }
 
     public int getX () {
@@ -960,7 +1099,7 @@ class Bullet implements Entitative {
     private final int y1;
     private final int y2;
 
-    public Bullet(Point origin, Point target, boolean enemy_fire) {
+    public Bullet(Point origin, Point target, boolean enemy_fire, int bulletKey) {
 
         Resources.bulletSound(enemy_fire);
 
@@ -973,7 +1112,7 @@ class Bullet implements Entitative {
         currentTime = 0;
         explosion_frameCount = 0;
         hitBox = new Rectangle();
-        bullet_properties = new BulletProperties(origin, enemy_fire);
+        bullet_properties = new BulletProperties(origin, enemy_fire, bulletKey);
 
         if (bullet_properties.large_bullet){
             bullet_sprite = Resources.large_bullet_sprite;
@@ -994,7 +1133,7 @@ class Bullet implements Entitative {
     }
 
     private void cleanUp() {
-        BulletPane.removeBullet(this);
+        BulletPane.bullets.remove(bullet_properties.bulletKey);
     }
 
     public void hitPlayer() {
@@ -1023,8 +1162,6 @@ class Bullet implements Entitative {
     }
 
     public void hitAsteroid(Asteroid a){
-
-        System.out.println("Hit Asteroid");
 
         a.asteroid_properties.health -= 20;
 
@@ -1073,7 +1210,7 @@ class Bullet implements Entitative {
 
 class BulletPane extends JPanel {
 
-    public static ArrayList<Bullet> bullets = new ArrayList<>();
+    public static ConcurrentHashMap<Integer,Bullet> bullets = new ConcurrentHashMap<>();
     private int bulletCount = 0;
 
     private ScheduledExecutorService bullet_periodic_update;
@@ -1089,7 +1226,7 @@ class BulletPane extends JPanel {
         bullet_location_update = Executors.newCachedThreadPool();
         bullet_periodic_update.scheduleAtFixedRate(() -> {
             bullet_location_update.submit(() -> {
-                bullets.forEach(bullet -> {
+                bullets.forEach((key, bullet) -> {
                     if (bullet.isViableBullet()) {
                         bullet.tickUpdate();
                     }
@@ -1104,7 +1241,7 @@ class BulletPane extends JPanel {
 
         super.paintComponent(g);
 
-        bullets.forEach(bullet -> {
+        bullets.forEach((key,bullet) -> {
             g.drawImage(bullet.bullet_sprite, bullet.location().x,
                     bullet.location().y, this);
         });
@@ -1115,16 +1252,15 @@ class BulletPane extends JPanel {
         final Point p1 = new Point(origin.x, origin.y);
         final Point p2 = new Point(target.x, target.y);
 
-        bullets.add(new Bullet(p1, p2, enemy_fire));
-        System.out.println("Bullet " + bulletCount + "fired");
+        bullets.put(bulletCount,new Bullet(p1, p2, enemy_fire, bulletCount));
         bulletCount++;
+
+        if (bulletCount == Integer.MAX_VALUE){
+            bulletCount = 0;
+        }
 
         repaint();
 
-    }
-
-    public static void removeBullet(Bullet bullet){
-        bullets.remove(bullet);
     }
 
 }
@@ -1145,23 +1281,19 @@ class Ocelot implements Hostile {
 
     private int onFire_frameCount;
     private int explosion_frameCount;
-    private final int enemyNumber;
+    private int enemyKey;
     private boolean collisionDeath;
 
-    Ocelot(Point origin) {
+    Ocelot(Point origin, int enemyKey) {
 
-        try {
-            ocelot_sprite = Resources.ocelot_sprite;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        ocelot_sprite = Resources.ocelot_sprite;
 
         enemy_properties = new CharacterProperties(origin, 70, 3);
         hitBox = new Rectangle();
 
         onFire_frameCount = 0;
         explosion_frameCount = 0;
-        enemyNumber = EnemyPane.enemyCount;
+        this.enemyKey = enemyKey;
         x_increment = 5;
         y_increment = 5;
         collisionDeath = false;
@@ -1229,7 +1361,7 @@ class Ocelot implements Hostile {
     }
 
     private void cleanUp() {
-        EnemyPane.enemies.remove(this);
+        EnemyPane.enemies.remove(enemyKey);
     }
 
     public CharacterProperties enemy_properties(){
@@ -1301,15 +1433,11 @@ class Karmakazi implements Hostile {
 
     private int onFire_frameCount;
     private int explosion_frameCount;
-    private final int enemyNumber;
+    private int enemyKey;
 
-    Karmakazi(Point origin) {
+    Karmakazi(Point origin, int enemyKey) {
 
-        try {
-            karmakazi_sprite = Resources.karmakazi_sprite;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        karmakazi_sprite = Resources.karmakazi_sprite;
 
         currentTime += 33;
 
@@ -1318,7 +1446,7 @@ class Karmakazi implements Hostile {
 
         onFire_frameCount = 0;
         explosion_frameCount = 0;
-        enemyNumber = EnemyPane.enemyCount;
+        this.enemyKey = enemyKey;
 
         movement_frameUpdate = new Timer(Resources.REFRESH_RATE, null);
         explode_frameUpdate = new Timer((int)(Resources.REFRESH_RATE * 1.5), null);
@@ -1375,7 +1503,7 @@ class Karmakazi implements Hostile {
     }
 
     private void cleanUp() {
-        EnemyPane.enemies.remove(this);
+        EnemyPane.enemies.remove(enemyKey);
     }
 
     public CharacterProperties enemy_properties(){
@@ -1434,22 +1562,18 @@ class RegularEnemy implements Hostile {
 
     private int onFire_frameCount;
     private int explosion_frameCount;
-    private final int enemyNumber;
+    private int enemyKey;
 
-    RegularEnemy(Point origin) {
+    RegularEnemy(Point origin, int enemyKey) {
 
-        try {
-            enemy_sprite = Resources.regular_enemy_sprite;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        enemy_sprite = Resources.regular_enemy_sprite;
 
         enemy_properties = new CharacterProperties(origin, 100, 1);
         hitBox = new Rectangle();
 
         onFire_frameCount = 0;
         explosion_frameCount = 0;
-        enemyNumber = EnemyPane.enemyCount;
+        this.enemyKey = enemyKey;
         x_increment = 1;
         y_increment = 1;
 
@@ -1508,7 +1632,7 @@ class RegularEnemy implements Hostile {
     }
 
     private void cleanUp() {
-        EnemyPane.enemies.remove(this);
+        EnemyPane.enemies.remove(enemyKey);
     }
 
     public CharacterProperties enemy_properties(){
@@ -1532,9 +1656,8 @@ class RegularEnemy implements Hostile {
     }
 
     public void tickUpdate() {
-        enemy_properties.updateLocation(x_increment,y_increment);
 
-        System.out.println(enemy_properties);
+        enemy_properties.updateLocation(x_increment,y_increment);
 
         if (enemy_properties.onBottom()) {
             y_increment = -1;
@@ -1547,6 +1670,8 @@ class RegularEnemy implements Hostile {
         } else if (enemy_properties.onLeft()) {
             x_increment = 1;
         }
+
+
 
         hitBox = new Rectangle(enemy_properties.getX() - 50, enemy_properties.getY() - 25, 60, 60);
 
@@ -1569,7 +1694,7 @@ class EnemyPane extends JPanel {
     public static ScheduledExecutorService enemy_periodic_update;
     public static ExecutorService enemy_location_update;
     public static int enemyCount = 0;
-    public static ArrayList<Hostile> enemies = new ArrayList<>();
+    public static ConcurrentHashMap<Integer,Hostile> enemies = new ConcurrentHashMap<>();
 
     public Timer scheduledSpawn;
 
@@ -1587,7 +1712,7 @@ class EnemyPane extends JPanel {
         enemy_location_update = Executors.newCachedThreadPool();
         enemy_periodic_update.scheduleAtFixedRate(() -> {
             enemy_location_update.submit(() -> {
-                enemies.forEach(enemy -> {
+                enemies.forEach((key,enemy) -> {
                     if (!enemy.isDead()) {
                         enemy.tickUpdate();
                     }
@@ -1624,7 +1749,7 @@ class EnemyPane extends JPanel {
 
         super.paintComponent(g);
 
-        enemies.forEach(enemy -> {
+        enemies.forEach((key,enemy) -> {
 
             if (enemy.enemy_properties().character_type != 6) {
 
@@ -1683,30 +1808,36 @@ class EnemyPane extends JPanel {
     public void addRegularEnemy() {
 
         int randomX = ThreadLocalRandom.current().nextInt(20, 1100);
-        enemies.add(new RegularEnemy(new Point(randomX, -50)));
+        enemies.put(enemyCount,new RegularEnemy(new Point(randomX, -50), enemyCount));
 
-        System.out.println("Enemy " + enemyCount + " created");
         enemyCount++;
+        if (enemyCount == Integer.MAX_VALUE){
+            enemyCount = 0;
+        }
 
     }
 
     public void addKarmakazi(){
 
         int randomX = ThreadLocalRandom.current().nextInt(20, 1100);
-        enemies.add(new Karmakazi(new Point(randomX, -50)));
+        enemies.put(enemyCount,new Karmakazi(new Point(randomX, -50), enemyCount));
 
-        System.out.println("Karmakazi " + enemyCount + " created");
         enemyCount++;
+        if (enemyCount == Integer.MAX_VALUE){
+            enemyCount = 0;
+        }
 
     }
 
     public void addOcelot(){
 
         int randomX = ThreadLocalRandom.current().nextInt(20, 1200);
-        enemies.add(new Ocelot(new Point(randomX, -50)));
+        enemies.put(enemyCount,new Ocelot(new Point(randomX, -50), enemyCount));
 
-        System.out.println("Ocelot " + enemyCount + " created");
         enemyCount++;
+        if (enemyCount == Integer.MAX_VALUE){
+            enemyCount = 0;
+        }
 
     }
 
@@ -1751,7 +1882,9 @@ class CollisionLogic {
     private ExecutorService cached_pool_bullet;
     private ExecutorService cached_pool_enemy;
 
-    public CollisionLogic(ArrayList<Hostile> enemies, ArrayList<Bullet> bullets, Player player){
+    public CollisionLogic(ConcurrentHashMap<Integer,Hostile> enemies,
+                          ConcurrentHashMap<Integer,Bullet> bullets,
+                          ConcurrentHashMap<Integer,Asteroid> asteroids, Player player){
 
         cached_pool_bullet = Executors.newCachedThreadPool();
         cached_pool_enemy = Executors.newCachedThreadPool();
@@ -1759,13 +1892,14 @@ class CollisionLogic {
         bullet_collision = Executors.newScheduledThreadPool(1);
         bullet_collision.scheduleAtFixedRate(() -> {
             cached_pool_bullet.submit(() -> {
-                bullets.forEach(bullet -> {
+                bullets.forEach((key,bullet) -> {
                     if (bullet.isViableBullet()){
 
-                        Space.asteroids.forEach(asteroid -> {
+                        asteroids.forEach((key1,asteroid) -> {
                             if (distanceCheck(bullet,asteroid)){
                                 if (collisionCheck(bullet,asteroid)){
                                     bullet.hitAsteroid(asteroid);
+                                    System.out.println("hit");
                                 }
                             }
                         });
@@ -1775,7 +1909,7 @@ class CollisionLogic {
                                 bullet.hitPlayer();
                             }
                         } else if (!bullet.isEnemyBullet()){
-                            enemies.forEach(enemy -> {
+                            enemies.forEach((key1,enemy) -> {
                                 if (collisionCheck(enemy,bullet)){
                                     bullet.hitEnemy(enemy);
                                 }
@@ -1789,12 +1923,19 @@ class CollisionLogic {
         enemy_collision = Executors.newScheduledThreadPool(1);
         enemy_collision.scheduleAtFixedRate(() -> {
             cached_pool_enemy.submit(() -> {
-                enemies.forEach(enemy -> {
+                enemies.forEach((key,enemy) -> {
                     if (!enemy.isDead() && distanceCheck(enemy, player)) {
                         if (collisionCheck(enemy, player)) {
                             enemy.collisionDeath();
                         }
                     }
+                    asteroids.forEach((key1,asteroid) -> {
+                        if (!enemy.isDead() && distanceCheck(enemy, asteroid)) {
+                            if (collisionCheck(enemy, asteroid)) {
+                                enemy.explode(true);
+                            }
+                        }
+                    });
                 });
             });
         },0,Resources.REFRESH_RATE,TimeUnit.MILLISECONDS);
@@ -1802,7 +1943,7 @@ class CollisionLogic {
     }
 
     private boolean distanceCheck(Entitative e1, Entitative e2){
-        return entityDistance(e1.location(), e2.location()) < 100;
+        return entityDistance(e1.location(), e2.location()) < 200;
     }
 
     private boolean collisionCheck (Entitative e1, Entitative e2){
@@ -2190,13 +2331,13 @@ class Player extends JPanel implements ActionListener, Entitative {
 
             this.repaint();
 
-            BulletPane.bullets.forEach(bullet -> {
+            BulletPane.bullets.forEach((key,bullet) -> {
                 if (shockwave_hitBox.intersects(bullet.hitBox())){
                     bullet.hitNothing();
                 }
             });
 
-            EnemyPane.enemies.forEach(enemy -> {
+            EnemyPane.enemies.forEach((key,enemy) -> {
                 if (shockwave_hitBox.intersects(enemy.hitBox()) && !(enemy.location().y < 0)){
                     enemy.explode(true);
                 }
@@ -2219,11 +2360,8 @@ class Player extends JPanel implements ActionListener, Entitative {
 
         Timer protect_init = new Timer (Resources.REFRESH_RATE, null);
 
-        System.out.println(" triggered");
-
         protect_init.addActionListener(e -> {
 
-            System.out.println("timer triggered");
             protect_bubble = Resources.bubble_init[protect_frameCount];
             this.repaint();
 
@@ -2310,21 +2448,6 @@ class Player extends JPanel implements ActionListener, Entitative {
             health_percentage = 100;
         }
         return health_percentage;
-    }
-
-}
-
-class FriendlyPane extends JPanel {
-
-    FriendlyPane() {
-
-        super();
-
-        setBounds(0, 0, 1280, 750);
-        setLayout(null);
-        setOpaque(false);
-
-
     }
 
 }
