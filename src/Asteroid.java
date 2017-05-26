@@ -84,8 +84,17 @@ class Resources {
     public static final BufferedImage[] weapon_state_overHeat = new BufferedImage[30];
 
     public static final BufferedImage[] asteroid_fire = new BufferedImage[180];
+    public static final BufferedImage[] fire_frag_s = new BufferedImage[240];
+    public static final BufferedImage[] fire_frag_m = new BufferedImage[240];
+    public static final BufferedImage[] fire_frag_lg = new BufferedImage[240];
     public static final BufferedImage[] asteroid_normal = new BufferedImage[180];
+    public static final BufferedImage[] normal_frag_s = new BufferedImage[240];
+    public static final BufferedImage[] normal_frag_m = new BufferedImage[240];
+    public static final BufferedImage[] normal_frag_lg = new BufferedImage[240];
     public static final BufferedImage[] asteroid_ice = new BufferedImage[317];
+    public static final BufferedImage[] ice_frag_s = new BufferedImage[240];
+    public static final BufferedImage[] ice_frag_m = new BufferedImage[240];
+    public static final BufferedImage[] ice_frag_lg = new BufferedImage[240];
 
     public static final BufferedImage[] player_teleport = new BufferedImage[11];
     public static final BufferedImage[] bubble_init = new BufferedImage[30];
@@ -310,13 +319,26 @@ class Resources {
                 for (int i = 0; i < 2; i++) {
                     space_background[i] = ImageIO.read(Resources.class.getResource("/resources/background_loop.jpg"));
                 }
-                for (int i = 0; i < 180; i++){
+                for (int i = 0; i < 180; i++) {
                     asteroid_fire[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/sequence/" + i + ".png"));
                     asteroid_normal[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/sequence/" + i + ".png"));
                 }
-                for (int i = 0; i < 317; i++){
+                for (int i = 0; i < 317; i++) {
                     asteroid_ice[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/sequence/" + i + ".png"));
                 }
+
+                for (int i = 0; i < 240; i++) {
+                    fire_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_s_seq/" + i + ".png"));
+                    fire_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_m_seq/" + i + ".png"));
+                    fire_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_lg_seq/" + i + ".png"));
+                    ice_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_s_seq/" + i + ".png"));
+                    ice_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_m_seq/" + i + ".png"));
+                    ice_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_lg_seq/" + i + ".png"));
+                    normal_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_s_seq/" + i + ".png"));
+                    normal_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_m_seq/" + i + ".png"));
+                    normal_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_lg_seq/" + i + ".png"));
+                }
+
             } catch (java.io.IOException e) {
                 fileNotFound(e);
             }
@@ -737,6 +759,7 @@ class Asteroid implements Entitative{
     private Timer explode_frameUpdate;
 
     private int asteroidKey;
+    private int asteroidType;
 
     public Asteroid(Point origin, int asteroidType, int asteroidKey){
 
@@ -745,6 +768,7 @@ class Asteroid implements Entitative{
         hitBox = new Rectangle();
 
         this.asteroidKey = asteroidKey;
+        this.asteroidType = asteroidType;
 
         asteroid_properties = new CharacterProperties(origin, 200, -1);
         asteroid_frameCount = 0;
@@ -829,6 +853,8 @@ class Asteroid implements Entitative{
 
         explode_frameUpdate.start();
 
+        GameGUI.space.spawnAsteroidFragment(new Point(location().x,location().y),asteroidType);
+
     }
 
 }
@@ -839,7 +865,7 @@ class AsteroidFragment implements Entitative {
 
     private int targetTime;
     private int currentTime;
-    private int explosion_frameCount;
+    private int fragment_frameCount;
 
     private Rectangle hitBox;
     private BulletProperties fragment_properties;
@@ -851,26 +877,29 @@ class AsteroidFragment implements Entitative {
     private final int y1;
     private final int y2;
 
-    public AsteroidFragment(Point origin, Point target, int fragmentKey, int fragmentType) {
+    private int asteroidType;
+    private int fragmentType;
+
+    public AsteroidFragment(Point origin, int fragmentKey, int asteroidType, int fragmentType) {
 
         x1 = origin.x;
-        x2 = target.x;
+        x2 = ThreadLocalRandom.current().nextInt(origin.x - 200,origin.x + 200);
         y1 = origin.y;
-        y2 = target.y;
+        y2 = ThreadLocalRandom.current().nextInt(origin.y - 100,origin.y + 100);
 
-        targetTime = 800;
+        targetTime = 700;
         currentTime = 0;
-        explosion_frameCount = 0;
+        this.asteroidType = asteroidType;
+        this.fragmentType = fragmentType;
+        fragment_frameCount = 0;
         hitBox = new Rectangle();
         fragment_properties = new BulletProperties(origin, null, fragmentKey);
 
-
-
         fragment_impact_frameUpdate = new Timer(Resources.REFRESH_RATE, null);
         fragment_impact_frameUpdate.addActionListener(e -> {
-            if (explosion_frameCount < 8) {
-                fragment_sprite = Resources.bullet_impact[explosion_frameCount];
-                explosion_frameCount++;
+            if (fragment_frameCount < 8) {
+                fragment_sprite = Resources.bullet_impact[fragment_frameCount];
+                fragment_frameCount ++;
             } else {
                 fragment_impact_frameUpdate.stop();
                 cleanUp();
@@ -933,11 +962,43 @@ class AsteroidFragment implements Entitative {
 
     public void tickUpdate() {
 
+        if (asteroidType == 1){
+            if (fragmentType == 1){
+                fragment_sprite = Resources.ice_frag_s[fragment_frameCount];
+            } else if (fragmentType == 2){
+                fragment_sprite = Resources.ice_frag_m[fragment_frameCount];
+            } else if (fragmentType == 3){
+                fragment_sprite = Resources.ice_frag_lg[fragment_frameCount];
+            }
+        } else if (asteroidType == 2){
+            if (fragmentType == 1){
+                fragment_sprite = Resources.fire_frag_s[fragment_frameCount];
+            } else if (fragmentType == 2){
+                fragment_sprite = Resources.fire_frag_m[fragment_frameCount];
+            } else if (fragmentType == 3){
+                fragment_sprite = Resources.fire_frag_lg[fragment_frameCount];
+            }
+        } else if (asteroidType == 3){
+            if (fragmentType == 1){
+                fragment_sprite = Resources.normal_frag_s[fragment_frameCount];
+            } else if (fragmentType == 2){
+                fragment_sprite = Resources.normal_frag_m[fragment_frameCount];
+            } else if (fragmentType == 3){
+                fragment_sprite = Resources.normal_frag_lg[fragment_frameCount];
+            }
+        }
+
         fragment_properties.setLocation(
                 (x1 + currentTime * (x2 - x1) / targetTime),
                 (y1 + currentTime * (y2 - y1) / targetTime));
 
         currentTime += 33;
+
+        if (fragment_frameCount < 240 - 1){
+            fragment_frameCount ++;
+        } else {
+            fragment_frameCount = 0;
+        }
 
         if (fragment_properties.outOfFrame()) {
             cleanUp();
@@ -948,6 +1009,7 @@ class AsteroidFragment implements Entitative {
 class Space extends JPanel {
 
     private int asteroidCount;
+    private int fragmentCount;
 
     private int y1;
     private int y2;
@@ -956,6 +1018,10 @@ class Space extends JPanel {
     private Timer spawn_asteroid;
 
     public static ConcurrentHashMap<Integer,Asteroid> asteroids = new ConcurrentHashMap<>();
+    public static ConcurrentHashMap<Integer,AsteroidFragment> asteroidFragments = new ConcurrentHashMap<>();
+
+    public ScheduledExecutorService fragment_periodic_update;
+    public ExecutorService fragment_frameUpdate;
 
     public Space() {
 
@@ -969,6 +1035,7 @@ class Space extends JPanel {
         y2 = -1 * Resources.FRAME_HEIGHT;
 
         asteroidCount = 0;
+        fragmentCount = 0;
 
         spawn_asteroid = new Timer(Resources.REFRESH_RATE * 8, e -> {
             spawnAsteroid();
@@ -987,8 +1054,18 @@ class Space extends JPanel {
 
             repaint();
         });
-
         background_frameUpdate.start();
+
+        fragment_frameUpdate = Executors.newCachedThreadPool();
+
+        fragment_periodic_update = Executors.newScheduledThreadPool(0);
+        fragment_periodic_update.scheduleAtFixedRate(() -> {
+            fragment_frameUpdate.submit(() -> {
+                asteroidFragments.forEach((key,asteroid) -> {
+                    asteroid.tickUpdate();
+                });
+            });
+        },0,Resources.REFRESH_RATE,TimeUnit.MILLISECONDS);
 
     }
 
@@ -998,11 +1075,14 @@ class Space extends JPanel {
         g.drawImage(Resources.space_background[0], 0, y1, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT, this);
         g.drawImage(Resources.space_background[1], 0, y2, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT,this);
 
-        Graphics2D g2d = (Graphics2D)g;
+        asteroidFragments.forEach((key,asteroid) -> {
+            g.drawImage(asteroid.fragment_sprite,(int)asteroid.location().getX(),(int)asteroid.location().getY(),this);
+        });
 
         asteroids.forEach((key,asteroid) -> {
-            g.drawImage(asteroid.asteroid_sprite,asteroid.asteroid_properties.getX(),asteroid.asteroid_properties.getY(),this);
+            g.drawImage(asteroid.asteroid_sprite,(int)asteroid.location().getX(),(int)asteroid.location().getY(),this);
         });
+
     }
 
     private boolean isSpawnAsteroid() {
@@ -1038,6 +1118,34 @@ class Space extends JPanel {
 
             this.repaint();
         }
+    }
+
+    public void spawnAsteroidFragment(Point origin, int asteroidType) {
+
+        asteroidFragments.put(fragmentCount,new AsteroidFragment(origin,fragmentCount,asteroidType,1));
+
+        if (fragmentCount < Integer.MAX_VALUE){
+            fragmentCount ++;
+        } else {
+            fragmentCount = 0;
+        }
+
+        asteroidFragments.put(fragmentCount,new AsteroidFragment(origin,fragmentCount,asteroidType,2));
+
+        if (fragmentCount < Integer.MAX_VALUE){
+            fragmentCount ++;
+        } else {
+            fragmentCount = 0;
+        }
+
+        asteroidFragments.put(fragmentCount,new AsteroidFragment(origin,fragmentCount,asteroidType,3));
+
+        if (fragmentCount < Integer.MAX_VALUE){
+            fragmentCount ++;
+        } else {
+            fragmentCount = 0;
+        }
+
     }
 
 }
