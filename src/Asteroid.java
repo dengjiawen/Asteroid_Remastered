@@ -1,6 +1,4 @@
-import kuusisto.tinysound.Music;
-import kuusisto.tinysound.Sound;
-import kuusisto.tinysound.TinySound;
+import libs.sound.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -67,41 +65,48 @@ class Resources {
     public static final int FRAME_WIDTH = 1450;
     public static final int FRAME_HEIGHT = 800;
 
-    public static final BufferedImage[] space_background = new BufferedImage[2];
-    public static final BufferedImage[] bullet_impact = new BufferedImage[9];
-    public static final BufferedImage[] regular_enemy_fire = new BufferedImage[44];
-    public static final BufferedImage[] karmakazi_fire = new BufferedImage[44];
-    public static final BufferedImage[] ocelot_fire = new BufferedImage[44];
-    public static final BufferedImage[] explosion = new BufferedImage[22];
-    public static final BufferedImage[] player_fire = new BufferedImage[44];
+    public static BufferedImage[] space_background = new BufferedImage[2];
+    public static BufferedImage[] bullet_impact = new BufferedImage[9];
+    public static BufferedImage[] regular_enemy_fire = new BufferedImage[44];
+    public static BufferedImage[] karmakazi_fire = new BufferedImage[44];
+    public static BufferedImage[] ocelot_fire = new BufferedImage[44];
+    public static BufferedImage[] explosion = new BufferedImage[22];
+    public static BufferedImage[] player_fire = new BufferedImage[44];
 
-    public static final BufferedImage[] left_hud = new BufferedImage[731];
-    public static final BufferedImage[] logo_hud = new BufferedImage[2 * 150];
-    public static final BufferedImage[] health_meter = new BufferedImage[80];
-    public static final BufferedImage[] low_health_meter = new BufferedImage[30];
-    public static final BufferedImage[] weapon_state_engage = new BufferedImage[180];
-    public static final BufferedImage[] weapon_state_normal = new BufferedImage[180];
-    public static final BufferedImage[] weapon_state_overHeat = new BufferedImage[30];
+    public static BufferedImage[] left_hud = new BufferedImage[731];
+    public static BufferedImage[] logo_hud = new BufferedImage[2 * 150];
+    public static BufferedImage[] health_meter = new BufferedImage[80];
+    public static BufferedImage[] low_health_meter = new BufferedImage[30];
+    public static BufferedImage[] weapon_state_engage = new BufferedImage[180];
+    public static BufferedImage[] weapon_state_normal = new BufferedImage[180];
+    public static BufferedImage[] weapon_state_overHeat = new BufferedImage[30];
+    public static BufferedImage[] backup_init = new BufferedImage[75];
+    public static BufferedImage[] shield_init = new BufferedImage[75];
+    public static BufferedImage[] shockwave_init = new BufferedImage[75];
+    public static BufferedImage[] teleport_init = new BufferedImage[75];
+    public static BufferedImage[] teleport_load = new BufferedImage[121];
+    public static BufferedImage[] shockwave_load = new BufferedImage[121];
+    public static BufferedImage[] shield_load = new BufferedImage[121];
 
-    public static final BufferedImage[] asteroid_fire = new BufferedImage[180];
-    public static final BufferedImage[] fire_frag_s = new BufferedImage[240];
-    public static final BufferedImage[] fire_frag_m = new BufferedImage[240];
-    public static final BufferedImage[] fire_frag_lg = new BufferedImage[240];
-    public static final BufferedImage[] asteroid_normal = new BufferedImage[180];
-    public static final BufferedImage[] normal_frag_s = new BufferedImage[240];
-    public static final BufferedImage[] normal_frag_m = new BufferedImage[240];
-    public static final BufferedImage[] normal_frag_lg = new BufferedImage[240];
-    public static final BufferedImage[] asteroid_ice = new BufferedImage[317];
-    public static final BufferedImage[] ice_frag_s = new BufferedImage[240];
-    public static final BufferedImage[] ice_frag_m = new BufferedImage[240];
-    public static final BufferedImage[] ice_frag_lg = new BufferedImage[240];
+    public static BufferedImage[] asteroid_fire = new BufferedImage[180];
+    public static BufferedImage[] fire_frag_s = new BufferedImage[240];
+    public static BufferedImage[] fire_frag_m = new BufferedImage[240];
+    public static BufferedImage[] fire_frag_lg = new BufferedImage[240];
+    public static BufferedImage[] asteroid_normal = new BufferedImage[180];
+    public static BufferedImage[] normal_frag_s = new BufferedImage[240];
+    public static BufferedImage[] normal_frag_m = new BufferedImage[240];
+    public static BufferedImage[] normal_frag_lg = new BufferedImage[240];
+    public static BufferedImage[] asteroid_ice = new BufferedImage[317];
+    public static BufferedImage[] ice_frag_s = new BufferedImage[240];
+    public static BufferedImage[] ice_frag_m = new BufferedImage[240];
+    public static BufferedImage[] ice_frag_lg = new BufferedImage[240];
 
-    public static final BufferedImage[] player_teleport = new BufferedImage[11];
-    public static final BufferedImage[] bubble_init = new BufferedImage[30];
-    public static final BufferedImage[] bubble = new BufferedImage[150];
+    public static BufferedImage[] player_teleport = new BufferedImage[11];
+    public static BufferedImage[] bubble_init = new BufferedImage[30];
+    public static BufferedImage[] bubble = new BufferedImage[150];
 
-    private static final BufferedImage[] regular_cursor = new BufferedImage[60];
-    private static final BufferedImage[] aimed_cursor = new BufferedImage[60];
+    private static BufferedImage[] regular_cursor = new BufferedImage[60];
+    private static BufferedImage[] aimed_cursor = new BufferedImage[60];
 
     public static BufferedImage[] health_init = new BufferedImage[60];
     public static BufferedImage[] weapon_state_init = new BufferedImage[60];
@@ -142,7 +147,6 @@ class Resources {
     public static Music low_health = TinySound.loadMusic(Resources.class.getResource("/resources/sound/low_health_warning.wav"));
 
     public static boolean infinite_health = false;
-    public static boolean large_bullet = false;
 
     public static ExecutorService enemy_resources = Executors.newCachedThreadPool();
     public static ExecutorService player_resources = Executors.newCachedThreadPool();
@@ -178,13 +182,11 @@ class Resources {
 
                     cursor_hitBox.setBounds(mouse_location.x, mouse_location.y, 50, 50);
 
-                    for (int i = 0; i < EnemyPane.enemies.size(); i++) {
-                        if (EnemyPane.enemies.get(i) != null) {
-                            if (cursor_hitBox.intersects(EnemyPane.enemies.get(i).hitBox())) {
-                                cursor_onTarget = true;
-                            }
+                    EnemyPane.enemies.forEach((key, enemy) -> {
+                        if (cursor_hitBox.intersects(enemy.hitBox())) {
+                            cursor_onTarget = true;
                         }
-                    }
+                    });
 
                     if (cursor_onTarget) {
                         cursor = Toolkit.getDefaultToolkit().createCustomCursor(aimed_cursor[cursor_frameCount], new Point(0, 0), null);
@@ -302,6 +304,17 @@ class Resources {
                     weapon_state_normal[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/normal/" + i + ".png"));
                     weapon_state_engage[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/engage/" + i + ".png"));
                 }
+                for (int i = 0; i < 75; i++){
+                    backup_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/backup_init/" + i + ".png"));
+                    shockwave_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shockwave_init/" + i + ".png"));
+                    shield_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shield_init/" + i + ".png"));
+                    teleport_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/teleport_init/" + i + ".png"));
+                }
+                for (int i = 0; i < 121; i++){
+                    shockwave_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shockwave_load/" + i + ".png"));
+                    shield_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shield_load/" + i + ".png"));
+                    teleport_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/teleport_load/" + i + ".png"));
+                }
             } catch (java.io.IOException e) {
                 fileNotFound(e);
             }
@@ -314,8 +327,11 @@ class Resources {
     }
 
     public static void importSpaceResources(){
+
         space_resources.submit(() -> {
+
             try {
+
                 for (int i = 0; i < 2; i++) {
                     space_background[i] = ImageIO.read(Resources.class.getResource("/resources/background_loop.jpg"));
                 }
@@ -347,20 +363,6 @@ class Resources {
 
             space_resources.shutdownNow();
         });
-    }
-
-    public static void cleanUpAnimation(){
-
-        health_init = null;
-        weapon_state_init = null;
-
-        for (int i = 0; i < 300; i ++){
-            Resources.left_hud[i] = null;
-        }
-        for (int i = 0; i < 100; i++){
-            Resources.logo_hud[i] = null;
-        }
-
     }
 
     private static void fileNotFound(Exception e) {
@@ -419,7 +421,8 @@ class GameGUI extends JFrame{
         space = new Space();
         player = new Player(new Point((Resources.FRAME_WIDTH - Resources.player_sprite.getWidth())/2, 650));
         enemy_pane = new EnemyPane();
-        collision_logic = new CollisionLogic(EnemyPane.enemies, BulletPane.bullets, Space.asteroids, player);
+        collision_logic = new CollisionLogic(EnemyPane.enemies, BulletPane.bullets,
+                Space.asteroids, Space.asteroidFragments, player);
 
         Resources.music();
 
@@ -500,6 +503,10 @@ class HUD extends JPanel{
     private Timer left_hud_init;
     private Timer health_meter_init;
     private Timer logo_hud_init;
+    private Timer shockwave_init;
+    private Timer backup_init;
+    private Timer shield_init;
+    private Timer teleport_init;
     private Timer logo_hud_frameUpdate;
     private Timer left_hud_frameUpdate;
     private Timer health_meter_frameUpdate;
@@ -509,11 +516,19 @@ class HUD extends JPanel{
     private BufferedImage logo_hud;
     private BufferedImage health_meter;
     private BufferedImage weapon_state;
+    private BufferedImage shockwave_icon;
+    private BufferedImage backup_icon;
+    private BufferedImage shield_icon;
+    private BufferedImage teleport_icon;
 
     private int left_hud_frameCount;
     private int logo_hud_frameCount;
     private int health_meter_frameCount;
     private int weapon_state_frameCount;
+    private int shockwave_frameCount;
+    private int backup_frameCount;
+    private int shield_frameCount;
+    private int teleport_frameCount;
 
     private int health_percentage;
 
@@ -534,6 +549,30 @@ class HUD extends JPanel{
         health_percentage = 0;
         health_meter_frameCount = 0;
         weapon_state_frameCount = 0;
+        shockwave_frameCount = 0;
+        backup_frameCount = 0;
+        shield_frameCount = 0;
+        teleport_frameCount = 0;
+
+        backup_init = new Timer(Resources.REFRESH_RATE, e -> {
+            backup_icon = Resources.backup_init[backup_frameCount];
+
+            if (backup_frameCount < 75 - 1){
+                backup_frameCount ++;
+            } else {
+                backup_init.stop();
+            }
+        });
+
+        shockwave_init = new Timer(Resources.REFRESH_RATE, e -> {
+            shockwave_icon = Resources.shockwave_init[shockwave_frameCount];
+
+            if (shockwave_frameCount < 75 - 1){
+                shockwave_frameCount ++;
+            } else {
+                shockwave_init.stop();
+            }
+        });
 
         left_hud_init = new Timer(Resources.REFRESH_RATE, e -> {
             left_hud = Resources.left_hud[left_hud_frameCount];
@@ -647,6 +686,9 @@ class HUD extends JPanel{
             }
         });
 
+        backup_init.start();
+        shockwave_init.start();
+
         add(health_number);
 
     }
@@ -660,7 +702,8 @@ class HUD extends JPanel{
         g.drawImage(logo_hud, 1000, 30, this);
         g.drawImage(health_meter, 1048, 186, this);
         g.drawImage(weapon_state, 1000, 225, this);
-        //g.drawImage(Resources.point_slot,1000,500,this);
+        g.drawImage(backup_icon, 1003,405,(int)(90*1.3),(int)(29*1.3),this);
+        g.drawImage(shockwave_icon,1130,405,(int)(90*1.3),(int)(29*1.3),this);
 
     }
 
@@ -831,6 +874,33 @@ class Asteroid implements Entitative{
         return hitBox;
     }
 
+    public boolean isExploded() {
+        return asteroid_properties.dead;
+    }
+
+    public void collidePlayer(Player player) {
+
+        if (asteroidType == 1) {
+            player.changeHealth(-150);
+        } else if (asteroidType == 2){
+            player.changeHealth(-200);
+        } else if (asteroidType == 3){
+            player.changeHealth(-100);
+        }
+
+        explode();
+    }
+
+    public void collideEnemy(Hostile enemy) {
+        if (asteroidType == 1) {
+            enemy.changeHealth(-150);
+        } else if (asteroidType == 2){
+            enemy.changeHealth(-200);
+        } else if (asteroidType == 3){
+            enemy.changeHealth(-100);
+        }
+    }
+
     public void explode() {
 
         asteroid_frameUpdate.stop();
@@ -853,7 +923,13 @@ class Asteroid implements Entitative{
 
         explode_frameUpdate.start();
 
-        GameGUI.space.spawnAsteroidFragment(new Point(location().x,location().y),asteroidType);
+        Point fragmentOrigin_s = new Point(location().x,location().y);
+        Point fragmentOrigin_m = new Point(location().x,location().y);
+        Point fragmentOrigin_lg = new Point(location().x,location().y);
+
+        GameGUI.space.spawnAsteroidFragment(fragmentOrigin_s,asteroidType,1);
+        GameGUI.space.spawnAsteroidFragment(fragmentOrigin_m,asteroidType,2);
+        GameGUI.space.spawnAsteroidFragment(fragmentOrigin_lg,asteroidType,3);
 
     }
 
@@ -878,7 +954,7 @@ class AsteroidFragment implements Entitative {
     private final int y2;
 
     private int asteroidType;
-    private int fragmentType;
+    public int fragmentType;
 
     public AsteroidFragment(Point origin, int fragmentKey, int asteroidType, int fragmentType) {
 
@@ -900,6 +976,7 @@ class AsteroidFragment implements Entitative {
             if (fragment_frameCount < 8) {
                 fragment_sprite = Resources.bullet_impact[fragment_frameCount];
                 fragment_frameCount ++;
+                System.out.println(fragment_frameCount);
             } else {
                 fragment_impact_frameUpdate.stop();
                 cleanUp();
@@ -908,7 +985,7 @@ class AsteroidFragment implements Entitative {
     }
 
     private void cleanUp() {
-        BulletPane.bullets.remove(fragment_properties.bulletKey);
+        Space.asteroidFragments.remove(fragment_properties.bulletKey);
     }
 
     public void hitPlayer() {
@@ -916,14 +993,17 @@ class AsteroidFragment implements Entitative {
         GameGUI.player.changeHealth(-15);
 
         fragment_properties.hit = true;
+        fragment_frameCount = 0;
+        fragment_impact_frameUpdate.start();
     }
 
     public void hitEnemy(Hostile e){
 
         e.enemy_properties().health -= 25;
 
-        fragment_impact_frameUpdate.start();
         fragment_properties.hit = true;
+        fragment_frameCount = 0;
+        fragment_impact_frameUpdate.start();
     }
 
     public void hitNothing() {
@@ -939,7 +1019,7 @@ class AsteroidFragment implements Entitative {
         fragment_properties.hit = true;
     }
 
-    public boolean isViableBullet(){
+    public boolean isViableFragment(){
         return !this.fragment_properties.hit;
     }
 
@@ -957,7 +1037,14 @@ class AsteroidFragment implements Entitative {
     }
 
     public void updateHitBox() {
-        hitBox.setBounds(fragment_properties.getX(), fragment_properties.getY(), 10, 10);
+
+        if (fragmentType == 1) {
+            hitBox.setBounds(fragment_properties.getX() + 15, fragment_properties.getY() + 15, 15, 15);
+        } else if (fragmentType == 2){
+            hitBox.setBounds(fragment_properties.getX() + 10, fragment_properties.getY() + 10, 30, 30);
+        } else if (fragmentType == 3){
+            hitBox.setBounds(fragment_properties.getX() + 5, fragment_properties.getY() + 5, 30, 30);
+        }
     }
 
     public void tickUpdate() {
@@ -1062,7 +1149,9 @@ class Space extends JPanel {
         fragment_periodic_update.scheduleAtFixedRate(() -> {
             fragment_frameUpdate.submit(() -> {
                 asteroidFragments.forEach((key,asteroid) -> {
-                    asteroid.tickUpdate();
+                    if (asteroid.isViableFragment()) {
+                        asteroid.tickUpdate();
+                    }
                 });
             });
         },0,Resources.REFRESH_RATE,TimeUnit.MILLISECONDS);
@@ -1120,25 +1209,9 @@ class Space extends JPanel {
         }
     }
 
-    public void spawnAsteroidFragment(Point origin, int asteroidType) {
+    public void spawnAsteroidFragment(Point origin, int asteroidType, int fragmentType) {
 
-        asteroidFragments.put(fragmentCount,new AsteroidFragment(origin,fragmentCount,asteroidType,1));
-
-        if (fragmentCount < Integer.MAX_VALUE){
-            fragmentCount ++;
-        } else {
-            fragmentCount = 0;
-        }
-
-        asteroidFragments.put(fragmentCount,new AsteroidFragment(origin,fragmentCount,asteroidType,2));
-
-        if (fragmentCount < Integer.MAX_VALUE){
-            fragmentCount ++;
-        } else {
-            fragmentCount = 0;
-        }
-
-        asteroidFragments.put(fragmentCount,new AsteroidFragment(origin,fragmentCount,asteroidType,3));
+        asteroidFragments.put(fragmentCount,new AsteroidFragment(origin,fragmentCount,asteroidType,fragmentType));
 
         if (fragmentCount < Integer.MAX_VALUE){
             fragmentCount ++;
@@ -1163,7 +1236,7 @@ class BulletProperties {
     public BulletProperties(Point location, Boolean enemy_fire, int bulletKey) {
         this.location = location;
         this.enemy_fire = enemy_fire;
-        this.large_bullet = Resources.large_bullet;
+        this.large_bullet = false;
         this.hit = false;
         this.bulletKey = bulletKey;
     }
@@ -1410,14 +1483,6 @@ class Ocelot implements Hostile {
         explode_frameUpdate = new Timer((int)(Resources.REFRESH_RATE * 1.5), null);
         fire_bullet = new Timer(500, null);
 
-        /*movement_frameUpdate.addActionListener(e -> {
-
-            EnemyPane.enemy_location_update.submit(() -> {
-
-            });
-
-        });*/
-
         fire_bullet.addActionListener(e -> {
 
             GameGUI.bullet_pane.fireBullet(
@@ -1482,6 +1547,10 @@ class Ocelot implements Hostile {
 
     public Point targetPoint(){
         return GameGUI.player.location();
+    }
+
+    public void changeHealth(int healthChange){
+        enemy_properties.health += healthChange;
     }
 
     public Rectangle hitBox(){
@@ -1628,6 +1697,10 @@ class Karmakazi implements Hostile {
 
     public Point location() {
         return enemy_properties.location;
+    }
+
+    public void changeHealth(int healthChange){
+        enemy_properties.health += healthChange;
     }
 
     public void tickUpdate() {
@@ -1795,6 +1868,10 @@ class RegularEnemy implements Hostile {
         }
     }
 
+    public void changeHealth(int healthChange){
+        enemy_properties.health += healthChange;
+    }
+
 }
 
 class EnemyPane extends JPanel {
@@ -1833,13 +1910,11 @@ class EnemyPane extends JPanel {
 
             allDead = true;
 
-            for (int i = 0; i < enemies.size(); i++) {
-                if (!(EnemyPane.enemies.get(i) == null)) {
-                    if (!EnemyPane.enemies.get(i).enemy_properties().dead) {
-                        allDead = false;
-                    }
+            EnemyPane.enemies.forEach((key,enemy) -> {
+                if (!enemy.isDead()){
+                    allDead = false;
                 }
-            }
+            });
 
             if (Player.shockwave_frameUpdate.isRunning()){
                 allDead = false;
@@ -1859,45 +1934,39 @@ class EnemyPane extends JPanel {
 
         enemies.forEach((key,enemy) -> {
 
-            if (enemy.enemy_properties().character_type != 6) {
+            Graphics2D g2d = (Graphics2D) g.create();
 
-                Graphics2D g2d = (Graphics2D) g.create();
-                int initialX = enemy.enemy_properties().getX();
-                int initialY = enemy.enemy_properties().getY();
+            int initialX = enemy.enemy_properties().getX();
+            int initialY = enemy.enemy_properties().getY();
 
-                double rotation = 0f;
+            double rotation = 0f;
 
-                int width = initialX * 2;
-                int height = initialY * 2;
+            int width = initialX * 2;
+            int height = initialY * 2;
 
-                if (targetPoint != null) {
+            if (targetPoint != null) {
 
-                    int x = width / 2;
-                    int y = height / 2;
+                int x = width / 2;
+                int y = height / 2;
 
-                    int deltaX = targetPoint.x - x;
-                    int deltaY = targetPoint.y - y;
+                int deltaX = targetPoint.x - x;
+                int deltaY = targetPoint.y - y;
 
-                    if (!(deltaX == 0 || deltaY == 0)) {
+                if (!(deltaX == 0 || deltaY == 0)) {
 
-                        rotation = -Math.atan2(deltaX, deltaY);
-                        rotation = Math.toDegrees(rotation) + 180;
-                    }
+                    rotation = -Math.atan2(deltaX, deltaY);
+                    rotation = Math.toDegrees(rotation) + 180;
                 }
-
-                int x = (width - 40) / 2;
-                int y = (height - 40) / 2;
-
-                g2d.rotate(Math.toRadians(rotation), width / 2, height / 2);
-
-                g2d.drawImage(enemy.enemy_sprite(), x, y, this);
-
-            } else {
-                Graphics2D g2d = (Graphics2D) g;
-                g2d.drawImage(enemy.enemy_sprite(), enemy.enemy_properties().getX(), enemy.enemy_properties().getY(), this);
-                g2d.setColor(Color.red);
-                g2d.fillRect(enemy.hitBox().x, enemy.hitBox().y, (int) enemy.hitBox().getHeight(), (int) enemy.hitBox().getWidth());
             }
+
+            int x = (width - 40) / 2;
+            int y = (height - 40) / 2;
+
+            g2d.rotate(Math.toRadians(rotation), width / 2, height / 2);
+
+            g2d.drawImage(enemy.enemy_sprite(), x, y, this);
+
+            g2d.dispose();
 
         });
 
@@ -1980,22 +2049,27 @@ interface Hostile extends Entitative{
     void collisionDeath();
     void explode(boolean e);
     void tickUpdate();
+    void changeHealth(int i);
 }
 
 class CollisionLogic {
 
     private ScheduledExecutorService bullet_collision;
     private ScheduledExecutorService enemy_collision;
+    private ScheduledExecutorService asteroid_collision;
 
     private ExecutorService cached_pool_bullet;
     private ExecutorService cached_pool_enemy;
+    private ExecutorService cached_pool_asteroid;
 
     public CollisionLogic(ConcurrentHashMap<Integer,Hostile> enemies,
                           ConcurrentHashMap<Integer,Bullet> bullets,
-                          ConcurrentHashMap<Integer,Asteroid> asteroids, Player player){
+                          ConcurrentHashMap<Integer,Asteroid> asteroids,
+                          ConcurrentHashMap<Integer,AsteroidFragment> fragments, Player player){
 
         cached_pool_bullet = Executors.newCachedThreadPool();
         cached_pool_enemy = Executors.newCachedThreadPool();
+        cached_pool_asteroid = Executors.newCachedThreadPool();
 
         bullet_collision = Executors.newScheduledThreadPool(1);
         bullet_collision.scheduleAtFixedRate(() -> {
@@ -2007,7 +2081,6 @@ class CollisionLogic {
                             if (distanceCheck(bullet,asteroid)){
                                 if (collisionCheck(bullet,asteroid)){
                                     bullet.hitAsteroid(asteroid);
-                                    System.out.println("hit");
                                 }
                             }
                         });
@@ -2032,21 +2105,60 @@ class CollisionLogic {
         enemy_collision.scheduleAtFixedRate(() -> {
             cached_pool_enemy.submit(() -> {
                 enemies.forEach((key,enemy) -> {
-                    if (!enemy.isDead() && distanceCheck(enemy, player)) {
-                        if (collisionCheck(enemy, player)) {
-                            enemy.collisionDeath();
-                        }
-                    }
-                    asteroids.forEach((key1,asteroid) -> {
-                        if (!enemy.isDead() && distanceCheck(enemy, asteroid)) {
-                            if (collisionCheck(enemy, asteroid)) {
-                                enemy.explode(true);
+                    if (!enemy.isDead()) {
+
+                        if (distanceCheck(enemy, player)) {
+                            if (collisionCheck(enemy, player)) {
+                                enemy.collisionDeath();
                             }
                         }
-                    });
+                        asteroids.forEach((key1, asteroid) -> {
+                            if (distanceCheck(enemy, asteroid)) {
+                                if (collisionCheck(enemy, asteroid)) {
+                                    enemy.explode(true);
+                                }
+                            }
+                        });
+                    }
                 });
             });
         },0,Resources.REFRESH_RATE,TimeUnit.MILLISECONDS);
+
+        asteroid_collision = Executors.newScheduledThreadPool(1);
+        asteroid_collision.scheduleAtFixedRate(() -> {
+            cached_pool_asteroid.submit(() -> {
+                asteroids.forEach((key,asteroid) -> {
+                    if (!asteroid.isExploded()){
+                        if (distanceCheck(asteroid,player)){
+                            if (collisionCheck(asteroid,player)){
+                                asteroid.collidePlayer(player);
+                            }
+                        }
+                    }
+                });
+
+                fragments.forEach((key,fragment) -> {
+                    if (fragment.isViableFragment()){
+                        if (distanceCheck(fragment,player)){
+                            if (collisionCheck(fragment,player)){
+                                fragment.hitPlayer();
+                            }
+                        }
+
+                        enemies.forEach((key1,enemy) -> {
+                            if (!enemy.isDead()){
+                                if (distanceCheck(enemy,fragment)){
+                                    if (collisionCheck(enemy,fragment)){
+                                        fragment.hitEnemy(enemy);
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+
+            });
+        },0,Resources.REFRESH_RATE, TimeUnit.MILLISECONDS);
 
     }
 
@@ -2408,6 +2520,8 @@ class Player extends JPanel implements ActionListener, Entitative {
 
         g2d.rotate(-1 * Math.toRadians(rotation), width / 2, height / 2);
         g2d.drawImage(shockwave,shockwaveX,shockwaveY,shockwaveSize,shockwaveSize,this);
+
+        g2d.dispose();
 
     }
 

@@ -6,6 +6,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/Music.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/Sound.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/TinySound.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/ByteList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/MemMusic.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/MemSound.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/Mixer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/MusicReference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/SoundReference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/StreamInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/StreamMusic.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/StreamSound.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kuusisto/tinysound/internal/UpdateRunner.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Asteroid.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Asteroid.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/AsteroidFragment.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/AsteroidFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CollisionLogic.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/CollisionLogic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/ConfirmStart$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/ConfirmStart$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/ConfirmStart.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/ConfirmStart.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/GameGUI.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/GameGUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Hostile.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Hostile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Resources$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Resources$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Resources.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Resources.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Space.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Space.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/launcher.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/launcher.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Asteroid.java" afterPath="$PROJECT_DIR$/src/Asteroid.java" />
     </list>
@@ -23,32 +62,65 @@
       <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="341" column="13" lean-forward="false" selection-start-line="341" selection-start-column="13" selection-end-line="341" selection-end-column="13" />
+            <state relative-caret-position="235">
+              <caret line="188" column="23" lean-forward="false" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
               <folding>
                 <element signature="class#Launcher#0" expanded="false" />
-                <element signature="e#7593#8901#0" expanded="true" />
-                <element signature="e#8900#8901#0" expanded="true" />
+                <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
+                <element signature="e#7787#8967#0" expanded="true" />
+                <element signature="e#8966#8967#0" expanded="true" />
+                <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
+                <element signature="method#importEnemyResources#0;class#Resources#0" expanded="false" />
+                <element signature="method#importPlayerResources#0;class#Resources#0" expanded="false" />
+                <element signature="method#importHUDResources#0;class#Resources#0" expanded="false" />
+                <element signature="method#importSpaceResources#0;class#Resources#0" expanded="false" />
+                <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
+                <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
                 <element signature="class#GameGUI#0" expanded="false" />
                 <element signature="class#ConfirmStart#0" expanded="false" />
-                <element signature="e#20470#20675#0" expanded="true" />
-                <element signature="e#20674#20675#0" expanded="true" />
-                <element signature="class#HUD#0" expanded="false" />
+                <element signature="e#21334#21539#0" expanded="true" />
+                <element signature="e#21538#21539#0" expanded="true" />
+                <element signature="e#24155#24477#0" expanded="false" />
+                <element signature="e#24545#24788#0" expanded="false" />
+                <element signature="e#24850#25172#0" expanded="false" />
+                <element signature="e#25240#25483#0" expanded="false" />
+                <element signature="e#25549#26298#0" expanded="false" />
+                <element signature="e#26370#27691#0" expanded="false" />
+                <element signature="e#27764#28431#0" expanded="false" />
                 <element signature="class#CharacterProperties#0" expanded="false" />
-                <element signature="method#hitPlayer#0;class#AsteroidFragment#0" expanded="false" />
-                <element signature="method#hitEnemy#0;class#AsteroidFragment#0" expanded="false" />
+                <element signature="class#Asteroid#0" expanded="false" />
+                <element signature="method#Asteroid#0;class#Asteroid#0" expanded="false" />
+                <element signature="class#AsteroidFragment#0" expanded="false" />
                 <element signature="method#hitNothing#0;class#AsteroidFragment#0" expanded="false" />
                 <element signature="method#hitAsteroid#0;class#AsteroidFragment#0" expanded="false" />
                 <element signature="method#hitBox#0;class#AsteroidFragment#0" expanded="false" />
-                <element signature="e#36906#36951#0" expanded="false" />
-                <element signature="e#37054#37354#0" expanded="false" />
-                <element signature="method#isSpawnAsteroid#0;class#Space#0" expanded="false" />
+                <element signature="method#updateHitBox#0;class#AsteroidFragment#0" expanded="false" />
+                <element signature="class#Space#0" expanded="false" />
+                <element signature="e#40665#40710#0" expanded="false" />
+                <element signature="e#40813#41113#0" expanded="false" />
                 <element signature="method#spawnAsteroid#0;class#Space#0" expanded="false" />
+                <element signature="class#BulletProperties#0" expanded="false" />
                 <element signature="class#Bullet#0" expanded="false" />
-                <element signature="e#69638#70008#0" expanded="true" />
-                <element signature="e#70007#70008#0" expanded="true" />
-                <element signature="e#72852#73054#0" expanded="true" />
-                <element signature="e#73053#73054#0" expanded="true" />
+                <element signature="class#BulletPane#0" expanded="false" />
+                <element signature="class#Ocelot#0" expanded="false" />
+                <element signature="method#Ocelot#0;class#Ocelot#0" expanded="false" />
+                <element signature="method#collisionDeath#0;class#Ocelot#0" expanded="false" />
+                <element signature="method#explode#0;class#Ocelot#0" expanded="false" />
+                <element signature="method#tickUpdate#0;class#Ocelot#0" expanded="false" />
+                <element signature="class#Karmakazi#0" expanded="false" />
+                <element signature="method#Karmakazi#0;class#Karmakazi#0" expanded="false" />
+                <element signature="method#tickUpdate#0;class#Karmakazi#0" expanded="false" />
+                <element signature="class#RegularEnemy#0" expanded="false" />
+                <element signature="method#tickUpdate#0;class#RegularEnemy#0" expanded="false" />
+                <element signature="class#EnemyPane#0" expanded="false" />
+                <element signature="class#Hostile#0" expanded="false" />
+                <element signature="class#CollisionLogic#0" expanded="false" />
+                <element signature="class#Entitative#0" expanded="false" />
+                <element signature="class#Player#0" expanded="false" />
+                <element signature="e#74316#74686#0" expanded="true" />
+                <element signature="e#74685#74686#0" expanded="true" />
+                <element signature="e#77530#77732#0" expanded="true" />
+                <element signature="e#77731#77732#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,6 +162,8 @@
       <find>delay</find>
       <find>true</find>
       <find>System.out.println</find>
+      <find>fragmentType</find>
+      <find>g2d</find>
     </findStrings>
     <replaceStrings>
       <replace>FriendlyPane</replace>
@@ -119,6 +193,7 @@
         <option value="$PROJECT_DIR$/src/Space.java" />
         <option value="$PROJECT_DIR$/src/CollisionLogic.java" />
         <option value="$PROJECT_DIR$/Asteroid.java" />
+        <option value="$PROJECT_DIR$/src/libs/sound/TinySound.java" />
         <option value="$PROJECT_DIR$/src/Asteroid.java" />
       </list>
     </option>
@@ -151,8 +226,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,7 +256,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -687,12 +762,14 @@
       <workItem from="1495814057979" duration="286000" />
       <workItem from="1495817742324" duration="71000" />
       <workItem from="1495819171238" duration="34000" />
-      <workItem from="1495837589877" duration="3154000" />
+      <workItem from="1495837589877" duration="3449000" />
+      <workItem from="1495892554734" duration="5484000" />
+      <workItem from="1495907076512" duration="4302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107502000" />
+    <option name="totallyTimeSpent" value="117583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -701,26 +778,26 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.2746781" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.20600858" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5586552" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.6523605" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.34763947" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.44134477" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27968526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28683835" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -772,7 +849,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="106" />
+      <option name="time" value="110" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -781,7 +858,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
     <entry file="file://$PROJECT_DIR$/src/KillEveryone.java" />
@@ -885,34 +961,75 @@
     <entry file="file://$PROJECT_DIR$/src/CollisionLogic.java" />
     <entry file="file://$PROJECT_DIR$/src/Friendly.java" />
     <entry file="file://$PROJECT_DIR$/Asteroid.java" />
+    <entry file="file://$PROJECT_DIR$/src/libs/sound/TinySound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="341" column="13" lean-forward="false" selection-start-line="341" selection-start-column="13" selection-end-line="341" selection-end-column="13" />
+        <state relative-caret-position="235">
+          <caret line="188" column="23" lean-forward="false" selection-start-line="188" selection-start-column="23" selection-end-line="188" selection-end-column="23" />
           <folding>
             <element signature="class#Launcher#0" expanded="false" />
-            <element signature="e#7593#8901#0" expanded="true" />
-            <element signature="e#8900#8901#0" expanded="true" />
+            <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
+            <element signature="e#7787#8967#0" expanded="true" />
+            <element signature="e#8966#8967#0" expanded="true" />
+            <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
+            <element signature="method#importEnemyResources#0;class#Resources#0" expanded="false" />
+            <element signature="method#importPlayerResources#0;class#Resources#0" expanded="false" />
+            <element signature="method#importHUDResources#0;class#Resources#0" expanded="false" />
+            <element signature="method#importSpaceResources#0;class#Resources#0" expanded="false" />
+            <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
+            <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
             <element signature="class#GameGUI#0" expanded="false" />
             <element signature="class#ConfirmStart#0" expanded="false" />
-            <element signature="e#20470#20675#0" expanded="true" />
-            <element signature="e#20674#20675#0" expanded="true" />
-            <element signature="class#HUD#0" expanded="false" />
+            <element signature="e#21334#21539#0" expanded="true" />
+            <element signature="e#21538#21539#0" expanded="true" />
+            <element signature="e#24155#24477#0" expanded="false" />
+            <element signature="e#24545#24788#0" expanded="false" />
+            <element signature="e#24850#25172#0" expanded="false" />
+            <element signature="e#25240#25483#0" expanded="false" />
+            <element signature="e#25549#26298#0" expanded="false" />
+            <element signature="e#26370#27691#0" expanded="false" />
+            <element signature="e#27764#28431#0" expanded="false" />
             <element signature="class#CharacterProperties#0" expanded="false" />
-            <element signature="method#hitPlayer#0;class#AsteroidFragment#0" expanded="false" />
-            <element signature="method#hitEnemy#0;class#AsteroidFragment#0" expanded="false" />
+            <element signature="class#Asteroid#0" expanded="false" />
+            <element signature="method#Asteroid#0;class#Asteroid#0" expanded="false" />
+            <element signature="class#AsteroidFragment#0" expanded="false" />
             <element signature="method#hitNothing#0;class#AsteroidFragment#0" expanded="false" />
             <element signature="method#hitAsteroid#0;class#AsteroidFragment#0" expanded="false" />
             <element signature="method#hitBox#0;class#AsteroidFragment#0" expanded="false" />
-            <element signature="e#36906#36951#0" expanded="false" />
-            <element signature="e#37054#37354#0" expanded="false" />
-            <element signature="method#isSpawnAsteroid#0;class#Space#0" expanded="false" />
+            <element signature="method#updateHitBox#0;class#AsteroidFragment#0" expanded="false" />
+            <element signature="class#Space#0" expanded="false" />
+            <element signature="e#40665#40710#0" expanded="false" />
+            <element signature="e#40813#41113#0" expanded="false" />
             <element signature="method#spawnAsteroid#0;class#Space#0" expanded="false" />
+            <element signature="class#BulletProperties#0" expanded="false" />
             <element signature="class#Bullet#0" expanded="false" />
-            <element signature="e#69638#70008#0" expanded="true" />
-            <element signature="e#70007#70008#0" expanded="true" />
-            <element signature="e#72852#73054#0" expanded="true" />
-            <element signature="e#73053#73054#0" expanded="true" />
+            <element signature="class#BulletPane#0" expanded="false" />
+            <element signature="class#Ocelot#0" expanded="false" />
+            <element signature="method#Ocelot#0;class#Ocelot#0" expanded="false" />
+            <element signature="method#collisionDeath#0;class#Ocelot#0" expanded="false" />
+            <element signature="method#explode#0;class#Ocelot#0" expanded="false" />
+            <element signature="method#tickUpdate#0;class#Ocelot#0" expanded="false" />
+            <element signature="class#Karmakazi#0" expanded="false" />
+            <element signature="method#Karmakazi#0;class#Karmakazi#0" expanded="false" />
+            <element signature="method#tickUpdate#0;class#Karmakazi#0" expanded="false" />
+            <element signature="class#RegularEnemy#0" expanded="false" />
+            <element signature="method#tickUpdate#0;class#RegularEnemy#0" expanded="false" />
+            <element signature="class#EnemyPane#0" expanded="false" />
+            <element signature="class#Hostile#0" expanded="false" />
+            <element signature="class#CollisionLogic#0" expanded="false" />
+            <element signature="class#Entitative#0" expanded="false" />
+            <element signature="class#Player#0" expanded="false" />
+            <element signature="e#74316#74686#0" expanded="true" />
+            <element signature="e#74685#74686#0" expanded="true" />
+            <element signature="e#77530#77732#0" expanded="true" />
+            <element signature="e#77731#77732#0" expanded="true" />
           </folding>
         </state>
       </provider>
