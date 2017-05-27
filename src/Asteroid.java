@@ -65,6 +65,10 @@ class Resources {
     public static final int FRAME_WIDTH = 1450;
     public static final int FRAME_HEIGHT = 800;
 
+    private static final GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+    //public static final int FRAME_WIDTH = gd.getDisplayMode().getWidth();
+    //public static final int FRAME_HEIGHT = gd.getDisplayMode().getHeight();
+
     public static BufferedImage[] space_background = new BufferedImage[2];
     public static BufferedImage[] bullet_impact = new BufferedImage[9];
     public static BufferedImage[] regular_enemy_fire = new BufferedImage[44];
@@ -87,6 +91,7 @@ class Resources {
     public static BufferedImage[] teleport_load = new BufferedImage[121];
     public static BufferedImage[] shockwave_load = new BufferedImage[121];
     public static BufferedImage[] shield_load = new BufferedImage[121];
+    public static BufferedImage[] point_slot_init = new BufferedImage[61];
 
     public static BufferedImage[] asteroid_fire = new BufferedImage[180];
     public static BufferedImage[] fire_frag_s = new BufferedImage[240];
@@ -127,6 +132,8 @@ class Resources {
     public static Point mouse_location = new Point(0,0);
 
     public static final Font standard = new Font("Calibri",Font.PLAIN,13);
+    public static final Font point = new Font("Calibri",Font.PLAIN,30);
+
     public static final Color techno_RED = Color.decode("#ed3737");
     public static final Color techno_BLUE = Color.decode("#2bede6");
 
@@ -280,7 +287,6 @@ class Resources {
             try {
                 boot_confirmation = ImageIO.read(Resources.class.getResource("/resources/gui/start_confirmation.png"));
                 cheat = ImageIO.read(Resources.class.getResource("/resources/gui/cheat.png"));
-                point_slot = ImageIO.read(Resources.class.getResource("/resources/hud/point_slot.png"));
                 for (int i = 0; i < 731; i++) {
                     left_hud[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/dev_hud_1/" + i + ".png"));
                 }
@@ -313,6 +319,9 @@ class Resources {
                     shockwave_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shockwave_load/" + i + ".png"));
                     shield_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shield_load/" + i + ".png"));
                     teleport_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/teleport_load/" + i + ".png"));
+                }
+                for (int i = 0; i < 61; i++){
+                    point_slot_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/point_slot_init/" + i + ".png"));
                 }
             } catch (java.io.IOException e) {
                 fileNotFound(e);
@@ -506,10 +515,14 @@ class HUD extends JPanel{
     private Timer backup_init;
     private Timer shield_init;
     private Timer teleport_init;
+    private Timer point_slot_init;
     private Timer logo_hud_frameUpdate;
     private Timer left_hud_frameUpdate;
     private Timer health_meter_frameUpdate;
     private Timer weapon_state_frameUpdate;
+    private Timer shockwave_load;
+    private Timer shield_load;
+    private Timer teleport_load;
 
     private BufferedImage left_hud;
     private BufferedImage logo_hud;
@@ -519,6 +532,7 @@ class HUD extends JPanel{
     private BufferedImage backup_icon;
     private BufferedImage shield_icon;
     private BufferedImage teleport_icon;
+    private BufferedImage point_slot;
 
     private int left_hud_frameCount;
     private int logo_hud_frameCount;
@@ -528,10 +542,12 @@ class HUD extends JPanel{
     private int backup_frameCount;
     private int shield_frameCount;
     private int teleport_frameCount;
+    private int point_slot_frameCount;
 
     private int health_percentage;
 
     private JLabel health_number;
+    private JLabel points;
 
     public HUD(){
 
@@ -543,6 +559,11 @@ class HUD extends JPanel{
         health_number.setBounds(995,186,50,29);
         health_number.setFont(Resources.standard);
 
+        points = new JLabel();
+        points.setBounds(1021,485,245,78);
+        points.setForeground(Resources.techno_BLUE);
+        points.setFont(Resources.point);
+
         left_hud_frameCount = 0;
         logo_hud_frameCount = 0;
         health_percentage = 0;
@@ -552,6 +573,7 @@ class HUD extends JPanel{
         backup_frameCount = 0;
         shield_frameCount = 0;
         teleport_frameCount = 0;
+        point_slot_frameCount = 0;
 
         backup_init = new Timer(Resources.REFRESH_RATE, e -> {
             backup_icon = Resources.backup_init[backup_frameCount];
@@ -572,6 +594,9 @@ class HUD extends JPanel{
                 shockwave_init.stop();
             }
         });
+        shockwave_load = new Timer(Resources.REFRESH_RATE, e -> {
+            
+        });
 
         shield_init = new Timer(Resources.REFRESH_RATE, e -> {
             shield_icon = Resources.shield_init[shield_frameCount];
@@ -582,6 +607,9 @@ class HUD extends JPanel{
                 shield_init.stop();
             }
         });
+        shield_load = new Timer(Resources.REFRESH_RATE, e -> {
+
+        });
 
         teleport_init = new Timer(Resources.REFRESH_RATE, e -> {
             teleport_icon = Resources.teleport_init[teleport_frameCount];
@@ -590,6 +618,22 @@ class HUD extends JPanel{
                 teleport_frameCount ++;
             } else {
                 teleport_init.stop();
+            }
+        });
+        teleport_load = new Timer(Resources.REFRESH_RATE, e -> {
+
+        });
+
+        point_slot_init = new Timer(Resources.REFRESH_RATE, e -> {
+
+            points.setText("" + Resources.total_points);
+
+            point_slot = Resources.point_slot_init[point_slot_frameCount];
+
+            if (point_slot_frameCount < 61 - 1){
+                point_slot_frameCount ++;
+            } else {
+                point_slot_init.stop();
             }
         });
 
@@ -706,6 +750,7 @@ class HUD extends JPanel{
         });
 
         add(health_number);
+        add(points);
 
     }
 
@@ -722,6 +767,7 @@ class HUD extends JPanel{
         g.drawImage(shockwave_icon,1130,400,(int)(90*1.3),(int)(29*1.3),this);
         g.drawImage(shield_icon,1003,445,(int)(90*1.3),(int)(29*1.3),this);
         g.drawImage(teleport_icon,1130,445,(int)(90*1.3),(int)(29*1.3),this);
+        g.drawImage(point_slot,1003,493,245,78,this);
 
     }
 
@@ -734,7 +780,12 @@ class HUD extends JPanel{
         shockwave_init.start();
         shield_init.start();
         teleport_init.start();
+        point_slot_init.start();
 
+    }
+
+    public void updatePoints(int pointDiff){
+        this.points.setText("" + (Resources.total_points += pointDiff));
     }
 
 }
@@ -1532,6 +1583,7 @@ class Ocelot implements Hostile {
 
         if (!collisionDeath){
             GameGUI.player.changeHealth(200);
+            GameGUI.hud.updatePoints(100);
         }
 
         explode_frameUpdate.addActionListener(e -> {
@@ -1678,6 +1730,7 @@ class Karmakazi implements Hostile {
 
         if (!collisionDeath){
             GameGUI.player.changeHealth(150);
+            GameGUI.hud.updatePoints(80);
         }
 
         explode_frameUpdate.addActionListener(e -> {
@@ -1811,6 +1864,7 @@ class RegularEnemy implements Hostile {
 
         if (!collisionDeath){
             GameGUI.player.changeHealth(80);
+            GameGUI.hud.updatePoints(50);
         }
 
         explode_frameUpdate.addActionListener(e -> {
