@@ -123,7 +123,6 @@ class Resources {
 
     public static BufferedImage cheat;
     public static BufferedImage boot_confirmation;
-    public static BufferedImage point_slot;
 
     public static Point mouse_location = new Point(0,0);
 
@@ -574,6 +573,26 @@ class HUD extends JPanel{
             }
         });
 
+        shield_init = new Timer(Resources.REFRESH_RATE, e -> {
+            shield_icon = Resources.shield_init[shield_frameCount];
+
+            if (shield_frameCount < 75 - 1){
+                shield_frameCount ++;
+            } else {
+                shield_init.stop();
+            }
+        });
+
+        teleport_init = new Timer(Resources.REFRESH_RATE, e -> {
+            teleport_icon = Resources.teleport_init[teleport_frameCount];
+
+            if (teleport_frameCount < 75 - 1){
+                teleport_frameCount ++;
+            } else {
+                teleport_init.stop();
+            }
+        });
+
         left_hud_init = new Timer(Resources.REFRESH_RATE, e -> {
             left_hud = Resources.left_hud[left_hud_frameCount];
 
@@ -686,9 +705,6 @@ class HUD extends JPanel{
             }
         });
 
-        backup_init.start();
-        shockwave_init.start();
-
         add(health_number);
 
     }
@@ -702,8 +718,10 @@ class HUD extends JPanel{
         g.drawImage(logo_hud, 1000, 30, this);
         g.drawImage(health_meter, 1048, 186, this);
         g.drawImage(weapon_state, 1000, 225, this);
-        g.drawImage(backup_icon, 1003,405,(int)(90*1.3),(int)(29*1.3),this);
-        g.drawImage(shockwave_icon,1130,405,(int)(90*1.3),(int)(29*1.3),this);
+        g.drawImage(backup_icon, 1003,400,(int)(90*1.3),(int)(29*1.3),this);
+        g.drawImage(shockwave_icon,1130,400,(int)(90*1.3),(int)(29*1.3),this);
+        g.drawImage(shield_icon,1003,445,(int)(90*1.3),(int)(29*1.3),this);
+        g.drawImage(teleport_icon,1130,445,(int)(90*1.3),(int)(29*1.3),this);
 
     }
 
@@ -712,6 +730,10 @@ class HUD extends JPanel{
         left_hud_init.start();
         logo_hud_init.start();
         health_meter_init.start();
+        backup_init.start();
+        shockwave_init.start();
+        shield_init.start();
+        teleport_init.start();
 
     }
 
