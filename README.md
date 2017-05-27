@@ -12,7 +12,11 @@ The coding for the program is currently being optimized and simplified.
 - [x] Add teleportation and protective shield
 - [x] Add shockwave
 - [x] Add asteroids
-- [ ] Add functional asteroid fragments
+- [x] Add functional asteroid fragments
+- [ ] Add point system
+- [ ] Add cool down timers for abilities
+- [ ] Add boot up screen
+- [ ] Add setting panel
 - [ ] Add call backup feature
 - [ ] Add new enemy classes
 
