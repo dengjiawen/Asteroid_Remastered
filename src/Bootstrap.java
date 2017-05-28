@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 /**
  * Created by freddeng on 2017-05-28.
  */
-class Launcher{
+class Bootstrap{
 
     public static LoadingGUI loading;
     public static GameGUI gameGUI;
@@ -280,8 +280,8 @@ class LoadingGUI extends JFrame{
                 this.dispose();
                 load.stop();
                 Runtime.getRuntime().gc();
-                Launcher.gameGUI = new GameGUI();
-                Launcher.gameGUI.setVisible(true);
+                Bootstrap.gameGUI = new GameGUI();
+                Bootstrap.gameGUI.setVisible(true);
 
         }
 

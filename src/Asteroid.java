@@ -149,7 +149,7 @@ class Resources {
                         cursor = Toolkit.getDefaultToolkit().createCustomCursor(regular_cursor[cursor_frameCount], new Point(0, 0), null);
                     }
 
-                    Launcher.gameGUI.getContentPane().setCursor(cursor);
+                    Bootstrap.gameGUI.getContentPane().setCursor(cursor);
 
                     if (cursor_frameCount < 59) {
                         cursor_frameCount++;
@@ -174,7 +174,7 @@ class Resources {
             fileNotFound(e);
         }
 
-        Launcher.loading.notifyCompletion();
+        Bootstrap.loading.notifyCompletion();
     }
 
     public static void importEnemyResources() {
@@ -197,7 +197,7 @@ class Resources {
             fileNotFound(e);
         }
 
-        Launcher.loading.notifyCompletion();
+        Bootstrap.loading.notifyCompletion();
     }
 
     public static void importPlayerResources() {
@@ -221,7 +221,7 @@ class Resources {
             fileNotFound(e);
         }
 
-        Launcher.loading.notifyCompletion();
+        Bootstrap.loading.notifyCompletion();
 
     }
 
@@ -270,7 +270,7 @@ class Resources {
             fileNotFound(e);
         }
 
-        Launcher.loading.notifyCompletion();
+        Bootstrap.loading.notifyCompletion();
 
     }
 
@@ -305,7 +305,7 @@ class Resources {
             fileNotFound(e);
         }
 
-        Launcher.loading.notifyCompletion();
+        Bootstrap.loading.notifyCompletion();
 
     }
 
