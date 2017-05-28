@@ -252,14 +252,14 @@ class LoadingGUI extends JFrame{
                 import_pool_2.submit(() -> {
                     Resources.importSpaceResources();
                 });
-                status.setText("Doing Stuff...");
+                status.setText("Killing Aliens...");
                 break;
 
             case 3:
                 import_pool_3.submit(() -> {
                     Resources.importEnemyResources();
                 });
-                status.setText("Building Ships...");
+                status.setText("Crunching ##s...");
                 break;
 
             case 4:
@@ -273,7 +273,7 @@ class LoadingGUI extends JFrame{
                 import_pool_1.submit(() -> {
                     Resources.importPlayerResources();
                 });
-                status.setText("ASTEROIDS!...");
+                status.setText("Playing God...");
                 break;
 
             case 6:
