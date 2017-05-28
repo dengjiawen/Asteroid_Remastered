@@ -523,6 +523,9 @@ class HUD extends JPanel{
     private Timer shockwave_load;
     private Timer shield_load;
     private Timer teleport_load;
+    private Timer shockwave_unload;
+    private Timer shield_unload;
+    private Timer teleport_unload;
 
     private BufferedImage left_hud;
     private BufferedImage logo_hud;
@@ -592,10 +595,28 @@ class HUD extends JPanel{
                 shockwave_frameCount ++;
             } else {
                 shockwave_init.stop();
+                shockwave_frameCount = 0;
+                shockwave_load.start();
             }
         });
-        shockwave_load = new Timer(Resources.REFRESH_RATE, e -> {
+        shockwave_load = new Timer(200, e -> {
+            shockwave_icon = Resources.shockwave_load[shockwave_frameCount];
 
+            if (shockwave_frameCount < 121 - 1){
+                shockwave_frameCount ++;
+            } else {
+                shield_load.stop();
+            }
+        });
+        shockwave_unload = new Timer(20, e -> {
+            shockwave_icon = Resources.shockwave_load[shockwave_frameCount];
+
+            if (shockwave_frameCount > 0){
+                shockwave_frameCount --;
+            } else {
+                shockwave_unload.stop();
+                shockwave_load.start();
+            }
         });
 
         shield_init = new Timer(Resources.REFRESH_RATE, e -> {
@@ -605,10 +626,18 @@ class HUD extends JPanel{
                 shield_frameCount ++;
             } else {
                 shield_init.stop();
+                shield_frameCount = 0;
+                shield_load.start();
             }
         });
-        shield_load = new Timer(Resources.REFRESH_RATE, e -> {
-            
+        shield_load = new Timer(200, e -> {
+            shield_icon = Resources.shield_load[shield_frameCount];
+
+            if (shield_frameCount < 121 - 1){
+                shield_frameCount ++;
+            } else {
+                shield_load.stop();
+            }
         });
 
         teleport_init = new Timer(Resources.REFRESH_RATE, e -> {
@@ -618,10 +647,28 @@ class HUD extends JPanel{
                 teleport_frameCount ++;
             } else {
                 teleport_init.stop();
+                teleport_frameCount = 0;
+                teleport_load.start();
             }
         });
-        teleport_load = new Timer(Resources.REFRESH_RATE, e -> {
+        teleport_load = new Timer(80, e -> {
+            teleport_icon = Resources.teleport_load[teleport_frameCount];
 
+            if (teleport_frameCount < 121 - 1){
+                teleport_frameCount ++;
+            } else {
+                teleport_load.stop();
+            }
+        });
+        teleport_unload = new Timer(20, e -> {
+            teleport_icon = Resources.teleport_load[teleport_frameCount];
+
+            if (teleport_frameCount > 0){
+                teleport_frameCount --;
+            } else {
+                teleport_unload.stop();
+                teleport_load.start();
+            }
         });
 
         point_slot_init = new Timer(Resources.REFRESH_RATE, e -> {
@@ -786,6 +833,26 @@ class HUD extends JPanel{
 
     public void updatePoints(int pointDiff){
         this.points.setText("" + (Resources.total_points += pointDiff));
+    }
+
+    public boolean teleportIsAvailable(){
+        return teleport_frameCount == 120;
+    }
+
+    public boolean shockwaveIsAvailable(){
+        return shockwave_frameCount == 120;
+    }
+
+    public void shockwaveInProgress(){
+        shockwave_unload.start();
+    }
+
+    public void teleportInProgress(){
+        teleport_unload.start();
+    }
+
+    public boolean shieldIsAvailable(){
+        return shield_frameCount == 120;
     }
 
 }
@@ -2611,69 +2678,77 @@ class Player extends JPanel implements ActionListener, Entitative {
 
     public void teleport (){
 
-        removeMouseListener(mouseControl);
-        teleport_disappearance.start();
+        if (GameGUI.hud.teleportIsAvailable()) {
+            removeMouseListener(mouseControl);
+            teleport_disappearance.start();
+            GameGUI.hud.teleportInProgress();
+        }
 
     }
 
     public void shockWave (Point Epicenter){
 
-        shockwave = Resources.shockwave;
-        shockwave_frameUpdate.addActionListener(e -> {
+        if (GameGUI.hud.shockwaveIsAvailable()) {
+            shockwave = Resources.shockwave;
+            shockwave_frameUpdate.addActionListener(e -> {
 
-            shockwaveSize += 40;
-            shockwaveX = Epicenter.x - (shockwaveSize - player_sprite.getWidth())/2;
-            shockwaveY = Epicenter.y - (shockwaveSize - player_sprite.getHeight())/2;
+                shockwaveSize += 40;
+                shockwaveX = Epicenter.x - (shockwaveSize - player_sprite.getWidth()) / 2;
+                shockwaveY = Epicenter.y - (shockwaveSize - player_sprite.getHeight()) / 2;
 
-            shockwave_hitBox.setBounds(shockwaveX + 100,shockwaveY + 90,shockwaveSize - 300, shockwaveSize - 300);
+                shockwave_hitBox.setBounds(shockwaveX + 100, shockwaveY + 90, shockwaveSize - 300, shockwaveSize - 300);
 
-            this.repaint();
+                this.repaint();
 
-            BulletPane.bullets.forEach((key,bullet) -> {
-                if (shockwave_hitBox.intersects(bullet.hitBox())){
-                    bullet.hitNothing();
+                BulletPane.bullets.forEach((key, bullet) -> {
+                    if (shockwave_hitBox.intersects(bullet.hitBox())) {
+                        bullet.hitNothing();
+                    }
+                });
+
+                EnemyPane.enemies.forEach((key, enemy) -> {
+                    if (shockwave_hitBox.intersects(enemy.hitBox()) && !(enemy.location().y < 0)) {
+                        enemy.explode(true);
+                    }
+                });
+
+                if (shockwaveSize > Resources.FRAME_WIDTH + 3000) {
+                    shockwaveSize = 0;
+                    shockwaveX = 0;
+                    shockwaveY = 0;
+                    shockwave = null;
+                    shockwave_hitBox = new Rectangle();
+                    shockwave_frameUpdate.stop();
                 }
             });
 
-            EnemyPane.enemies.forEach((key,enemy) -> {
-                if (shockwave_hitBox.intersects(enemy.hitBox()) && !(enemy.location().y < 0)){
-                    enemy.explode(true);
-                }
-            });
-
-            if (shockwaveSize > Resources.FRAME_WIDTH + 3000){
-                shockwaveSize = 0;
-                shockwaveX = 0;
-                shockwaveY = 0;
-                shockwave = null;
-                shockwave_hitBox = new Rectangle();
-                shockwave_frameUpdate.stop();
-            }
-        });
-
-        shockwave_frameUpdate.start();
+            shockwave_frameUpdate.start();
+            GameGUI.hud.shockwaveInProgress();
+        }
     }
 
     public void protect_init(){
 
-        Timer protect_init = new Timer (Resources.REFRESH_RATE, null);
+        if (GameGUI.hud.shieldIsAvailable()) {
+            Timer protect_init = new Timer(Resources.REFRESH_RATE, null);
 
-        protect_init.addActionListener(e -> {
+            protect_init.addActionListener(e -> {
 
-            protect_bubble = Resources.bubble_init[protect_frameCount];
-            this.repaint();
+                protect_bubble = Resources.bubble_init[protect_frameCount];
+                this.repaint();
 
-            protect_frameCount ++;
+                protect_frameCount++;
 
-            if (protect_frameCount > 29 - 1){
-                protect_init.stop();
-                protect(player_data.health);
-                protect_frameCount = 0;
-            }
+                if (protect_frameCount > 29 - 1) {
+                    protect_init.stop();
+                    protect(player_data.health);
+                    protect_frameCount = 0;
+                }
 
-        });
+            });
 
-        protect_init.start();
+            protect_init.start();
+        }
 
     }
 
