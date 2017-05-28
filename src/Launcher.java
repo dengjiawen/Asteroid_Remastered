@@ -200,5 +200,11 @@ class LoadingGUI extends JFrame{
 
     }
 
+    public void purgeAnimation(){
+        import_pool_1.submit(() -> {
+            for (int i = 0; i < )
+        });
+    }
+
 
 }
