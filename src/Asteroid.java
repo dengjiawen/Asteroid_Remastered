@@ -9,54 +9,6 @@ import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.concurrent.*;
 
-class Launcher {
-
-    public static GameGUI gameGUI;
-
-    public static boolean player_loaded = false;
-    public static boolean enemy_loaded = false;
-    public static boolean hud_loaded = false;
-    public static boolean space_loaded = false;
-
-    private static ExecutorService init = Executors.newCachedThreadPool();
-    private static Timer notify = new Timer(Resources.REFRESH_RATE,null);
-
-    public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null,"Close this window to start.","Close",JOptionPane.INFORMATION_MESSAGE);
-
-        notify.addActionListener(e -> {
-
-            if (player_loaded && enemy_loaded && hud_loaded && space_loaded){
-
-                SwingUtilities.invokeLater(() -> {
-                    gameGUI = new GameGUI();
-                    gameGUI.setVisible(true);
-                });
-
-                notify.stop();
-            }
-        });
-
-        notify.start();
-
-        init.submit(() -> {
-            init();
-        });
-
-    }
-
-    private static void init() {
-
-        TinySound.init();
-        Resources.importBulletResources();
-        Resources.importPlayerResources();
-        Resources.importEnemyResources();
-        Resources.importHUDResources();
-        Resources.importSpaceResources();
-
-    }
-}
-
 class Resources {
 
     public static final byte FRAME_RATE = 30;
@@ -133,6 +85,7 @@ class Resources {
 
     public static final Font standard = new Font("Calibri",Font.PLAIN,13);
     public static final Font point = new Font("Calibri",Font.PLAIN,30);
+    public static final Font load = new Font("Calibri",Font.BOLD,20);
 
     public static final Color techno_RED = Color.decode("#ed3737");
     public static final Color techno_BLUE = Color.decode("#2bede6");
@@ -154,10 +107,6 @@ class Resources {
 
     public static boolean infinite_health = false;
 
-    public static ExecutorService enemy_resources = Executors.newCachedThreadPool();
-    public static ExecutorService player_resources = Executors.newCachedThreadPool();
-    public static ExecutorService HUD_resources = Executors.newCachedThreadPool();
-    public static ExecutorService space_resources = Executors.newCachedThreadPool();
     private static ScheduledExecutorService cursor_periodic_update = Executors.newScheduledThreadPool(0);
     private static ExecutorService cursor_frameUpdate = Executors.newCachedThreadPool();
 
@@ -224,153 +173,140 @@ class Resources {
         } catch (java.io.IOException e) {
             fileNotFound(e);
         }
+
+        Launcher.loading.notifyCompletion();
     }
 
     public static void importEnemyResources() {
 
-        enemy_resources.submit(() -> {
-            try {
-                regular_enemy_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/regular_enemy.png"));
-                ocelot_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/ocelot.png"));
-                karmakazi_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/karmakazi.png"));
-                blockade_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/blockade.png"));
-                boss_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/boss_sprite.png"));
-                for (int i = 0; i < 44; i++) {
-                    regular_enemy_fire[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/enemy1_on_fire/" + i + ".png"));
-                    karmakazi_fire[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/karmakazi_on_fire/" + i + ".png"));
-                    ocelot_fire[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/ocelot_on_fire/" + i + ".png"));
-                }
-                for (int i = 0; i < 21; i++) {
-                    explosion[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/explosion/" + i + ".png"));
-                }
-            } catch (java.io.IOException e) {
-                fileNotFound(e);
+        try {
+            regular_enemy_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/regular_enemy.png"));
+            ocelot_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/ocelot.png"));
+            karmakazi_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/karmakazi.png"));
+            blockade_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/blockade.png"));
+            boss_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/boss_sprite.png"));
+            for (int i = 0; i < 44; i++) {
+                regular_enemy_fire[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/enemy1_on_fire/" + i + ".png"));
+                karmakazi_fire[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/karmakazi_on_fire/" + i + ".png"));
+                ocelot_fire[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/ocelot_on_fire/" + i + ".png"));
             }
+            for (int i = 0; i < 21; i++) {
+                explosion[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/explosion/" + i + ".png"));
+            }
+        } catch (java.io.IOException e) {
+            fileNotFound(e);
+        }
 
-            Launcher.enemy_loaded = true;
-
-            enemy_resources.shutdownNow();
-        });
+        Launcher.loading.notifyCompletion();
     }
 
     public static void importPlayerResources() {
 
-        player_resources.submit(() -> {
-            try {
-                for (int i = 0; i < 44; i++) {
-                    player_fire[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/self_on_fire/" + i + ".png"));
-                }
-                for (int i = 0; i < 11; i++) {
-                    player_teleport[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/self_teleporting/" + i + ".png"));
-                }
-                for (int i = 0; i < 30; i++) {
-                    bubble_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/bubble_init/" + i + ".png"));
-                }
-                for (int i = 0; i < 150; i++) {
-                    bubble[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/protective_bubble/" + i + ".png"));
-                }
-                player_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/spaceship_sprite.png"));
-                shockwave = ImageIO.read(Resources.class.getResource("/resources/shockwave.png"));
-            } catch (java.io.IOException e) {
-                fileNotFound(e);
+        try {
+            for (int i = 0; i < 44; i++) {
+                player_fire[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/self_on_fire/" + i + ".png"));
             }
-
-            Launcher.player_loaded = true;
-
-            player_resources.shutdownNow();
-        });
-    }
-
-    public static void importHUDResources(){
-
-        HUD_resources.submit(() -> {
-            try {
-                boot_confirmation = ImageIO.read(Resources.class.getResource("/resources/gui/start_confirmation.png"));
-                cheat = ImageIO.read(Resources.class.getResource("/resources/gui/cheat.png"));
-                for (int i = 0; i < 731; i++) {
-                    left_hud[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/dev_hud_1/" + i + ".png"));
-                }
-                for (int i = 0; i < 150; i++) {
-                    logo_hud[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_logo/init/" + i + ".png"));
-                    logo_hud[150 + i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_logo/loop/" + i + ".png"));
-                }
-                for (int i = 0; i < 30; i++) {
-                    low_health_meter[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_health/low_health_pane/" + i + ".png"));
-                    weapon_state_overHeat[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/over_heat/" + i + ".png"));
-                }
-                for (int i = 0; i < 80; i++) {
-                    health_meter[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_health/normal_health/" + i + ".png"));
-                }
-                for (int i = 0; i < 60; i++) {
-                    health_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_health/health_init/" + i + ".png"));
-                    weapon_state_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/init/" + i + ".png"));
-                }
-                for (int i = 0; i < 180; i++) {
-                    weapon_state_normal[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/normal/" + i + ".png"));
-                    weapon_state_engage[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/engage/" + i + ".png"));
-                }
-                for (int i = 0; i < 75; i++){
-                    backup_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/backup_init/" + i + ".png"));
-                    shockwave_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shockwave_init/" + i + ".png"));
-                    shield_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shield_init/" + i + ".png"));
-                    teleport_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/teleport_init/" + i + ".png"));
-                }
-                for (int i = 0; i < 121; i++){
-                    shockwave_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shockwave_load/" + i + ".png"));
-                    shield_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shield_load/" + i + ".png"));
-                    teleport_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/teleport_load/" + i + ".png"));
-                }
-                for (int i = 0; i < 61; i++){
-                    point_slot_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/point_slot_init/" + i + ".png"));
-                }
-            } catch (java.io.IOException e) {
-                fileNotFound(e);
+            for (int i = 0; i < 11; i++) {
+                player_teleport[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/self_teleporting/" + i + ".png"));
             }
+            for (int i = 0; i < 30; i++) {
+                bubble_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/bubble_init/" + i + ".png"));
+            }
+            for (int i = 0; i < 150; i++) {
+                bubble[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/protective_bubble/" + i + ".png"));
+            }
+            player_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/spaceship_sprite.png"));
+            shockwave = ImageIO.read(Resources.class.getResource("/resources/shockwave.png"));
+        } catch (java.io.IOException e) {
+            fileNotFound(e);
+        }
 
-            Launcher.hud_loaded = true;
-
-            HUD_resources.shutdownNow();
-        });
+        Launcher.loading.notifyCompletion();
 
     }
 
-    public static void importSpaceResources(){
+    public static void importHUDResources() {
 
-        space_resources.submit(() -> {
+        try {
+            boot_confirmation = ImageIO.read(Resources.class.getResource("/resources/gui/start_confirmation.png"));
+            cheat = ImageIO.read(Resources.class.getResource("/resources/gui/cheat.png"));
+            for (int i = 0; i < 731; i++) {
+                left_hud[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/dev_hud_1/" + i + ".png"));
+            }
+            for (int i = 0; i < 150; i++) {
+                logo_hud[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_logo/init/" + i + ".png"));
+                logo_hud[150 + i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_logo/loop/" + i + ".png"));
+            }
+            for (int i = 0; i < 30; i++) {
+                low_health_meter[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_health/low_health_pane/" + i + ".png"));
+                weapon_state_overHeat[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/over_heat/" + i + ".png"));
+            }
+            for (int i = 0; i < 80; i++) {
+                health_meter[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_health/normal_health/" + i + ".png"));
+            }
+            for (int i = 0; i < 60; i++) {
+                health_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_health/health_init/" + i + ".png"));
+                weapon_state_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/init/" + i + ".png"));
+            }
+            for (int i = 0; i < 180; i++) {
+                weapon_state_normal[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/normal/" + i + ".png"));
+                weapon_state_engage[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/sub_hud_weapon/engage/" + i + ".png"));
+            }
+            for (int i = 0; i < 75; i++) {
+                backup_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/backup_init/" + i + ".png"));
+                shockwave_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shockwave_init/" + i + ".png"));
+                shield_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shield_init/" + i + ".png"));
+                teleport_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/teleport_init/" + i + ".png"));
+            }
+            for (int i = 0; i < 121; i++) {
+                shockwave_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shockwave_load/" + i + ".png"));
+                shield_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/shield_load/" + i + ".png"));
+                teleport_load[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/teleport_load/" + i + ".png"));
+            }
+            for (int i = 0; i < 61; i++) {
+                point_slot_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/point_slot_init/" + i + ".png"));
+            }
+        } catch (java.io.IOException e) {
+            fileNotFound(e);
+        }
 
-            try {
+        Launcher.loading.notifyCompletion();
 
-                for (int i = 0; i < 2; i++) {
-                    space_background[i] = ImageIO.read(Resources.class.getResource("/resources/background_loop.jpg"));
-                }
-                for (int i = 0; i < 180; i++) {
-                    asteroid_fire[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/sequence/" + i + ".png"));
-                    asteroid_normal[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/sequence/" + i + ".png"));
-                }
-                for (int i = 0; i < 317; i++) {
-                    asteroid_ice[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/sequence/" + i + ".png"));
-                }
+    }
 
-                for (int i = 0; i < 240; i++) {
-                    fire_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_s_seq/" + i + ".png"));
-                    fire_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_m_seq/" + i + ".png"));
-                    fire_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_lg_seq/" + i + ".png"));
-                    ice_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_s_seq/" + i + ".png"));
-                    ice_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_m_seq/" + i + ".png"));
-                    ice_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_lg_seq/" + i + ".png"));
-                    normal_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_s_seq/" + i + ".png"));
-                    normal_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_m_seq/" + i + ".png"));
-                    normal_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_lg_seq/" + i + ".png"));
-                }
+    public static void importSpaceResources() {
 
-            } catch (java.io.IOException e) {
-                fileNotFound(e);
+        try {
+
+            for (int i = 0; i < 2; i++) {
+                space_background[i] = ImageIO.read(Resources.class.getResource("/resources/background_loop.jpg"));
+            }
+            for (int i = 0; i < 180; i++) {
+                asteroid_fire[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/sequence/" + i + ".png"));
+                asteroid_normal[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/sequence/" + i + ".png"));
+            }
+            for (int i = 0; i < 317; i++) {
+                asteroid_ice[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/sequence/" + i + ".png"));
             }
 
-            Launcher.space_loaded = true;
+            for (int i = 0; i < 240; i++) {
+                fire_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_s_seq/" + i + ".png"));
+                fire_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_m_seq/" + i + ".png"));
+                fire_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/fire_rock/frag_lg_seq/" + i + ".png"));
+                ice_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_s_seq/" + i + ".png"));
+                ice_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_m_seq/" + i + ".png"));
+                ice_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/ice_rock/frag_lg_seq/" + i + ".png"));
+                normal_frag_s[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_s_seq/" + i + ".png"));
+                normal_frag_m[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_m_seq/" + i + ".png"));
+                normal_frag_lg[i] = ImageIO.read(Resources.class.getResource("/resources/asteroids/normal_rock/frag_lg_seq/" + i + ".png"));
+            }
 
-            space_resources.shutdownNow();
-        });
+        } catch (java.io.IOException e) {
+            fileNotFound(e);
+        }
+
+        Launcher.loading.notifyCompletion();
+
     }
 
     private static void fileNotFound(Exception e) {

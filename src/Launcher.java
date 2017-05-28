@@ -13,13 +13,16 @@ import java.util.concurrent.Executors;
 /**
  * Created by freddeng on 2017-05-28.
  */
-class Test{
+class Launcher{
+
+    public static LoadingGUI loading;
+    public static GameGUI gameGUI;
 
     public static void main (String[] args){
 
         TinySound.init();
 
-        LoadingGUI loading = new LoadingGUI();
+        loading = new LoadingGUI();
         loading.setVisible(true);
     }
 
@@ -35,8 +38,12 @@ class LoadingGUI extends JFrame{
 
     private int visual_frameCount;
     private int ball_frameCount;
+    private int load_count;
+
+    private boolean purged;
 
     private JPanel visual;
+    private JLabel status;
 
     private BufferedImage visual_image;
     private BufferedImage load_ball;
@@ -62,6 +69,8 @@ class LoadingGUI extends JFrame{
 
         visual_frameCount = 0;
         ball_frameCount = 0;
+        load_count = 0;
+        purged = false;
 
         visual = new JPanel(){
             protected void paintComponent (Graphics g){
@@ -70,7 +79,13 @@ class LoadingGUI extends JFrame{
             }
         };
         visual.setBounds(0,0,1000,563);
+        visual.setBackground(Color.black);
         visual.setOpaque(false);
+
+        status = new JLabel();
+        status.setForeground(Color.white);
+        status.setFont(Resources.standard);
+        status.setBounds(750,460,1000,50);
 
         logo_seq = new BufferedImage[363];
         load_seq = new BufferedImage[600];
@@ -102,20 +117,30 @@ class LoadingGUI extends JFrame{
         load_sequence = new Timer(Resources.REFRESH_RATE, e -> {
 
             visual_image = load_seq[visual_frameCount];
-            load_ball = ball_seq[ball_frameCount];
+
+            if (purged) {
+                load_ball = ball_seq[ball_frameCount];
+            }
 
             repaint();
 
             if (visual_frameCount < 450){
                 visual_frameCount ++;
             } else {
+                if (!purged){
+                    purgeAnimation();
+                    notifyCompletion();
+                    purged = true;
+                }
                 visual_frameCount = 300;
             }
 
-            if (ball_frameCount < 94 - 1) {
-                ball_frameCount++;
-            } else {
-                ball_frameCount = 0;
+            if (purged) {
+                if (ball_frameCount < 94 - 1) {
+                    ball_frameCount++;
+                } else {
+                    ball_frameCount = 0;
+                }
             }
 
         });
@@ -125,6 +150,7 @@ class LoadingGUI extends JFrame{
         load = TinySound.loadMusic(getClass().getResource("/resources/sound/load.wav"));
         logo.play(false,0.5);
 
+        add(status);
         add(visual);
 
     }
@@ -202,8 +228,63 @@ class LoadingGUI extends JFrame{
 
     public void purgeAnimation(){
         import_pool_1.submit(() -> {
-            for (int i = 0; i < )
+            for (int i = 0; i < 300; i++){
+                load_seq[i] = null;
+            }
+            Runtime.getRuntime().gc();
         });
+    }
+
+    public void notifyCompletion(){
+
+        load_count ++;
+
+        switch (load_count){
+
+            case 1:
+                import_pool_1.submit(() -> {
+                    Resources.importBulletResources();
+                });
+                status.setText("Doing Stuff...");
+                break;
+
+            case 2:
+                import_pool_2.submit(() -> {
+                    Resources.importSpaceResources();
+                });
+                status.setText("Doing Stuff...");
+                break;
+
+            case 3:
+                import_pool_3.submit(() -> {
+                    Resources.importEnemyResources();
+                });
+                status.setText("Building Ships...");
+                break;
+
+            case 4:
+                import_pool_1.submit(() -> {
+                    Resources.importHUDResources();
+                });
+                status.setText("Building Ships...");
+                break;
+
+            case 5:
+                import_pool_1.submit(() -> {
+                    Resources.importPlayerResources();
+                });
+                status.setText("ASTEROIDS!...");
+                break;
+
+            case 6:
+                this.dispose();
+                load.stop();
+                Runtime.getRuntime().gc();
+                Launcher.gameGUI = new GameGUI();
+                Launcher.gameGUI.setVisible(true);
+
+        }
+
     }
 
 
