@@ -6,7 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/source/HUD/point_slot.psd" afterPath="$PROJECT_DIR$/src/resources/source/HUD/point_slot.psd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Asteroid.java" afterPath="$PROJECT_DIR$/src/Asteroid.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,10 +22,11 @@
       <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="597" column="12" lean-forward="true" selection-start-line="597" selection-start-column="12" selection-end-line="597" selection-end-column="12" />
+            <state relative-caret-position="169">
+              <caret line="610" column="12" lean-forward="true" selection-start-line="610" selection-start-column="12" selection-end-line="610" selection-end-column="12" />
               <folding>
                 <element signature="class#Launcher#0" expanded="false" />
+                <element signature="class#Resources#0" expanded="false" />
                 <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#cursor_frameUpdate#0;class#Resources#0" expanded="false" />
                 <element signature="e#8167#9347#0" expanded="true" />
@@ -44,7 +44,6 @@
                 <element signature="e#22014#22015#0" expanded="true" />
                 <element signature="e#24451#24690#0" expanded="false" />
                 <element signature="e#24753#25010#0" expanded="false" />
-                <element signature="e#25161#25400#0" expanded="false" />
                 <element signature="e#25538#25789#0" expanded="false" />
                 <element signature="e#25931#26248#0" expanded="false" />
                 <element signature="e#26310#26632#0" expanded="false" />
@@ -84,6 +83,8 @@
                 <element signature="class#CollisionLogic#0" expanded="false" />
                 <element signature="class#Entitative#0" expanded="false" />
                 <element signature="class#Player#0" expanded="false" />
+                <element signature="e#75413#75414#0" expanded="true" />
+                <element signature="e#75456#75457#0" expanded="true" />
                 <element signature="e#77044#77414#0" expanded="true" />
                 <element signature="e#77413#77414#0" expanded="true" />
                 <element signature="e#80258#80460#0" expanded="true" />
@@ -731,12 +732,12 @@
       <workItem from="1495819171238" duration="34000" />
       <workItem from="1495837589877" duration="3449000" />
       <workItem from="1495892554734" duration="5484000" />
-      <workItem from="1495907076512" duration="8535000" />
+      <workItem from="1495907076512" duration="10070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121816000" />
+    <option name="totallyTimeSpent" value="123351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -745,13 +746,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.16595136" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.16452074" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.71030045" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.83547926" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.28969958" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.28969958" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -938,10 +939,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="597" column="12" lean-forward="true" selection-start-line="597" selection-start-column="12" selection-end-line="597" selection-end-column="12" />
+        <state relative-caret-position="169">
+          <caret line="610" column="12" lean-forward="true" selection-start-line="610" selection-start-column="12" selection-end-line="610" selection-end-column="12" />
           <folding>
             <element signature="class#Launcher#0" expanded="false" />
+            <element signature="class#Resources#0" expanded="false" />
             <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
             <element signature="method#cursor_frameUpdate#0;class#Resources#0" expanded="false" />
             <element signature="e#8167#9347#0" expanded="true" />
@@ -959,7 +961,6 @@
             <element signature="e#22014#22015#0" expanded="true" />
             <element signature="e#24451#24690#0" expanded="false" />
             <element signature="e#24753#25010#0" expanded="false" />
-            <element signature="e#25161#25400#0" expanded="false" />
             <element signature="e#25538#25789#0" expanded="false" />
             <element signature="e#25931#26248#0" expanded="false" />
             <element signature="e#26310#26632#0" expanded="false" />
@@ -999,6 +1000,8 @@
             <element signature="class#CollisionLogic#0" expanded="false" />
             <element signature="class#Entitative#0" expanded="false" />
             <element signature="class#Player#0" expanded="false" />
+            <element signature="e#75413#75414#0" expanded="true" />
+            <element signature="e#75456#75457#0" expanded="true" />
             <element signature="e#77044#77414#0" expanded="true" />
             <element signature="e#77413#77414#0" expanded="true" />
             <element signature="e#80258#80460#0" expanded="true" />

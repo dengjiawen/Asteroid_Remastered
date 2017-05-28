@@ -595,7 +595,7 @@ class HUD extends JPanel{
             }
         });
         shockwave_load = new Timer(Resources.REFRESH_RATE, e -> {
-            
+
         });
 
         shield_init = new Timer(Resources.REFRESH_RATE, e -> {
@@ -608,7 +608,7 @@ class HUD extends JPanel{
             }
         });
         shield_load = new Timer(Resources.REFRESH_RATE, e -> {
-
+            
         });
 
         teleport_init = new Timer(Resources.REFRESH_RATE, e -> {
@@ -2665,7 +2665,7 @@ class Player extends JPanel implements ActionListener, Entitative {
 
             protect_frameCount ++;
 
-            if (protect_frameCount > 29){
+            if (protect_frameCount > 29 - 1){
                 protect_init.stop();
                 protect(player_data.health);
                 protect_frameCount = 0;
