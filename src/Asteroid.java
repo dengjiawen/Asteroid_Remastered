@@ -1,5 +1,6 @@
 import libs.sound.*;
 
+import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.Timer;
@@ -20,6 +21,9 @@ class Resources {
     private static final GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     //public static final int FRAME_WIDTH = gd.getDisplayMode().getWidth();
     //public static final int FRAME_HEIGHT = gd.getDisplayMode().getHeight();
+
+    public static BufferedImage[] intro_sequence = new BufferedImage[132];
+    public static BufferedImage[] button_selected = new BufferedImage[3];
 
     public static BufferedImage[] space_background = new BufferedImage[2];
     public static BufferedImage[] bullet_impact = new BufferedImage[9];
@@ -311,6 +315,25 @@ class Resources {
 
     }
 
+    public static void importIntroResources(){
+
+        try {
+
+            for (int i = 0; i < intro_sequence.length; i++) {
+                intro_sequence[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/welcome_seq/" + i + ".png"));
+            }
+            for (int i = 0; i < button_selected.length; i++){
+                button_selected[i] = ImageIO.read(Resources.class.getResource("/resources/button/" + i + ".png"));
+            }
+
+        } catch (java.io.IOException e) {
+            fileNotFound(e);
+        }
+
+        Bootstrap.loading.notifyCompletion();
+
+    }
+
     private static void fileNotFound(Exception e) {
 
         JOptionPane.showMessageDialog(null,"One or more files required to run this program is missing.\n" +
@@ -350,7 +373,7 @@ class GameGUI extends JFrame{
     public static BulletPane bullet_pane;
     public static HUD hud;
 
-    private static ConfirmStart start_confirmation;
+    private static IntroGUI introGUI;
     private static CollisionLogic collision_logic;
     public static Player player;
     public static Space space;
@@ -371,14 +394,14 @@ class GameGUI extends JFrame{
         bullet_pane = new BulletPane();
         hud = new HUD();
 
-        start_confirmation = new ConfirmStart(this);
+        introGUI = new IntroGUI();
         space = new Space();
         player = new Player(new Point((Resources.FRAME_WIDTH - Resources.player_sprite.getWidth())/2, 650));
         enemy_pane = new EnemyPane();
         collision_logic = new CollisionLogic(EnemyPane.enemies, BulletPane.bullets,
                 Space.asteroids, Space.asteroidFragments, player);
 
-        add(start_confirmation);
+        add(introGUI);
         add(hud);
         add(enemy_pane);
         add(player);
@@ -394,62 +417,142 @@ class GameGUI extends JFrame{
         Resources.music();
         enemy_pane.init();
         hud.init();
+        space.init();
+
+        introGUI.setVisible(false);
+        introGUI = null;
+        Runtime.getRuntime().gc();
+
+    }
+
+    public void setVisible(boolean b){
+        super.setVisible(b);
+
+        introGUI.init();
     }
 }
 
-class ConfirmStart extends JPanel{
+class IntroGUI extends JPanel{
 
-    private JButton proceed;
-    private JButton abort;
+    private BufferedImage visual;
+    private BufferedImage start_selected;
+    private BufferedImage setting_selected;
+    private BufferedImage quit_selected;
 
-    public ConfirmStart(GameGUI gameGUI){
+    private Timer visual_frameUpdate;
+    private int visual_frameCount;
+
+    private JButton start;
+    private JButton setting;
+    private JButton quit;
+
+    public IntroGUI(){
 
         super();
 
-        setBounds((Resources.FRAME_WIDTH - 300)/2,(Resources.FRAME_HEIGHT - 309)/2,300, 309);
+        setBounds((Resources.FRAME_WIDTH - 1450)/2,(Resources.FRAME_HEIGHT - 800)/2,1450, 800);
         setOpaque(false);
         setLayout(null);
-
-        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
-
-        proceed = new JButton();
-        proceed.setBounds(150,260,150,49);
-        proceed.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        proceed.setBorderPainted(false);
-        proceed.setOpaque(false);
-        proceed.setContentAreaFilled(false);
-        proceed.addActionListener(e -> {
-            setVisible(false);
-            gameGUI.init();
-        });
-
-        abort = new JButton();
-        abort.setBounds(0,260,150,49);
-        abort.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        abort.setBorderPainted(false);
-        abort.setOpaque(false);
-        abort.setContentAreaFilled(false);
-        abort.addActionListener(e -> {
-            System.exit(0);
-        });
 
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
                 super.mouseEntered(e);
-                ConfirmStart.this.grabFocus();
+                IntroGUI.this.grabFocus();
             }
         });
 
-        add(proceed);
-        add(abort);
+        start = new JButton();
+        start.setBounds(646,280,174,41);
+        start.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                super.mouseEntered(e);
+                start_selected = Resources.button_selected[0];
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e){
+                super.mouseExited(e);
+                start_selected = null;
+            }
+        });
+        start.addActionListener(e -> {
+            Bootstrap.gameGUI.init();
+        });
+        start.setOpaque(false);
+        start.setContentAreaFilled(false);
+        start.setBorderPainted(false);
+
+
+        setting = new JButton();
+        setting.setBounds(646,330,174,41);
+        setting.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                super.mouseEntered(e);
+                setting_selected = Resources.button_selected[1];
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e){
+                super.mouseExited(e);
+                setting_selected = null;
+            }
+        });
+        setting.setOpaque(false);
+        setting.setContentAreaFilled(false);
+        setting.setBorderPainted(false);
+
+        quit = new JButton();
+        quit.setBounds(646,380,174,41);
+        quit.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                super.mouseEntered(e);
+                quit_selected = Resources.button_selected[2];
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e){
+                super.mouseExited(e);
+                quit_selected = null;
+            }
+        });
+        quit.addActionListener(e -> {
+            System.exit(100);
+        });
+        quit.setOpaque(false);
+        quit.setContentAreaFilled(false);
+        quit.setBorderPainted(false);
+
+        visual_frameCount = 0;
+
+        visual_frameUpdate = new Timer(Resources.REFRESH_RATE, e -> {
+
+            visual = Resources.intro_sequence[visual_frameCount];
+
+            if (visual_frameCount < 131 - 1){
+                visual_frameCount ++;
+            } else {
+                visual_frameCount = 64;
+            }
+
+        });
 
     }
 
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
-        g.drawImage(Resources.boot_confirmation, 0,0,this);
+        g.drawImage(visual, 0,0,this);
+        g.drawImage(start_selected,646,280,this);
+        g.drawImage(setting_selected,646,330,this);
+        g.drawImage(quit_selected,646,380,this);
+    }
+
+    public void init(){
+        visual_frameUpdate.start();
     }
 
 }
@@ -1229,7 +1332,6 @@ class Space extends JPanel {
         spawn_asteroid = new Timer(Resources.REFRESH_RATE * 8, e -> {
             spawnAsteroid();
         });
-        spawn_asteroid.start();
 
         background_frameUpdate = new Timer(Resources.REFRESH_RATE, e -> {
             if (y1 == Resources.FRAME_HEIGHT) {
@@ -1321,6 +1423,10 @@ class Space extends JPanel {
             fragmentCount = 0;
         }
 
+    }
+
+    public void init(){
+        spawn_asteroid.start();
     }
 
 }

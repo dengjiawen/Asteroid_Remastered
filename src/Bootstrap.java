@@ -308,11 +308,18 @@ class LoadingGUI extends JFrame{
 
             case 6:
                 import_pool_1.submit(() -> {
+                    Resources.importIntroResources();
+                });
+                status.setText("Playing God...");
+                break;
+
+            case 7:
+                import_pool_1.submit(() -> {
                     Bootstrap.gameGUI = new GameGUI();
                 });
                 break;
 
-            case 7:
+            case 8:
                 status.setText("Almost There...");
                 tips_sequence.stop();
                 tip = tips[4];
@@ -327,7 +334,7 @@ class LoadingGUI extends JFrame{
                 });
                 break;
 
-            case 8:
+            case 9:
 
                 status.setText("Here We Go...");
 
