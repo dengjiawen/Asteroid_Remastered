@@ -5,10 +5,7 @@
     <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,9 +20,10 @@
       <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2802">
+            <state relative-caret-position="120">
               <caret line="456" column="24" lean-forward="false" selection-start-line="456" selection-start-column="24" selection-end-line="456" selection-end-column="24" />
               <folding>
+                <element signature="class#Resources#0" expanded="false" />
                 <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#cursor_frameUpdate#0;class#Resources#0" expanded="false" />
                 <element signature="e#6862#8043#0" expanded="true" />
@@ -37,6 +35,7 @@
                 <element signature="method#importSpaceResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
                 <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
+                <element signature="class#GameGUI#0" expanded="false" />
                 <element signature="class#ConfirmStart#0" expanded="false" />
                 <element signature="e#20032#20237#0" expanded="true" />
                 <element signature="e#20236#20237#0" expanded="true" />
@@ -112,11 +111,10 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+            <state relative-caret-position="188">
+              <caret line="349" column="39" lean-forward="true" selection-start-line="349" selection-start-column="39" selection-end-line="349" selection-end-column="39" />
               <folding>
                 <element signature="class#Bootstrap#0" expanded="false" />
-                <element signature="class#LoadingGUI#0" expanded="false" />
                 <element signature="e#4096#4341#0" expanded="false" />
                 <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
               </folding>
@@ -852,12 +850,12 @@
       <workItem from="1496019635818" duration="1877000" />
       <workItem from="1496022782408" duration="1827000" />
       <workItem from="1496062266719" duration="79000" />
-      <workItem from="1496067879174" duration="384000" />
+      <workItem from="1496067879174" duration="1006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139562000" />
+    <option name="totallyTimeSpent" value="140184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1052,11 +1050,10 @@
     <entry file="file://$PROJECT_DIR$/src/Launcher.java" />
     <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="188">
+          <caret line="349" column="39" lean-forward="true" selection-start-line="349" selection-start-column="39" selection-end-line="349" selection-end-column="39" />
           <folding>
             <element signature="class#Bootstrap#0" expanded="false" />
-            <element signature="class#LoadingGUI#0" expanded="false" />
             <element signature="e#4096#4341#0" expanded="false" />
             <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
           </folding>
@@ -1065,9 +1062,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2802">
+        <state relative-caret-position="120">
           <caret line="456" column="24" lean-forward="false" selection-start-line="456" selection-start-column="24" selection-end-line="456" selection-end-column="24" />
           <folding>
+            <element signature="class#Resources#0" expanded="false" />
             <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
             <element signature="method#cursor_frameUpdate#0;class#Resources#0" expanded="false" />
             <element signature="e#6862#8043#0" expanded="true" />
@@ -1079,6 +1077,7 @@
             <element signature="method#importSpaceResources#0;class#Resources#0" expanded="false" />
             <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
             <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
+            <element signature="class#GameGUI#0" expanded="false" />
             <element signature="class#ConfirmStart#0" expanded="false" />
             <element signature="e#20032#20237#0" expanded="true" />
             <element signature="e#20236#20237#0" expanded="true" />
