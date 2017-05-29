@@ -353,6 +353,7 @@ class LoadingGUI extends JFrame{
                         visual_frameCount++;
                     } else {
                         load_sequence.stop();
+                        load_seq = null;
                         import_pool_1.shutdownNow();
                         this.dispose();
                         Bootstrap.loading = null;

@@ -108,8 +108,9 @@ class Resources {
     public static Sound over_heat = TinySound.loadSound(Resources.class.getResource("/resources/sound/over_heat.wav"));
     private static Music music = TinySound.loadMusic(Resources.class.getResource("/resources/sound/music.wav"));
     public static Music low_health = TinySound.loadMusic(Resources.class.getResource("/resources/sound/low_health_warning.wav"));
-    private static Music logo_theme = TinySound.loadMusic(Resources.class.getResource("/resources/sound/logo.wav"));;
-    public static Music load_music = TinySound.loadMusic(Resources.class.getResource("/resources/sound/load.wav"));;
+    private static Music logo_theme = TinySound.loadMusic(Resources.class.getResource("/resources/sound/logo.wav"));
+    public static Music load_music = TinySound.loadMusic(Resources.class.getResource("/resources/sound/load.wav"));
+    private static Sound ability_error = TinySound.loadSound(Resources.class.getResource("/resources/sound/ability_error.wav"));
 
     public static boolean infinite_health = false;
 
@@ -346,6 +347,10 @@ class Resources {
         explosion_sound.play();
     }
 
+    public static void abilityErrorSound() {
+        ability_error.play();
+    }
+
     public static void music() {
         music.play(true);
     }
@@ -452,6 +457,7 @@ class IntroGUI extends JPanel{
 
         setBounds((Resources.FRAME_WIDTH - 1450)/2,(Resources.FRAME_HEIGHT - 800)/2,1450, 800);
         setOpaque(false);
+        setFocusable(true);
         setLayout(null);
 
         addMouseListener(new MouseAdapter() {
@@ -539,6 +545,10 @@ class IntroGUI extends JPanel{
             }
 
         });
+
+        add(start);
+        add(setting);
+        add(quit);
 
     }
 
@@ -694,7 +704,7 @@ class HUD extends JPanel{
             shield_icon = Resources.shield_load[shield_frameCount];
 
             if (shield_frameCount > 0){
-                teleport_frameCount --;
+                shield_frameCount --;
             } else {
                 shield_unload.stop();
                 shield_load.start();
@@ -1181,7 +1191,6 @@ class AsteroidFragment implements Entitative {
             if (fragment_frameCount < 8) {
                 fragment_sprite = Resources.bullet_impact[fragment_frameCount];
                 fragment_frameCount ++;
-                System.out.println(fragment_frameCount);
             } else {
                 fragment_impact_frameUpdate.stop();
                 cleanUp();
@@ -2750,6 +2759,8 @@ class Player extends JPanel implements ActionListener, Entitative {
             removeMouseListener(mouseControl);
             teleport_disappearance.start();
             GameGUI.hud.teleportInProgress();
+        } else {
+            Resources.abilityErrorSound();
         }
 
     }
@@ -2792,6 +2803,8 @@ class Player extends JPanel implements ActionListener, Entitative {
 
             shockwave_frameUpdate.start();
             GameGUI.hud.shockwaveInProgress();
+        } else {
+            Resources.abilityErrorSound();
         }
     }
 
@@ -2819,6 +2832,8 @@ class Player extends JPanel implements ActionListener, Entitative {
             });
 
             protect_init.start();
+        } else {
+            Resources.abilityErrorSound();
         }
 
     }

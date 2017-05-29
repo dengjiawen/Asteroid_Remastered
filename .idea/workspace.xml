@@ -6,139 +6,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/0.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/1.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/10.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/100.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/101.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/101.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/102.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/102.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/103.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/103.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/104.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/104.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/105.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/105.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/106.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/106.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/107.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/107.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/108.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/108.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/109.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/109.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/11.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/110.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/110.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/111.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/111.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/112.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/112.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/113.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/113.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/114.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/114.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/115.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/115.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/116.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/116.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/117.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/117.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/118.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/118.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/119.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/119.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/12.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/120.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/120.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/121.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/121.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/122.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/122.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/123.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/123.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/124.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/124.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/125.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/125.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/126.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/126.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/127.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/127.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/128.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/128.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/129.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/129.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/13.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/13.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/130.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/130.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/131.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/131.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/14.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/14.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/15.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/15.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/16.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/17.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/17.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/18.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/18.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/19.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/19.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/2.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/20.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/20.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/21.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/21.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/22.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/22.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/23.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/23.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/24.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/24.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/25.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/25.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/26.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/26.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/27.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/27.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/28.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/28.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/29.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/29.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/3.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/30.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/30.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/31.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/31.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/32.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/32.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/33.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/33.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/34.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/34.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/35.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/35.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/36.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/36.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/37.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/37.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/38.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/38.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/39.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/39.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/4.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/40.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/40.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/41.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/41.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/42.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/42.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/43.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/43.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/44.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/44.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/45.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/45.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/46.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/46.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/47.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/47.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/48.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/48.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/49.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/49.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/5.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/50.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/50.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/51.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/51.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/52.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/52.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/53.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/53.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/54.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/54.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/55.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/55.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/56.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/56.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/57.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/57.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/58.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/58.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/59.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/59.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/6.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/60.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/60.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/61.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/61.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/62.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/62.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/63.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/63.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/64.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/64.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/65.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/65.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/66.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/66.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/67.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/67.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/68.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/68.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/69.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/69.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/7.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/70.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/70.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/71.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/71.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/72.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/72.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/73.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/73.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/74.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/74.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/75.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/75.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/76.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/76.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/77.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/77.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/78.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/78.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/79.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/79.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/8.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/80.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/80.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/81.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/81.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/82.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/82.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/83.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/83.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/84.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/84.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/85.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/85.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/86.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/86.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/87.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/87.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/88.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/88.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/89.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/89.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/9.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/90.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/90.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/91.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/91.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/92.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/92.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/93.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/93.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/94.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/94.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/95.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/95.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/96.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/96.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/97.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/97.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/98.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/98.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/99.png" afterPath="$PROJECT_DIR$/src/resources/sequence/welcome_seq/99.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/source/sequence/glitch_Seq.aep" afterPath="$PROJECT_DIR$/src/resources/source/sequence/glitch_Seq.aep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Asteroid.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Asteroid.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/AsteroidFragment.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/AsteroidFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CollisionLogic.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/CollisionLogic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Space.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Space.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Asteroid.java" afterPath="$PROJECT_DIR$/src/Asteroid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bootstrap.java" afterPath="$PROJECT_DIR$/src/Bootstrap.java" />
     </list>
@@ -156,14 +43,11 @@
       <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="473" column="21" lean-forward="true" selection-start-line="473" selection-start-column="21" selection-end-line="473" selection-end-column="21" />
+            <state relative-caret-position="7307">
+              <caret line="2835" column="42" lean-forward="false" selection-start-line="2835" selection-start-column="42" selection-end-line="2835" selection-end-column="42" />
               <folding>
-                <element signature="class#Resources#0" expanded="false" />
                 <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#cursor_frameUpdate#0;class#Resources#0" expanded="false" />
-                <element signature="e#7046#8227#0" expanded="true" />
-                <element signature="e#8226#8227#0" expanded="true" />
                 <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#importEnemyResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#importPlayerResources#0;class#Resources#0" expanded="false" />
@@ -171,40 +55,37 @@
                 <element signature="method#importSpaceResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#importIntroResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
+                <element signature="e#18101#18102#0" expanded="true" />
+                <element signature="e#18137#18138#0" expanded="true" />
                 <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
-                <element signature="e#20487#20688#0" expanded="true" />
-                <element signature="e#20687#20688#0" expanded="true" />
-                <element signature="e#23354#23355#0" expanded="true" />
-                <element signature="e#23396#23397#0" expanded="true" />
-                <element signature="class#HUD#0" expanded="false" />
-                <element signature="method#HUD#0;class#HUD#0" expanded="false" />
-                <element signature="e#25724#25963#0" expanded="false" />
-                <element signature="e#26026#26365#0" expanded="false" />
-                <element signature="e#26408#26663#0" expanded="false" />
-                <element signature="e#27061#27376#0" expanded="false" />
-                <element signature="e#27416#27656#0" expanded="false" />
-                <element signature="e#28035#28366#0" expanded="false" />
-                <element signature="e#28407#28659#0" expanded="false" />
-                <element signature="e#29053#29370#0" expanded="false" />
-                <element signature="e#29432#29754#0" expanded="false" />
-                <element signature="e#29822#30065#0" expanded="false" />
-                <element signature="e#30127#30449#0" expanded="false" />
-                <element signature="e#30517#30760#0" expanded="false" />
-                <element signature="e#30826#31575#0" expanded="false" />
-                <element signature="e#31647#32968#0" expanded="false" />
-                <element signature="e#33041#33708#0" expanded="false" />
+                <element signature="class#GameGUI#0" expanded="false" />
+                <element signature="class#IntroGUI#0" expanded="false" />
+                <element signature="e#26023#26262#0" expanded="false" />
+                <element signature="e#26325#26664#0" expanded="false" />
+                <element signature="e#26707#26962#0" expanded="false" />
+                <element signature="e#27360#27675#0" expanded="false" />
+                <element signature="e#28332#28663#0" expanded="false" />
+                <element signature="e#28704#28956#0" expanded="false" />
+                <element signature="e#29350#29667#0" expanded="false" />
+                <element signature="e#29729#30051#0" expanded="false" />
+                <element signature="e#30119#30362#0" expanded="false" />
+                <element signature="e#30424#30746#0" expanded="false" />
+                <element signature="e#30814#31057#0" expanded="false" />
+                <element signature="e#31123#31872#0" expanded="false" />
+                <element signature="e#31944#33265#0" expanded="false" />
+                <element signature="e#33338#34005#0" expanded="false" />
                 <element signature="method#paintComponent#0;class#HUD#0" expanded="false" />
                 <element signature="method#init#0;class#HUD#0" expanded="false" />
                 <element signature="class#CharacterProperties#0" expanded="false" />
                 <element signature="class#Asteroid#0" expanded="false" />
                 <element signature="method#Asteroid#0;class#Asteroid#0" expanded="false" />
-                <element signature="class#AsteroidFragment#0" expanded="false" />
                 <element signature="method#hitNothing#0;class#AsteroidFragment#0" expanded="false" />
                 <element signature="method#hitAsteroid#0;class#AsteroidFragment#0" expanded="false" />
                 <element signature="method#hitBox#0;class#AsteroidFragment#0" expanded="false" />
                 <element signature="method#updateHitBox#0;class#AsteroidFragment#0" expanded="false" />
-                <element signature="e#46894#46939#0" expanded="false" />
-                <element signature="e#47010#47310#0" expanded="false" />
+                <element signature="class#Space#0" expanded="false" />
+                <element signature="e#47134#47179#0" expanded="false" />
+                <element signature="e#47250#47550#0" expanded="false" />
                 <element signature="method#paintComponent#0;class#Space#0" expanded="false" />
                 <element signature="method#isSpawnAsteroid#0;class#Space#0" expanded="false" />
                 <element signature="method#spawnAsteroid#0;class#Space#0" expanded="false" />
@@ -224,23 +105,20 @@
                 <element signature="class#Hostile#0" expanded="false" />
                 <element signature="class#CollisionLogic#0" expanded="false" />
                 <element signature="class#Entitative#0" expanded="false" />
-                <element signature="class#Player#0" expanded="false" />
-                <element signature="class#79452:80047" expanded="false" />
-                <element signature="class#80078:80676" expanded="false" />
-                <element signature="e#80703#81073#0" expanded="true" />
-                <element signature="e#81072#81073#0" expanded="true" />
-                <element signature="e#81534#81599#0" expanded="false" />
-                <element signature="e#81675#81740#0" expanded="false" />
-                <element signature="e#81809#82659#0" expanded="false" />
-                <element signature="e#82906#83885#0" expanded="false" />
-                <element signature="e#83917#84119#0" expanded="true" />
-                <element signature="e#84118#84119#0" expanded="true" />
-                <element signature="e#84160#85316#0" expanded="false" />
-                <element signature="e#85366#85773#0" expanded="false" />
-                <element signature="e#85825#86272#0" expanded="false" />
+                <element signature="class#78440:79281" expanded="false" />
+                <element signature="method#Player#0;class#Player#0" expanded="false" />
+                <element signature="class#79692:80287" expanded="false" />
+                <element signature="class#80318:80916" expanded="false" />
+                <element signature="e#81774#81839#0" expanded="false" />
+                <element signature="e#81915#81980#0" expanded="false" />
+                <element signature="e#82049#82899#0" expanded="false" />
+                <element signature="e#83146#84125#0" expanded="false" />
+                <element signature="e#84400#85556#0" expanded="false" />
+                <element signature="e#85606#86013#0" expanded="false" />
+                <element signature="e#86065#86512#0" expanded="false" />
                 <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
                 <element signature="method#actionPerformed#0;class#Player#0" expanded="false" />
-                <element signature="e#88185#89393#0" expanded="false" />
+                <element signature="e#88485#89693#0" expanded="false" />
                 <element signature="method#changeHealth#0;class#Player#0" expanded="false" />
                 <element signature="method#healthPercentage#0;class#Player#0" expanded="false" />
               </folding>
@@ -251,10 +129,12 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-73">
-              <caret line="311" column="19" lean-forward="false" selection-start-line="311" selection-start-column="19" selection-end-line="311" selection-end-column="19" />
+            <state relative-caret-position="-441">
+              <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
               <folding>
                 <element signature="class#Bootstrap#0" expanded="false" />
+                <element signature="e#1922#2167#0" expanded="true" />
+                <element signature="e#2166#2167#0" expanded="true" />
                 <element signature="e#4096#4341#0" expanded="false" />
                 <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
               </folding>
@@ -366,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -439,8 +318,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -990,12 +870,13 @@
       <workItem from="1496019635818" duration="1877000" />
       <workItem from="1496022782408" duration="1827000" />
       <workItem from="1496062266719" duration="79000" />
-      <workItem from="1496067879174" duration="3865000" />
+      <workItem from="1496067879174" duration="4214000" />
+      <workItem from="1496073154742" duration="1231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143043000" />
+    <option name="totallyTimeSpent" value="144623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1004,19 +885,19 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.13018598" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.12732475" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.7546495" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.76180255" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.2453505" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.23819743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3211731" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32546496" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1075,7 +956,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="117" />
+      <option name="time" value="118" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1190,10 +1071,12 @@
     <entry file="file://$PROJECT_DIR$/src/Launcher.java" />
     <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="311" column="19" lean-forward="false" selection-start-line="311" selection-start-column="19" selection-end-line="311" selection-end-column="19" />
+        <state relative-caret-position="-441">
+          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding>
             <element signature="class#Bootstrap#0" expanded="false" />
+            <element signature="e#1922#2167#0" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
             <element signature="e#4096#4341#0" expanded="false" />
             <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
           </folding>
@@ -1202,14 +1085,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="473" column="21" lean-forward="true" selection-start-line="473" selection-start-column="21" selection-end-line="473" selection-end-column="21" />
+        <state relative-caret-position="7307">
+          <caret line="2835" column="42" lean-forward="false" selection-start-line="2835" selection-start-column="42" selection-end-line="2835" selection-end-column="42" />
           <folding>
-            <element signature="class#Resources#0" expanded="false" />
             <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
             <element signature="method#cursor_frameUpdate#0;class#Resources#0" expanded="false" />
-            <element signature="e#7046#8227#0" expanded="true" />
-            <element signature="e#8226#8227#0" expanded="true" />
             <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
             <element signature="method#importEnemyResources#0;class#Resources#0" expanded="false" />
             <element signature="method#importPlayerResources#0;class#Resources#0" expanded="false" />
@@ -1217,40 +1097,37 @@
             <element signature="method#importSpaceResources#0;class#Resources#0" expanded="false" />
             <element signature="method#importIntroResources#0;class#Resources#0" expanded="false" />
             <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
+            <element signature="e#18101#18102#0" expanded="true" />
+            <element signature="e#18137#18138#0" expanded="true" />
             <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
-            <element signature="e#20487#20688#0" expanded="true" />
-            <element signature="e#20687#20688#0" expanded="true" />
-            <element signature="e#23354#23355#0" expanded="true" />
-            <element signature="e#23396#23397#0" expanded="true" />
-            <element signature="class#HUD#0" expanded="false" />
-            <element signature="method#HUD#0;class#HUD#0" expanded="false" />
-            <element signature="e#25724#25963#0" expanded="false" />
-            <element signature="e#26026#26365#0" expanded="false" />
-            <element signature="e#26408#26663#0" expanded="false" />
-            <element signature="e#27061#27376#0" expanded="false" />
-            <element signature="e#27416#27656#0" expanded="false" />
-            <element signature="e#28035#28366#0" expanded="false" />
-            <element signature="e#28407#28659#0" expanded="false" />
-            <element signature="e#29053#29370#0" expanded="false" />
-            <element signature="e#29432#29754#0" expanded="false" />
-            <element signature="e#29822#30065#0" expanded="false" />
-            <element signature="e#30127#30449#0" expanded="false" />
-            <element signature="e#30517#30760#0" expanded="false" />
-            <element signature="e#30826#31575#0" expanded="false" />
-            <element signature="e#31647#32968#0" expanded="false" />
-            <element signature="e#33041#33708#0" expanded="false" />
+            <element signature="class#GameGUI#0" expanded="false" />
+            <element signature="class#IntroGUI#0" expanded="false" />
+            <element signature="e#26023#26262#0" expanded="false" />
+            <element signature="e#26325#26664#0" expanded="false" />
+            <element signature="e#26707#26962#0" expanded="false" />
+            <element signature="e#27360#27675#0" expanded="false" />
+            <element signature="e#28332#28663#0" expanded="false" />
+            <element signature="e#28704#28956#0" expanded="false" />
+            <element signature="e#29350#29667#0" expanded="false" />
+            <element signature="e#29729#30051#0" expanded="false" />
+            <element signature="e#30119#30362#0" expanded="false" />
+            <element signature="e#30424#30746#0" expanded="false" />
+            <element signature="e#30814#31057#0" expanded="false" />
+            <element signature="e#31123#31872#0" expanded="false" />
+            <element signature="e#31944#33265#0" expanded="false" />
+            <element signature="e#33338#34005#0" expanded="false" />
             <element signature="method#paintComponent#0;class#HUD#0" expanded="false" />
             <element signature="method#init#0;class#HUD#0" expanded="false" />
             <element signature="class#CharacterProperties#0" expanded="false" />
             <element signature="class#Asteroid#0" expanded="false" />
             <element signature="method#Asteroid#0;class#Asteroid#0" expanded="false" />
-            <element signature="class#AsteroidFragment#0" expanded="false" />
             <element signature="method#hitNothing#0;class#AsteroidFragment#0" expanded="false" />
             <element signature="method#hitAsteroid#0;class#AsteroidFragment#0" expanded="false" />
             <element signature="method#hitBox#0;class#AsteroidFragment#0" expanded="false" />
             <element signature="method#updateHitBox#0;class#AsteroidFragment#0" expanded="false" />
-            <element signature="e#46894#46939#0" expanded="false" />
-            <element signature="e#47010#47310#0" expanded="false" />
+            <element signature="class#Space#0" expanded="false" />
+            <element signature="e#47134#47179#0" expanded="false" />
+            <element signature="e#47250#47550#0" expanded="false" />
             <element signature="method#paintComponent#0;class#Space#0" expanded="false" />
             <element signature="method#isSpawnAsteroid#0;class#Space#0" expanded="false" />
             <element signature="method#spawnAsteroid#0;class#Space#0" expanded="false" />
@@ -1270,23 +1147,20 @@
             <element signature="class#Hostile#0" expanded="false" />
             <element signature="class#CollisionLogic#0" expanded="false" />
             <element signature="class#Entitative#0" expanded="false" />
-            <element signature="class#Player#0" expanded="false" />
-            <element signature="class#79452:80047" expanded="false" />
-            <element signature="class#80078:80676" expanded="false" />
-            <element signature="e#80703#81073#0" expanded="true" />
-            <element signature="e#81072#81073#0" expanded="true" />
-            <element signature="e#81534#81599#0" expanded="false" />
-            <element signature="e#81675#81740#0" expanded="false" />
-            <element signature="e#81809#82659#0" expanded="false" />
-            <element signature="e#82906#83885#0" expanded="false" />
-            <element signature="e#83917#84119#0" expanded="true" />
-            <element signature="e#84118#84119#0" expanded="true" />
-            <element signature="e#84160#85316#0" expanded="false" />
-            <element signature="e#85366#85773#0" expanded="false" />
-            <element signature="e#85825#86272#0" expanded="false" />
+            <element signature="class#78440:79281" expanded="false" />
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="class#79692:80287" expanded="false" />
+            <element signature="class#80318:80916" expanded="false" />
+            <element signature="e#81774#81839#0" expanded="false" />
+            <element signature="e#81915#81980#0" expanded="false" />
+            <element signature="e#82049#82899#0" expanded="false" />
+            <element signature="e#83146#84125#0" expanded="false" />
+            <element signature="e#84400#85556#0" expanded="false" />
+            <element signature="e#85606#86013#0" expanded="false" />
+            <element signature="e#86065#86512#0" expanded="false" />
             <element signature="method#paintComponent#0;class#Player#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#Player#0" expanded="false" />
-            <element signature="e#88185#89393#0" expanded="false" />
+            <element signature="e#88485#89693#0" expanded="false" />
             <element signature="method#changeHealth#0;class#Player#0" expanded="false" />
             <element signature="method#healthPercentage#0;class#Player#0" expanded="false" />
           </folding>
