@@ -104,6 +104,8 @@ class Resources {
     public static Sound over_heat = TinySound.loadSound(Resources.class.getResource("/resources/sound/over_heat.wav"));
     private static Music music = TinySound.loadMusic(Resources.class.getResource("/resources/sound/music.wav"));
     public static Music low_health = TinySound.loadMusic(Resources.class.getResource("/resources/sound/low_health_warning.wav"));
+    private static Music logo_theme = TinySound.loadMusic(Resources.class.getResource("/resources/sound/logo.wav"));;
+    public static Music load_music = TinySound.loadMusic(Resources.class.getResource("/resources/sound/load.wav"));;
 
     public static boolean infinite_health = false;
 
@@ -325,6 +327,14 @@ class Resources {
         music.play(true);
     }
 
+    public static void logoTheme() {
+        logo_theme.play(false,0.5);
+    }
+
+    public static void loadMusic() {
+        load_music.play(true,0.5);
+    }
+
     public static void bulletSound(boolean e){
         if (e) {
             enemy_fire.play();
@@ -368,8 +378,6 @@ class GameGUI extends JFrame{
         collision_logic = new CollisionLogic(EnemyPane.enemies, BulletPane.bullets,
                 Space.asteroids, Space.asteroidFragments, player);
 
-        Resources.music();
-
         add(start_confirmation);
         add(hud);
         add(enemy_pane);
@@ -377,9 +385,13 @@ class GameGUI extends JFrame{
         add(bullet_pane);
         add(space);
 
+        Bootstrap.loading.notifyCompletion();
+
     }
 
     public void init() {
+        Resources.load_music.stop();
+        Resources.music();
         enemy_pane.init();
         hud.init();
     }
@@ -573,6 +585,16 @@ class HUD extends JPanel{
                 shield_frameCount ++;
             } else {
                 shield_load.stop();
+            }
+        });
+        shield_unload = new Timer(125, e -> {
+            shield_icon = Resources.shield_load[shield_frameCount];
+
+            if (shield_frameCount > 0){
+                teleport_frameCount --;
+            } else {
+                shield_unload.stop();
+                shield_load.start();
             }
         });
 
@@ -789,6 +811,10 @@ class HUD extends JPanel{
 
     public boolean shieldIsAvailable(){
         return shield_frameCount == 120;
+    }
+
+    public void shieldInProgress(){
+        shield_unload.start();
     }
 
 }
@@ -2666,6 +2692,9 @@ class Player extends JPanel implements ActionListener, Entitative {
     public void protect_init(){
 
         if (GameGUI.hud.shieldIsAvailable()) {
+
+            GameGUI.hud.shieldInProgress();
+
             Timer protect_init = new Timer(Resources.REFRESH_RATE, null);
 
             protect_init.addActionListener(e -> {

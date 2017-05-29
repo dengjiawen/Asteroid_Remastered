@@ -2,9 +2,12 @@ import libs.sound.Music;
 import libs.sound.Sound;
 import libs.sound.TinySound;
 
+import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.concurrent.ExecutorService;
@@ -32,13 +35,12 @@ class LoadingGUI extends JFrame{
 
     private Timer logo_sequence;
     private Timer load_sequence;
-
-    private Music logo;
-    private Music load;
+    private Timer tips_sequence;
 
     private int visual_frameCount;
     private int ball_frameCount;
     private int load_count;
+    private int tip_count;
 
     private boolean purged;
 
@@ -47,10 +49,12 @@ class LoadingGUI extends JFrame{
 
     private BufferedImage visual_image;
     private BufferedImage load_ball;
+    private BufferedImage tip;
 
     private BufferedImage[] logo_seq;
     private BufferedImage[] load_seq;
     private BufferedImage[] ball_seq;
+    private BufferedImage[] tips;
 
     private ExecutorService import_pool_1 = Executors.newCachedThreadPool();
     private ExecutorService import_pool_2 = Executors.newCachedThreadPool();
@@ -70,12 +74,14 @@ class LoadingGUI extends JFrame{
         visual_frameCount = 0;
         ball_frameCount = 0;
         load_count = 0;
+        tip_count = 0;
         purged = false;
 
         visual = new JPanel(){
             protected void paintComponent (Graphics g){
                 g.drawImage(visual_image,0,0,this);
                 g.drawImage(load_ball,900,460,this);
+                g.drawImage(tip,600,250,this);
             }
         };
         visual.setBounds(0,0,1000,563);
@@ -90,6 +96,7 @@ class LoadingGUI extends JFrame{
         logo_seq = new BufferedImage[363];
         load_seq = new BufferedImage[600];
         ball_seq = new BufferedImage[95];
+        tips = new BufferedImage[5];
 
         importLogoSequence();
 
@@ -106,10 +113,11 @@ class LoadingGUI extends JFrame{
                 visual_frameCount = 0;
                 visual_image = null;
                 logo_seq = null;
-                load.play(true,0.5);
+                Resources.loadMusic();
                 Runtime.getRuntime().gc();
                 importLoadSequence();
                 load_sequence.start();
+                tips_sequence.start();
             }
 
         });
@@ -145,10 +153,22 @@ class LoadingGUI extends JFrame{
 
         });
 
+        tips_sequence = new Timer(5000, e -> {
+
+            if (purged) {
+                tip = tips[tip_count];
+
+                if (tip_count < 3) {
+                    tip_count++;
+                } else {
+                    tip_count = 0;
+                }
+            }
+        });
+        tips_sequence.setInitialDelay(0);
+
         logo_sequence.start();
-        logo = TinySound.loadMusic(getClass().getResource("/resources/sound/logo.wav"));
-        load = TinySound.loadMusic(getClass().getResource("/resources/sound/load.wav"));
-        logo.play(false,0.5);
+        Resources.logoTheme();
 
         add(status);
         add(visual);
@@ -184,6 +204,9 @@ class LoadingGUI extends JFrame{
                 }
                 for (int i = 0; i < ball_seq.length; i++){
                     ball_seq[i] = ImageIO.read(getClass().getResource("/resources/intro_seq/golf_balls/" + i + ".png"));
+                }
+                for (int i = 0; i < tips.length; i++){
+                    tips[i] = ImageIO.read(getClass().getResource("/resources/tips/" + i + ".png"));
                 }
             } catch (IOException e) {
                 System.out.println(e.getMessage());
@@ -231,6 +254,13 @@ class LoadingGUI extends JFrame{
             for (int i = 0; i < 300; i++){
                 load_seq[i] = null;
             }
+
+            import_pool_2.shutdownNow();
+            import_pool_3.shutdownNow();
+
+            import_pool_2 = null;
+            import_pool_3 = null;
+
             Runtime.getRuntime().gc();
         });
     }
@@ -249,14 +279,14 @@ class LoadingGUI extends JFrame{
                 break;
 
             case 2:
-                import_pool_2.submit(() -> {
+                import_pool_1.submit(() -> {
                     Resources.importSpaceResources();
                 });
                 status.setText("Killing Aliens...");
                 break;
 
             case 3:
-                import_pool_3.submit(() -> {
+                import_pool_1.submit(() -> {
                     Resources.importEnemyResources();
                 });
                 status.setText("Crunching ##s...");
@@ -277,11 +307,62 @@ class LoadingGUI extends JFrame{
                 break;
 
             case 6:
-                this.dispose();
-                load.stop();
-                Runtime.getRuntime().gc();
-                Bootstrap.gameGUI = new GameGUI();
-                Bootstrap.gameGUI.setVisible(true);
+                import_pool_1.submit(() -> {
+                    Bootstrap.gameGUI = new GameGUI();
+                });
+                break;
+
+            case 7:
+                status.setText("Almost There...");
+                tips_sequence.stop();
+                tip = tips[4];
+
+                getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER,0),"enter");
+
+                getRootPane().getActionMap().put("enter", new AbstractAction() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        notifyCompletion();
+                    }
+                });
+                break;
+
+            case 8:
+
+                status.setText("Here We Go...");
+
+                tip = null;
+
+                load_sequence.removeActionListener(load_sequence.getActionListeners()[0]);
+                load_sequence.addActionListener(e -> {
+
+                    visual_image = load_seq[visual_frameCount];
+
+                    load_ball = ball_seq[ball_frameCount];
+
+                    repaint();
+
+                    if (visual_frameCount < 599 - 1) {
+                        visual_frameCount++;
+                    } else {
+                        load_sequence.stop();
+                        import_pool_1.shutdownNow();
+                        this.dispose();
+                        Bootstrap.loading = null;
+                        Runtime.getRuntime().gc();
+
+                        Bootstrap.gameGUI.setVisible(true);
+                    }
+
+                    if (ball_frameCount < 94 - 1) {
+                        ball_frameCount++;
+                    } else {
+                        ball_frameCount = 0;
+                    }
+
+                });
+
+                break;
 
         }
 
