@@ -56,9 +56,9 @@ class LoadingGUI extends JFrame{
     private BufferedImage[] ball_seq;
     private BufferedImage[] tips;
 
-    private ExecutorService import_pool_1 = Executors.newCachedThreadPool();
-    private ExecutorService import_pool_2 = Executors.newCachedThreadPool();
-    private ExecutorService import_pool_3 = Executors.newCachedThreadPool();
+    private ExecutorService import_pool_1 = Executors.newFixedThreadPool(1);
+    private ExecutorService import_pool_2 = Executors.newFixedThreadPool(1);
+    private ExecutorService import_pool_3 = Executors.newFixedThreadPool(1);
 
     public LoadingGUI() {
 
@@ -91,7 +91,7 @@ class LoadingGUI extends JFrame{
         status = new JLabel();
         status.setForeground(Color.white);
         status.setFont(Resources.standard);
-        status.setBounds(750,460,1000,50);
+        status.setBounds(765,460,1000,50);
 
         logo_seq = new BufferedImage[363];
         load_seq = new BufferedImage[600];
