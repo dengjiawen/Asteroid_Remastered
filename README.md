@@ -9,13 +9,15 @@ It will be constantly improved upon with new features and GUI.
 The coding for the program is currently being optimized and simplified.
 **In future commits, we plan to:**
 - [x] Shrink code line count from 5,000 to 3,500
-- [ ] Shrink code line count from 3,500 to < 3,000
+- [x] Shrink code line count from 3,500 to 3,000
+- [ ] Shrink code line count from 3,000 to < 2500
 - [x] Add teleportation and protective shield
 - [x] Add shockwave
 - [x] Add asteroids
 - [x] Add functional asteroid fragments
 - [x] Add point system
 - [ ] Make point system functional
+- [ ] Add game over screen
 - [x] Add cool down timers for abilities
 - [x] Add boot up screen
 - [ ] Add setting panel
