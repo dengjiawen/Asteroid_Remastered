@@ -217,7 +217,7 @@ class LoadingGUI extends JFrame{
 
         super();
 
-        setSize(1000, 563);
+        setSize(810, 456);
         setUndecorated(true);
         setResizable(false);
         setLocationRelativeTo(null);
@@ -244,7 +244,7 @@ class LoadingGUI extends JFrame{
 
                 //draw animation frame,ball animation, and tip
                 g.drawImage(visual_image,0,0,this);
-                g.drawImage(load_ball,900,460,this);
+                g.drawImage(load_ball,775,300,this);
                 g.drawImage(tip,600,250,this);
             }
         };

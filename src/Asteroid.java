@@ -16,8 +16,8 @@ class Resources {
     public static final byte FRAME_RATE = 30;
     public static final byte REFRESH_RATE = (byte) (1000 / FRAME_RATE);
 
-    public static final int FRAME_WIDTH = 1450;
-    public static final int FRAME_HEIGHT = 800;
+    public static final int FRAME_WIDTH = 1280;
+    public static final int FRAME_HEIGHT = 750;
 
     private static final GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     //public static final int FRAME_WIDTH = gd.getDisplayMode().getWidth();
