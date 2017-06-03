@@ -78,14 +78,14 @@ class Bootstrap{
 
         TinySound.init();
 
-        if (!checkConnection()){
-            connectionError();
-        } else {
-            Resources.importData();
-        }
+        //if (!checkConnection()){
+            //connectionError();
+        //} else {
+           // Resources.importData();
+        //}
 
-        //loading = new LoadingGUI();
-        //loading.setVisible(true);
+        loading = new LoadingGUI();
+        loading.setVisible(true);
     }
 
     public static boolean checkConnection(){

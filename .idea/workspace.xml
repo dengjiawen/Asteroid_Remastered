@@ -6,8 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SaveProcessor.java" afterPath="$PROJECT_DIR$/src/SaveProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bootstrap.java" afterPath="$PROJECT_DIR$/src/Bootstrap.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +22,7 @@
       <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
+            <state relative-caret-position="651">
               <caret line="313" column="59" lean-forward="false" selection-start-line="313" selection-start-column="59" selection-end-line="313" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -66,12 +65,12 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="302">
+              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="class#LoadingGUI#0" expanded="false" />
-                <element signature="e#7925#8170#0" expanded="false" />
+                <element signature="e#7931#8176#0" expanded="false" />
                 <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
               </folding>
             </state>
@@ -154,8 +153,8 @@
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/Asteroid.java" />
         <option value="$PROJECT_DIR$/src/IDGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/SaveProcessor.java" />
+        <option value="$PROJECT_DIR$/src/Bootstrap.java" />
       </list>
     </option>
   </component>
@@ -824,12 +823,12 @@
       <workItem from="1496418015521" duration="317000" />
       <workItem from="1496418884323" duration="2115000" />
       <workItem from="1496433253994" duration="926000" />
-      <workItem from="1496436354537" duration="16116000" />
+      <workItem from="1496436354537" duration="16175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192646000" />
+    <option name="totallyTimeSpent" value="192705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1081,7 +1080,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
+        <state relative-caret-position="651">
           <caret line="313" column="59" lean-forward="false" selection-start-line="313" selection-start-column="59" selection-end-line="313" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1122,12 +1121,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="302">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="class#LoadingGUI#0" expanded="false" />
-            <element signature="e#7925#8170#0" expanded="false" />
+            <element signature="e#7931#8176#0" expanded="false" />
             <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
           </folding>
         </state>
