@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Asteroid.java" afterPath="$PROJECT_DIR$/src/Asteroid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bootstrap.java" afterPath="$PROJECT_DIR$/src/Bootstrap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SaveProcessor.java" afterPath="$PROJECT_DIR$/src/SaveProcessor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,8 +68,8 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-203">
-              <caret line="77" column="15" lean-forward="false" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
+            <state relative-caret-position="320">
+              <caret line="257" column="41" lean-forward="false" selection-start-line="257" selection-start-column="41" selection-end-line="257" selection-end-column="41" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="class#Bootstrap#0" expanded="false" />
@@ -80,12 +77,12 @@
                 <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
                 <element signature="method#checkConnection#0;class#Bootstrap#0" expanded="false" />
                 <element signature="method#connectionError#0;class#Bootstrap#0" expanded="false" />
-                <element signature="e#8559#8804#0" expanded="true" />
-                <element signature="e#8803#8804#0" expanded="true" />
-                <element signature="e#10733#10978#0" expanded="false" />
+                <element signature="e#8858#9302#0" expanded="true" />
+                <element signature="e#9301#9302#0" expanded="true" />
+                <element signature="e#11320#11565#0" expanded="false" />
                 <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
-                <element signature="e#16470#16471#0" expanded="false" />
-                <element signature="e#16536#16537#0" expanded="false" />
+                <element signature="e#17057#17058#0" expanded="false" />
+                <element signature="e#17123#17124#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -167,8 +164,8 @@
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/IDGenerator.java" />
         <option value="$PROJECT_DIR$/src/SaveProcessor.java" />
-        <option value="$PROJECT_DIR$/src/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/Asteroid.java" />
+        <option value="$PROJECT_DIR$/src/Bootstrap.java" />
       </list>
     </option>
   </component>
@@ -210,6 +207,72 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="KillEveryone" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KillEveryone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KillEveryone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveProcessor.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StringEncryptor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KillEveryone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KillEveryone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveProcessor.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveProcessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KillEveryone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KillEveryone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveProcessor.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -794,12 +857,12 @@
       <workItem from="1496418884323" duration="2115000" />
       <workItem from="1496433253994" duration="926000" />
       <workItem from="1496436354537" duration="16387000" />
-      <workItem from="1496497265338" duration="2850000" />
+      <workItem from="1496497265338" duration="3383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195767000" />
+    <option name="totallyTimeSpent" value="196300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1001,17 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -1056,6 +1108,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SaveProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-242">
@@ -1072,8 +1132,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="77" column="15" lean-forward="false" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
+        <state relative-caret-position="320">
+          <caret line="257" column="41" lean-forward="false" selection-start-line="257" selection-start-column="41" selection-end-line="257" selection-end-column="41" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="class#Bootstrap#0" expanded="false" />
@@ -1081,12 +1141,12 @@
             <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
             <element signature="method#checkConnection#0;class#Bootstrap#0" expanded="false" />
             <element signature="method#connectionError#0;class#Bootstrap#0" expanded="false" />
-            <element signature="e#8559#8804#0" expanded="true" />
-            <element signature="e#8803#8804#0" expanded="true" />
-            <element signature="e#10733#10978#0" expanded="false" />
+            <element signature="e#8858#9302#0" expanded="true" />
+            <element signature="e#9301#9302#0" expanded="true" />
+            <element signature="e#11320#11565#0" expanded="false" />
             <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
-            <element signature="e#16470#16471#0" expanded="false" />
-            <element signature="e#16536#16537#0" expanded="false" />
+            <element signature="e#17057#17058#0" expanded="false" />
+            <element signature="e#17123#17124#0" expanded="false" />
           </folding>
         </state>
       </provider>

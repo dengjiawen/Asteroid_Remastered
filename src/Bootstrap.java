@@ -199,15 +199,19 @@ class LoadingGUI extends JFrame{
     private BufferedImage load_ball;        //For displaying loading ball animation
     private BufferedImage tip;              //For displaying tips
 
-    private BufferedImage[] logo_seq;
-    private BufferedImage[] load_seq;
-    private BufferedImage[] ball_seq;
-    private BufferedImage[] tips;
+    private BufferedImage[] logo_seq;       //Logo sequence images
+    private BufferedImage[] load_seq;       //Load sequence images
+    private BufferedImage[] ball_seq;       //Ball sequence images
+    private BufferedImage[] tips;           //Tips
 
+    //Single threaded ThreadPools for importing resources in parallel
     private ExecutorService import_pool_1 = Executors.newFixedThreadPool(1);
     private ExecutorService import_pool_2 = Executors.newFixedThreadPool(1);
     private ExecutorService import_pool_3 = Executors.newFixedThreadPool(1);
 
+    /**
+     * Constructor
+     */
     public LoadingGUI() {
 
         super();
@@ -219,14 +223,23 @@ class LoadingGUI extends JFrame{
         setLayout(null);
         getContentPane().setBackground(Color.black);
 
+        //initialize instance variables
         visual_frameCount = 0;
         ball_frameCount = 0;
         load_count = 0;
         tip_count = 0;
         purged = false;
 
+        //Initialize JPanel for animation display
         visual = new JPanel(){
+
+            /**
+             * Override paintComponent class
+             * @param g default paintComponent parameter
+             */
             protected void paintComponent (Graphics g){
+
+                //draw animation frame,ball animation, and tip
                 g.drawImage(visual_image,0,0,this);
                 g.drawImage(load_ball,900,460,this);
                 g.drawImage(tip,600,250,this);
@@ -236,11 +249,13 @@ class LoadingGUI extends JFrame{
         visual.setBackground(Color.black);
         visual.setOpaque(false);
 
+        //Initialize JLabel for loading status
         status = new JLabel();
         status.setForeground(Color.white);
         status.setFont(Resources.standard);
         status.setBounds(765,460,1000,50);
 
+        //Initialize BufferedImage arrays
         logo_seq = new BufferedImage[363];
         load_seq = new BufferedImage[600];
         ball_seq = new BufferedImage[95];
