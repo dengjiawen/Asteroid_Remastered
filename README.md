@@ -5,6 +5,20 @@ This is the result of over **1 week of development**,
 and **tens of minutes of manpower**.
 It will be constantly improved upon with new features and GUI.
 
+### Activation
+The latest version of the game added activation. You have to enter one of the following keys in order to unlock the game. A save file will be automatically created for you on my remote server.
+
+**VQP4F-V47P8-BBDXK-R7K9Q-B42BB**
+
+**JBH94-K6WKQ-YHTD6-XJFV9-WJP7Y**
+
+**HRCXT-BY6WB-VBM83-CMBXF-BVWYY**
+
+**C626F-H4CCJ-PWR8R-2RB9K-3G3HD**
+
+**TBHJK-W4DPH-9D267-H93VR-WMXQJ**
+
+
 ### Upcoming Improvements
 The coding for the program is currently being optimized and simplified.
 **In future commits, we plan to:**
