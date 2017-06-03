@@ -1,8 +1,62 @@
-import libs.sound.Music;
-import libs.sound.Sound;
+/**
+ * Copyright 2017 (C) Jiawen Deng
+ * ALL RIGHTS RESERVED
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *     Redistributions of source code must retain the above copyright notice,
+ *     this list of conditions and the following disclaimer.
+ *
+ *     Redistributions in binary form must reproduce the above copyright notice,
+ *     this list of conditions and the following disclaimer in the documentation
+ *     and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ *
+ * Created on : 02-06-2017
+ * Author     : Jiawen Deng
+ *
+ *-----------------------------------------------------------------------------
+ * Revision History (Release 0.5)
+ *-----------------------------------------------------------------------------
+ * VERSION     AUTHOR/      DESCRIPTION OF CHANGE
+ * OLD/NEW     DATE
+ *-----------------------------------------------------------------------------
+ * --/0.1  | J.D.          | Initial creation of program
+ *         | 01-05-17      |
+ *---------|---------------|---------------------------------------------------
+ * 0.1/0.2 | J.D.          |
+ *         | 15-05-17      |
+ *---------|---------------|---------------------------------------------------
+ * 0.2/0.3 | J.D.          |
+ *         | 20-05-17      |
+ *---------|---------------|---------------------------------------------------
+ * 0.3/0.4 | J.D.          |
+ *         | 22-05-17      |
+ *---------|---------------|---------------------------------------------------
+ * 0.4/0.5 | J.D.          |
+ *         | 02-06-17      |
+ *---------|---------------|---------------------------------------------------
+ *
+ * This is a custom loader which plays a looped animation with music while the
+ * files are being loaded. It also initializes the game by loading resources
+ * into BufferedImage arrays in the Resources class.
+ *
+ */
+
 import libs.sound.TinySound;
 
-import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -10,12 +64,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Created by freddeng on 2017-05-28.
- */
 class Bootstrap{
 
     public static LoadingGUI loading;
@@ -25,8 +78,41 @@ class Bootstrap{
 
         TinySound.init();
 
-        loading = new LoadingGUI();
-        loading.setVisible(true);
+        if (!checkConnection()){
+            connectionError();
+        } else {
+            Resources.importData();
+        }
+
+        //loading = new LoadingGUI();
+        //loading.setVisible(true);
+    }
+
+    public static boolean checkConnection(){
+
+        System.out.println("Attempting to establish connection to server...");
+        try (Socket server = new Socket()){
+            System.out.println("Connecting to 185.176.43.78, port 80");
+            server.connect(new InetSocketAddress("185.176.43.78",80),10000);
+            System.out.println("Successfully connected.");
+            return true;
+        } catch (IOException e){
+            System.out.println("Error: Cannot connect to server. Status code 85.");
+            return false;
+        }
+
+    }
+
+    public static void connectionError(){
+
+        JOptionPane.showMessageDialog(null,
+                "The Internet connection to remote server had been lost." +
+                        "\nIt is necessary for DRM and cloud save purposes." +
+                        "\nThe game cannot function without Internet access.", "Error",
+                JOptionPane.ERROR_MESSAGE);
+
+        System.exit(85); //Status 85: Exit due to connection error
+
     }
 
 }
@@ -310,7 +396,6 @@ class LoadingGUI extends JFrame{
                 import_pool_1.submit(() -> {
                     Resources.importIntroResources();
                 });
-                status.setText("Playing God...");
                 break;
 
             case 7:

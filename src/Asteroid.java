@@ -1,13 +1,15 @@
 import libs.sound.*;
 
-import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
-import java.util.*;
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.concurrent.*;
 
 class Resources {
@@ -70,19 +72,19 @@ class Resources {
 
     public static final Font standard = new Font("Calibri",Font.PLAIN,13);
     public static final Font point = new Font("Calibri",Font.PLAIN,30);
-    public static final Font load = new Font("Calibri",Font.BOLD,20);
 
     public static final Color techno_RED = Color.decode("#ed3737");
     public static final Color techno_BLUE = Color.decode("#2bede6");
 
-    public static int total_points = 0;
+    public static int total_points;
     public static int top_score;
+    public static String UDID;
 
     public static Sound enemy_fire = TinySound.loadSound(Resources.class.getResource("/resources/sound/enemy_fire.wav"));
     public static Sound friendly_fire = TinySound.loadSound(Resources.class.getResource("/resources/sound/friendly_fire.wav"));
     private static Sound explosion_sound = TinySound.loadSound(Resources.class.getResource("/resources/sound/explosion.wav"));
     public static Sound over_heat = TinySound.loadSound(Resources.class.getResource("/resources/sound/over_heat.wav"));
-    private static Music music = TinySound.loadMusic(Resources.class.getResource("/resources/sound/music.wav"));
+    public static Music music = TinySound.loadMusic(Resources.class.getResource("/resources/sound/music.wav"));
     public static Music low_health = TinySound.loadMusic(Resources.class.getResource("/resources/sound/low_health_warning.wav"));
     private static Music logo_theme = TinySound.loadMusic(Resources.class.getResource("/resources/sound/logo.wav"));
     public static Music load_music = TinySound.loadMusic(Resources.class.getResource("/resources/sound/load.wav"));
@@ -93,6 +95,8 @@ class Resources {
     private static byte cursor_frameCount = 0;
     private static boolean cursor_onTarget = false;
     private static Rectangle cursor_hitBox = new Rectangle();
+
+    public static Timer cursor_frameUpdate;
 
     public static ExecutorService public_update = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
@@ -109,23 +113,23 @@ class Resources {
         }
     }
 
-    public static void cursor_frameUpdate(GameGUI gameGUI) {
+    public static void cursor_frameUpdate(ConcurrentHashMap<Integer,Hostile> enemies) {
 
         importCursorResources();
 
-        Timer cursor_frameUpdate = new Timer(REFRESH_RATE, e -> {
+        cursor_frameUpdate = new Timer(REFRESH_RATE, e -> {
 
             cursor_onTarget = false;
 
             cursor_hitBox.setBounds(mouse_location.x, mouse_location.y, 50, 50);
 
-            EnemyPane.enemies.forEach((a, enemy) -> {
+            enemies.forEach((a, enemy) -> {
                 if (cursor_hitBox.intersects(enemy.hitBox())) {
                     cursor_onTarget = true;
                 }
             });
 
-            gameGUI.getContentPane().setCursor(
+            Bootstrap.gameGUI.getContentPane().setCursor(
                     Toolkit.getDefaultToolkit().createCustomCursor(
                     cursor_sprite[cursor_onTarget? 1:0][cursor_frameCount],new Point(0,0),null));
 
@@ -299,6 +303,33 @@ class Resources {
 
     }
 
+    public static void importData(){
+
+        UDID = IDGenerator.UDIDGenerator();
+        System.out.println("UDID Generated.");
+        System.out.println("System UDID is " + UDID);
+
+        total_points = 0;
+        top_score = readSaveFiles();
+        System.out.println(top_score);
+
+    }
+
+    public static int readSaveFiles(){
+
+        File save_file = null;
+        URL ftp_address = null;
+
+        try {
+            ftp_address = new URL("http://asteroidsave.royalwebhosting.net/game_save/" + UDID + ".txt");
+        } catch (MalformedURLException e){
+            e.printStackTrace();
+        }
+
+        return SaveProcessor.saveDecoder(ftp_address);
+
+    }
+
     private static void fileNotFound(Exception e) {
 
         JOptionPane.showMessageDialog(null,"One or more files required to run this program is missing.\n" +
@@ -353,6 +384,8 @@ class GameGUI extends JFrame{
 
         super();
 
+        System.out.println("loading complete-3");
+
         setSize(Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT);
         setUndecorated(true);
         setResizable(false);
@@ -360,18 +393,29 @@ class GameGUI extends JFrame{
         setLayout(null);
         getContentPane().setBackground(Color.black);
 
-        Resources.cursor_frameUpdate(this);
-
         bullet_pane = new BulletPane();
+        System.out.println("loading complete-1");
         hud = new HUD();
+        System.out.println("loading complete-2");
 
         introGUI = new IntroGUI();
+        System.out.println("loading complete1");
         gameOver = new GameOverGUI();
+        System.out.println("loading complete2");
         space = new Space();
+        System.out.println("loading complete3");
         player = new Player(new Point((Resources.FRAME_WIDTH - Resources.player_sprite.getWidth())/2, 650));
+        System.out.println("loading complete4");
         enemy_pane = new EnemyPane();
-        collision_logic = new CollisionLogic(EnemyPane.enemies, BulletPane.bullets,
-                Space.asteroids, Space.asteroidFragments, player);
+        System.out.println("loading complete5");
+        collision_logic = new CollisionLogic(enemy_pane.enemies, bullet_pane.bullets,
+                space.asteroids, space.asteroidFragments, player);
+        System.out.println("loading complete6");
+
+        System.out.println("loading complete7");
+
+        Resources.cursor_frameUpdate(enemy_pane.enemies);
+        System.out.println("loading complete-1");
 
         add(introGUI);
         add(gameOver);
@@ -381,7 +425,11 @@ class GameGUI extends JFrame{
         add(bullet_pane);
         add(space);
 
-        Bootstrap.loading.notifyCompletion();
+        try {
+            Bootstrap.loading.notifyCompletion();
+        } catch (Exception e){
+
+        }
 
     }
 
@@ -402,7 +450,9 @@ class GameGUI extends JFrame{
     public void setVisible(boolean b){
         super.setVisible(b);
 
-        introGUI.init();
+        if (b) {
+            introGUI.init();
+        }
     }
 }
 
@@ -582,10 +632,26 @@ class GameOverGUI extends JPanel{
             }
         });
         main_menu.addActionListener(e -> {
+            this.setVisible(false);
             Bootstrap.gameGUI.setVisible(false);
+            Resources.cursor_frameUpdate.stop();
+
+            GameGUI.enemy_pane.enemies.forEach((a,enemy) -> {
+                enemy.explode(false,false);
+            });
+            GameGUI.bullet_pane.bullets.forEach((a,bullet) -> {
+                bullet.hitNothing();
+            });
+
             Bootstrap.gameGUI.dispose();
+            Bootstrap.gameGUI = null;
+            Resources.total_points = 0;
             Runtime.getRuntime().gc();
+            Resources.music.stop();
+            Resources.loadMusic();
             Bootstrap.gameGUI = new GameGUI();
+            Bootstrap.gameGUI.setVisible(true);
+            GameGUI.gameOver.setVisible(false);
         });
 
         quit = new JButton();
@@ -649,6 +715,7 @@ class HUD extends JPanel{
     private BufferedImage ability_icon[];
 
     private Timer left_hud_init;
+    private Timer left_hud_unload;
     private Timer health_meter_init;
     private Timer logo_hud_init;
     private Timer point_slot_init;
@@ -907,6 +974,10 @@ class HUD extends JPanel{
 
     }
 
+    public void unload(){
+
+    }
+
     public void updatePoints(int pointDiff){
         this.points.setText("" + (Resources.total_points += pointDiff));
     }
@@ -1151,7 +1222,7 @@ class Asteroid implements Entitative{
             if (asteroid_frameCount < 21) {
                 asteroid_frameCount++;
             } else if (asteroid_frameCount >= 21) {
-                Space.asteroids.remove(asteroidKey);
+                GameGUI.space.asteroids.remove(asteroidKey);
                 explode_frameUpdate.stop();
             }
 
@@ -1220,7 +1291,7 @@ class AsteroidFragment implements Entitative {
     }
 
     private void cleanUp() {
-        Space.asteroidFragments.remove(fragment_properties.bulletKey);
+        GameGUI.space.asteroidFragments.remove(fragment_properties.bulletKey);
     }
 
     public void hitPlayer() {
@@ -1315,8 +1386,8 @@ class Space extends JPanel {
     private Timer background_frameUpdate;
     private Timer spawn_asteroid;
 
-    public static ConcurrentHashMap<Integer,Asteroid> asteroids = new ConcurrentHashMap<>();
-    public static ConcurrentHashMap<Integer,AsteroidFragment> asteroidFragments = new ConcurrentHashMap<>();
+    public ConcurrentHashMap<Integer,Asteroid> asteroids = new ConcurrentHashMap<>();
+    public ConcurrentHashMap<Integer,AsteroidFragment> asteroidFragments = new ConcurrentHashMap<>();
 
     public Timer fragment_periodic_update;
 
@@ -1523,7 +1594,7 @@ class Bullet implements Entitative {
     }
 
     private void cleanUp() {
-        BulletPane.bullets.remove(bullet_properties.bulletKey);
+        GameGUI.bullet_pane.bullets.remove(bullet_properties.bulletKey);
     }
 
     public void hitPlayer() {
@@ -1600,16 +1671,20 @@ class Bullet implements Entitative {
 
 class BulletPane extends JPanel {
 
-    public static ConcurrentHashMap<Integer,Bullet> bullets = new ConcurrentHashMap<>();
-    private int bulletCount = 0;
+    public ConcurrentHashMap<Integer,Bullet> bullets;
+    private int bulletCount;
 
     private Timer bullet_periodic_update;
 
     public BulletPane() {
 
+        System.out.println("Loaded");
         setBounds(0, 0, Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT);
         setOpaque(false);
         setLayout(null);
+
+        bullets = new ConcurrentHashMap<>();
+        bulletCount = 0;
 
         bullet_periodic_update = new Timer(Resources.REFRESH_RATE, e -> {
             Resources.public_update.submit(() -> {
@@ -1745,7 +1820,7 @@ class Ocelot implements Hostile {
     }
 
     private void cleanUp() {
-        EnemyPane.enemies.remove(enemyKey);
+        GameGUI.enemy_pane.enemies.remove(enemyKey);
     }
 
     public CharacterProperties enemy_properties(){
@@ -1892,7 +1967,7 @@ class Karmakazi implements Hostile {
     }
 
     private void cleanUp() {
-        EnemyPane.enemies.remove(enemyKey);
+        GameGUI.enemy_pane.enemies.remove(enemyKey);
     }
 
     public CharacterProperties enemy_properties(){
@@ -2022,7 +2097,7 @@ class RegularEnemy implements Hostile {
     }
 
     private void cleanUp() {
-        EnemyPane.enemies.remove(enemyKey);
+        GameGUI.enemy_pane.enemies.remove(enemyKey);
     }
 
     public CharacterProperties enemy_properties(){
@@ -2083,15 +2158,15 @@ class RegularEnemy implements Hostile {
 
 class EnemyPane extends JPanel {
 
-    public static Timer enemy_periodic_update;
-    public static int enemyCount = 0;
-    public static ConcurrentHashMap<Integer,Hostile> enemies = new ConcurrentHashMap<>();
+    public Timer enemy_periodic_update;
+    public int enemyCount = 0;
+    public ConcurrentHashMap<Integer,Hostile> enemies = new ConcurrentHashMap<>();
 
     public Timer scheduledSpawn;
 
     private boolean allDead = false;
 
-    Point targetPoint = GameGUI.player.location();
+    Point targetPoint = Bootstrap.gameGUI.player.location();
 
     EnemyPane() {
 
@@ -2114,7 +2189,7 @@ class EnemyPane extends JPanel {
 
             allDead = true;
 
-            EnemyPane.enemies.forEach((key,enemy) -> {
+            enemies.forEach((key,enemy) -> {
                 if (!enemy.isDead()){
                     allDead = false;
                 }
@@ -2125,7 +2200,7 @@ class EnemyPane extends JPanel {
             }
 
             if (allDead) {
-                spawnMoreEnemy(2);
+                spawnMoreEnemy(6);
             }
         });
 
@@ -2228,7 +2303,7 @@ class EnemyPane extends JPanel {
 
         Timer delay = new Timer(10, null);
         delay.addActionListener(e -> {
-            spawnMoreEnemy(2);
+            spawnMoreEnemy(6);
             scheduledSpawn.start();
         });
 
@@ -2418,17 +2493,17 @@ interface Entitative{
 
 class Player extends JPanel implements ActionListener, Entitative {
 
-    public static CharacterProperties player_data;
-    public static Rectangle hitBox;
-    private static Rectangle shockwave_hitBox;
-    private static BufferedImage player_sprite;
-    public static BufferedImage protect_bubble;
-    private static BufferedImage shockwave;
+    public CharacterProperties player_data;
+    public Rectangle hitBox;
+    private Rectangle shockwave_hitBox;
+    private BufferedImage player_sprite;
+    public BufferedImage protect_bubble;
+    private BufferedImage shockwave;
 
-    private static int onFire_frameCount;
+    private int onFire_frameCount;
 
     public static int bullet_heat_factor;
-    private static int secondary_heat_factor;
+    private int secondary_heat_factor;
 
     private Timer movement_frameUpdate;
     private Timer fire_bullet;
@@ -2557,7 +2632,7 @@ class Player extends JPanel implements ActionListener, Entitative {
                 if (e.getKeyCode() == KeyEvent.VK_SHIFT){
                     protect_init();
                 } else if (e.getKeyCode() == KeyEvent.VK_ENTER){
-                    shockwave(location());
+                    shockwave(location(),shockwaveHitBox());
                 }
             }
         });
@@ -2613,10 +2688,10 @@ class Player extends JPanel implements ActionListener, Entitative {
 
         health_frameUpdate.addActionListener(e -> {
 
-            if (Player.player_data.health > 800){
-                Player.player_data.health = 800;
-            } else if (Player.player_data.health <= 0){
-                Player.player_data.health = 0;
+            if (player_data.health > 800){
+                player_data.health = 800;
+            } else if (player_data.health <= 0){
+                player_data.health = 0;
                 explode();
             }
 
@@ -2786,9 +2861,7 @@ class Player extends JPanel implements ActionListener, Entitative {
         return shockwave_hitBox;
     }
 
-    public void shockwave (Point Epicenter){
-
-        shockwave_hitBox = new Rectangle();
+    public void shockwave (Point Epicenter, Rectangle hitBox){
 
         if (GameGUI.hud.shockwaveIsAvailable()) {
             shockwave = Resources.shockwave;
@@ -2901,17 +2974,17 @@ class Player extends JPanel implements ActionListener, Entitative {
     }
 
     public void changeHealth(int healthChange){
-        if (Player.player_data.health + healthChange < 0){
-            Player.player_data.health = 0;
-        } else if (Player.player_data.health + healthChange > 800){
-            Player.player_data.health = 800;
+        if (player_data.health + healthChange < 0){
+            player_data.health = 0;
+        } else if (player_data.health + healthChange > 800){
+            player_data.health = 800;
         } else {
             player_data.health += healthChange;
         }
     }
 
     public int healthPercentage(){
-        int health_percentage = Math.round((Player.player_data.health / 800f) * 100);
+        int health_percentage = Math.round((player_data.health / 800f) * 100);
         if (health_percentage < 0){
             health_percentage = 0;
         } else if (health_percentage > 100){
