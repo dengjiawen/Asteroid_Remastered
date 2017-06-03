@@ -6,9 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Asteroid.java" afterPath="$PROJECT_DIR$/src/Asteroid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bootstrap.java" afterPath="$PROJECT_DIR$/src/Bootstrap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SaveProcessor.java" afterPath="$PROJECT_DIR$/src/SaveProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IDGenerator.java" afterPath="$PROJECT_DIR$/src/IDGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +23,7 @@
       <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="7140">
               <caret line="1784" column="39" lean-forward="false" selection-start-line="1784" selection-start-column="20" selection-end-line="1784" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -61,21 +60,32 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="433" column="61" lean-forward="false" selection-start-line="433" selection-start-column="61" selection-end-line="433" selection-end-column="61" />
+            <state relative-caret-position="200">
+              <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="method#main#0;class#Bootstrap#0" expanded="false" />
                 <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
                 <element signature="method#checkConnection#0;class#Bootstrap#0" expanded="false" />
-                <element signature="e#8927#9371#0" expanded="true" />
-                <element signature="e#9370#9371#0" expanded="true" />
-                <element signature="e#10465#11592#0" expanded="false" />
-                <element signature="e#12422#12667#0" expanded="false" />
+                <element signature="e#8928#9372#0" expanded="true" />
+                <element signature="e#9371#9372#0" expanded="true" />
+                <element signature="e#10466#11593#0" expanded="false" />
+                <element signature="e#12423#12668#0" expanded="false" />
                 <element signature="method#importLoadSequence#0;class#LoadingGUI#0" expanded="false" />
                 <element signature="method#purgeAnimation#0;class#LoadingGUI#0" expanded="false" />
-                <element signature="e#18742#18743#0" expanded="false" />
-                <element signature="e#18808#18809#0" expanded="false" />
+                <element signature="e#18743#18744#0" expanded="false" />
+                <element signature="e#18809#18810#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="69" column="35" lean-forward="false" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,9 +128,9 @@
       <find>shockwave</find>
       <find>loading</find>
       <find>purged</find>
-      <find>JOptionPane</find>
       <find>collisionDeath</find>
       <find>explode</find>
+      <find>JOptionPane</find>
       <find>player.changeHealth</find>
     </findStrings>
     <replaceStrings>
@@ -155,9 +165,9 @@
         <option value="$PROJECT_DIR$/src/libs/sound/TinySound.java" />
         <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/IDGenerator.java" />
         <option value="$PROJECT_DIR$/src/Asteroid.java" />
         <option value="$PROJECT_DIR$/src/SaveProcessor.java" />
+        <option value="$PROJECT_DIR$/src/IDGenerator.java" />
         <option value="$PROJECT_DIR$/src/Bootstrap.java" />
       </list>
     </option>
@@ -850,12 +860,12 @@
       <workItem from="1496418884323" duration="2115000" />
       <workItem from="1496433253994" duration="926000" />
       <workItem from="1496436354537" duration="16387000" />
-      <workItem from="1496497265338" duration="5411000" />
+      <workItem from="1496497265338" duration="6032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198328000" />
+    <option name="totallyTimeSpent" value="198949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1057,14 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SaveProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
@@ -1079,9 +1081,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="69" column="35" lean-forward="false" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="7140">
           <caret line="1784" column="39" lean-forward="false" selection-start-line="1784" selection-start-column="20" selection-end-line="1784" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1116,21 +1128,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="433" column="61" lean-forward="false" selection-start-line="433" selection-start-column="61" selection-end-line="433" selection-end-column="61" />
+        <state relative-caret-position="200">
+          <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="method#main#0;class#Bootstrap#0" expanded="false" />
             <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
             <element signature="method#checkConnection#0;class#Bootstrap#0" expanded="false" />
-            <element signature="e#8927#9371#0" expanded="true" />
-            <element signature="e#9370#9371#0" expanded="true" />
-            <element signature="e#10465#11592#0" expanded="false" />
-            <element signature="e#12422#12667#0" expanded="false" />
+            <element signature="e#8928#9372#0" expanded="true" />
+            <element signature="e#9371#9372#0" expanded="true" />
+            <element signature="e#10466#11593#0" expanded="false" />
+            <element signature="e#12423#12668#0" expanded="false" />
             <element signature="method#importLoadSequence#0;class#LoadingGUI#0" expanded="false" />
             <element signature="method#purgeAnimation#0;class#LoadingGUI#0" expanded="false" />
-            <element signature="e#18742#18743#0" expanded="false" />
-            <element signature="e#18808#18809#0" expanded="false" />
+            <element signature="e#18743#18744#0" expanded="false" />
+            <element signature="e#18809#18810#0" expanded="false" />
           </folding>
         </state>
       </provider>

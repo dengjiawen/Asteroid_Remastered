@@ -79,6 +79,7 @@ public class IDGenerator {
             UDID = sb.toString().toLowerCase();
         }
         catch(Exception e) {
+            e.printStackTrace();
             //If an error occured, return default UDID
             return "000000";
         }

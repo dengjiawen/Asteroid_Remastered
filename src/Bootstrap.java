@@ -98,6 +98,7 @@ class Bootstrap{
 
         loading = new LoadingGUI();     //Instantiate loading GUI
         loading.setVisible(true);       //Make loading GUI visible
+
     }
 
     /**
