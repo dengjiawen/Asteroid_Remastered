@@ -17,14 +17,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7140">
+            <state relative-caret-position="2821">
               <caret line="1784" column="39" lean-forward="false" selection-start-line="1784" selection-start-column="20" selection-end-line="1784" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#importData#0;class#Resources#0" expanded="false" />
                 <element signature="method#readSaveFiles#0;class#Resources#0" expanded="false" />
                 <element signature="e#15099#15100#0" expanded="true" />
                 <element signature="e#15141#15142#0" expanded="true" />
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+            <state relative-caret-position="338">
+              <caret line="518" column="29" lean-forward="false" selection-start-line="518" selection-start-column="29" selection-end-line="518" selection-end-column="29" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
@@ -127,8 +126,8 @@
       <find>purged</find>
       <find>collisionDeath</find>
       <find>explode</find>
-      <find>JOptionPane</find>
       <find>player.changeHealth</find>
+      <find>JOptionPane</find>
     </findStrings>
     <replaceStrings>
       <replace>FriendlyPane</replace>
@@ -857,16 +856,15 @@
       <workItem from="1496418884323" duration="2115000" />
       <workItem from="1496433253994" duration="926000" />
       <workItem from="1496436354537" duration="16387000" />
-      <workItem from="1496497265338" duration="6080000" />
+      <workItem from="1496497265338" duration="6414000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198997000" />
+    <option name="totallyTimeSpent" value="199331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -886,7 +884,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.3969957" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.3969957" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38984263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1088,13 +1086,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="518" column="29" lean-forward="false" selection-start-line="518" selection-start-column="29" selection-end-line="518" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
+            <element signature="method#checkConnection#0;class#Bootstrap#0" expanded="false" />
+            <element signature="e#8928#9372#0" expanded="true" />
+            <element signature="e#9371#9372#0" expanded="true" />
+            <element signature="e#10466#11593#0" expanded="false" />
+            <element signature="e#12423#12668#0" expanded="false" />
+            <element signature="method#importLoadSequence#0;class#LoadingGUI#0" expanded="false" />
+            <element signature="method#purgeAnimation#0;class#LoadingGUI#0" expanded="false" />
+            <element signature="e#18743#18744#0" expanded="false" />
+            <element signature="e#18809#18810#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7140">
+        <state relative-caret-position="2821">
           <caret line="1784" column="39" lean-forward="false" selection-start-line="1784" selection-start-column="20" selection-end-line="1784" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#importData#0;class#Resources#0" expanded="false" />
             <element signature="method#readSaveFiles#0;class#Resources#0" expanded="false" />
             <element signature="e#15099#15100#0" expanded="true" />
             <element signature="e#15141#15142#0" expanded="true" />
@@ -1119,26 +1136,6 @@
             <element signature="class#CollisionLogic#0" expanded="false" />
             <element signature="class#Entitative#0" expanded="false" />
             <element signature="class#Player#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
-            <element signature="method#checkConnection#0;class#Bootstrap#0" expanded="false" />
-            <element signature="e#8928#9372#0" expanded="true" />
-            <element signature="e#9371#9372#0" expanded="true" />
-            <element signature="e#10466#11593#0" expanded="false" />
-            <element signature="e#12423#12668#0" expanded="false" />
-            <element signature="method#importLoadSequence#0;class#LoadingGUI#0" expanded="false" />
-            <element signature="method#purgeAnimation#0;class#LoadingGUI#0" expanded="false" />
-            <element signature="e#18743#18744#0" expanded="false" />
-            <element signature="e#18809#18810#0" expanded="false" />
           </folding>
         </state>
       </provider>
