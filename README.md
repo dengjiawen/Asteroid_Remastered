@@ -11,6 +11,7 @@ The coding for the program is currently being optimized and simplified.
 - [x] Shrink code line count from 5,000 to 3,500
 - [x] Shrink code line count from 3,500 to 3,000
 - [ ] Shrink code line count from 3,000 to < 2500
+- [ ] Add cloud save feature
 - [x] Add teleportation and protective shield
 - [x] Add shockwave
 - [x] Add asteroids
