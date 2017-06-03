@@ -317,6 +317,8 @@ class Resources {
         top_score = readSaveFiles();
         System.out.println(top_score);
 
+        Bootstrap.loading.notifyCompletion();
+
     }
 
     public static int readSaveFiles(){
@@ -388,8 +390,6 @@ class GameGUI extends JFrame{
 
         super();
 
-        System.out.println("loading complete-3");
-
         setSize(Resources.FRAME_WIDTH, Resources.FRAME_HEIGHT);
         setUndecorated(true);
         setResizable(false);
@@ -397,29 +397,20 @@ class GameGUI extends JFrame{
         setLayout(null);
         getContentPane().setBackground(Color.black);
 
+        System.out.println(Resources.top_score);
+
         bullet_pane = new BulletPane();
-        System.out.println("loading complete-1");
         hud = new HUD();
-        System.out.println("loading complete-2");
 
         introGUI = new IntroGUI();
-        System.out.println("loading complete1");
         gameOver = new GameOverGUI();
-        System.out.println("loading complete2");
         space = new Space();
-        System.out.println("loading complete3");
         player = new Player(new Point((Resources.FRAME_WIDTH - Resources.player_sprite.getWidth())/2, 650));
-        System.out.println("loading complete4");
         enemy_pane = new EnemyPane();
-        System.out.println("loading complete5");
         collision_logic = new CollisionLogic(enemy_pane.enemies, bullet_pane.bullets,
                 space.asteroids, space.asteroidFragments, player);
-        System.out.println("loading complete6");
-
-        System.out.println("loading complete7");
 
         Resources.cursor_frameUpdate(enemy_pane.enemies);
-        System.out.println("loading complete-1");
 
         add(introGUI);
         add(gameOver);

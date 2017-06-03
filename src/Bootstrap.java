@@ -28,7 +28,7 @@
  * Author     : Jiawen Deng
  *
  *-----------------------------------------------------------------------------
- * Revision History (Release 0.5)
+ * Revision History (Release 3.0)
  *-----------------------------------------------------------------------------
  * VERSION     AUTHOR/      DESCRIPTION OF CHANGE
  * OLD/NEW     DATE
@@ -36,11 +36,11 @@
  * --/0.1  | J.D.          | Initial creation of program
  *         | 01-05-17      |
  *---------|---------------|---------------------------------------------------
- * 0.1/0.2 | J.D.          |
- *         | 15-05-17      |
+ * 0.1/0.2 | J.D.          | Making the launcher functional
+ *         | 15-05-17      | Implementing it into the actual game
  *---------|---------------|---------------------------------------------------
- * 0.2/0.3 | J.D.          |
- *         | 20-05-17      |
+ * 0.2/1.0 | J.D.          | Added animation for the game studio,
+ *         | 20-05-17      | as well as animation for during loading
  *---------|---------------|---------------------------------------------------
  * 0.3/0.4 | J.D.          |
  *         | 22-05-17      |
@@ -397,16 +397,23 @@ class LoadingGUI extends JFrame{
             case 6:
                 import_pool_1.submit(() -> {
                     Resources.importIntroResources();
+                    status.setText("Building World...");
                 });
                 break;
 
             case 7:
                 import_pool_1.submit(() -> {
+                    Resources.importData();
+                    status.setText("Herding Cows...");
+                });
+
+            case 8:
+                import_pool_1.submit(() -> {
                     Bootstrap.gameGUI = new GameGUI();
                 });
                 break;
 
-            case 8:
+            case 9:
                 status.setText("Almost There...");
                 tips_sequence.stop();
                 tip = tips[4];
@@ -421,7 +428,7 @@ class LoadingGUI extends JFrame{
                 });
                 break;
 
-            case 9:
+            case 10:
 
                 status.setText("Here We Go...");
 
@@ -460,8 +467,5 @@ class LoadingGUI extends JFrame{
                 break;
 
         }
-
     }
-
-
 }
