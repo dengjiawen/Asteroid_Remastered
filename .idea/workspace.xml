@@ -5,10 +5,7 @@
     <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bootstrap.java" afterPath="$PROJECT_DIR$/src/Bootstrap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IDGenerator.java" afterPath="$PROJECT_DIR$/src/IDGenerator.java" />
-    </list>
+    <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -860,12 +857,12 @@
       <workItem from="1496418884323" duration="2115000" />
       <workItem from="1496433253994" duration="926000" />
       <workItem from="1496436354537" duration="16387000" />
-      <workItem from="1496497265338" duration="6032000" />
+      <workItem from="1496497265338" duration="6080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198949000" />
+    <option name="totallyTimeSpent" value="198997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
