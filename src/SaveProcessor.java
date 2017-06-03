@@ -178,7 +178,7 @@ class SaveProcessor {
                     System.out.println("Entry error. Possible save corruption.");
 
                     //Pop-up to inform user of corrupted save.
-                    JOptionPane.showMessageDialog(null,
+                    JOptionPane.showMessageDialog(Bootstrap.loading,
                             "The cloud save had corrupted. Your save will be reset.",
                             "Error", JOptionPane.INFORMATION_MESSAGE);
 
@@ -365,7 +365,7 @@ class SaveManager{
         while (!activated){
             activated =
                     activationCheck(
-                    JOptionPane.showInputDialog(null,
+                    JOptionPane.showInputDialog(Bootstrap.loading,
                             "Please enter your game activation code.",
                             "Activation", JOptionPane.INFORMATION_MESSAGE)
                     );
@@ -376,14 +376,14 @@ class SaveManager{
 
                 //If code is not valid, display message.
 
-                JOptionPane.showMessageDialog(null,
+                JOptionPane.showMessageDialog(Bootstrap.loading,
                         "Your activation code is invalid.",
                         "Invalid Activation", JOptionPane.ERROR_MESSAGE);
             } else {
 
                 //If code is valid, display message.
 
-                JOptionPane.showMessageDialog(null,
+                JOptionPane.showMessageDialog(Bootstrap.loading,
                         "Your game had been activated.",
                         "Successful Activation", JOptionPane.INFORMATION_MESSAGE);
             }
@@ -529,14 +529,16 @@ class SaveManager{
         } catch (IOException e) {
 
             /* If an error had occured, inform the user that
-             * their progress will not be saved.
+             * game will exit.
              */
 
             System.out.println("Error while saving.");
 
-            JOptionPane.showMessageDialog(null,
-                    "An error occured while saving files. Your game data will not be saved.",
+            JOptionPane.showMessageDialog(Bootstrap.gameGUI,
+                    "An error occured while saving files. The game will now exit.",
                     "Error", JOptionPane.ERROR_MESSAGE);
+
+            System.exit(45);        //Status 45: Save Error
         }
 
         System.out.println("Sending save file to be uploaded.");

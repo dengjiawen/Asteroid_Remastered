@@ -152,7 +152,7 @@ class Bootstrap{
      */
     public static void connectionError(){
 
-        JOptionPane.showMessageDialog(null,
+        JOptionPane.showMessageDialog(loading,
                 "The Internet connection to remote server had been lost." +
                         "\nIt is necessary for DRM and cloud save purposes." +
                         "\nThe game cannot function without Internet access.", "Error",
@@ -230,6 +230,8 @@ class LoadingGUI extends JFrame{
         tip_count = 0;
         purged = false;
 
+        System.out.println("Initializing visual components...");
+
         //Initialize JPanel for animation display
         visual = new JPanel(){
 
@@ -261,26 +263,45 @@ class LoadingGUI extends JFrame{
         ball_seq = new BufferedImage[95];
         tips = new BufferedImage[5];
 
+        //Import logo animation
         importLogoSequence();
 
+        System.out.println("Initializing animation timers...");
+
+        /* Set visual image as the #visual_frameCount item on
+         * the logo sequence animation array
+         *
+         * If visual_frameCount is less than the number of images
+         * in the array, keep adding 1 every 33 seconds (for 30 fps)
+         *
+         * Cleanup all resources if the animation is complete to
+         * conserve RAM usage.
+         */
         logo_sequence = new Timer(Resources.REFRESH_RATE, e -> {
 
             visual_image = logo_seq[visual_frameCount];
-
             repaint();
 
             if (visual_frameCount < 362 - 1){
                 visual_frameCount ++;
             } else {
-                logo_sequence.stop();
-                visual_frameCount = 0;
-                visual_image = null;
-                logo_seq = null;
-                Resources.loadMusic();
-                Runtime.getRuntime().gc();
-                importLoadSequence();
-                load_sequence.start();
-                tips_sequence.start();
+
+                System.out.println("Logo animation complete;\nStarting cleanup sequence.");
+
+                //Cleanup
+                logo_sequence.stop();       //Stop this timer
+                visual_frameCount = 0;      //Reset frameCounter for loading animations
+                visual_image = null;        //Reset visual_image for loading animations
+                logo_seq = null;            //Dump the BufferedImage array
+                Runtime.getRuntime().gc();  //Call garbage collector
+
+                System.out.println("Cleanup complete;\nStarting loading sequence.");
+
+                //Load next animation
+                Resources.loadMusic();      //Start the loading music
+                importLoadSequence();       //Import loading animation
+                load_sequence.start();      //Start loading_sequence
+                tips_sequence.start();      //Start the tip_update timer
             }
 
         });
@@ -338,7 +359,7 @@ class LoadingGUI extends JFrame{
 
     }
 
-    public void importLoadSequence(){
+    private void importLoadSequence(){
 
         import_pool_1.submit(() -> {
             try {
@@ -378,15 +399,23 @@ class LoadingGUI extends JFrame{
 
     }
 
-    public void importLogoSequence(){
+    /**
+     * Using all three ThreadPools to import logo
+     * animation resources in parallel.
+     */
+    private void importLogoSequence(){
 
+        System.out.println("Importing logo animation.");
+
+        //Reading images using ImageIO
+        //Pool 1: Import image 0 - 100
         import_pool_1.submit(() -> {
             try {
                 for (int i = 0; i < 101; i++) {
                     logo_seq[i] = ImageIO.read(getClass().getResource("resources/intro_seq/logo/" + i + ".jpeg"));
                 }
-            } catch (IOException e){
-                System.out.println(e.getMessage());
+            } catch (Exception e){
+                fileNotFound();
             }
         });
 
@@ -412,7 +441,7 @@ class LoadingGUI extends JFrame{
 
     }
 
-    public void purgeAnimation(){
+    private void purgeAnimation(){
         import_pool_1.submit(() -> {
             for (int i = 0; i < 300; i++){
                 load_seq[i] = null;
@@ -426,6 +455,14 @@ class LoadingGUI extends JFrame{
 
             Runtime.getRuntime().gc();
         });
+    }
+
+    public void fileNotFound() {
+
+        JOptionPane.showMessageDialog(this,"One or more files required to run this program is missing.\n" +
+                "Please ensure that the \"resource\" folder is in the same folder as the java files.","Error",JOptionPane.ERROR_MESSAGE);
+        System.exit(80);
+
     }
 
     public void notifyCompletion(){
@@ -485,6 +522,7 @@ class LoadingGUI extends JFrame{
                     }
                     status.setText("Herding Cows...");
                 });
+                break;
 
             case 8:
                 import_pool_1.submit(() -> {
@@ -497,8 +535,8 @@ class LoadingGUI extends JFrame{
                 tips_sequence.stop();
                 tip = tips[4];
 
-                getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER,0),"enter");
-
+                getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+                        KeyStroke.getKeyStroke(KeyEvent.VK_ENTER,0),"enter");
                 getRootPane().getActionMap().put("enter", new AbstractAction() {
                     @Override
                     public void actionPerformed(ActionEvent e) {

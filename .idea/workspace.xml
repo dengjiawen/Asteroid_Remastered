@@ -6,7 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Asteroid.java" afterPath="$PROJECT_DIR$/src/Asteroid.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bootstrap.java" afterPath="$PROJECT_DIR$/src/Bootstrap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SaveProcessor.java" afterPath="$PROJECT_DIR$/src/SaveProcessor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,27 +24,19 @@
       <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="413" column="61" lean-forward="false" selection-start-line="413" selection-start-column="61" selection-end-line="413" selection-end-column="61" />
+            <state relative-caret-position="192">
+              <caret line="1784" column="39" lean-forward="false" selection-start-line="1784" selection-start-column="20" selection-end-line="1784" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#importEnemyResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#importPlayerResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#importHUDResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#importSpaceResources#0;class#Resources#0" expanded="false" />
-                <element signature="method#importIntroResources#0;class#Resources#0" expanded="false" />
                 <element signature="method#importData#0;class#Resources#0" expanded="false" />
                 <element signature="method#readSaveFiles#0;class#Resources#0" expanded="false" />
-                <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
-                <element signature="e#15312#15313#0" expanded="true" />
-                <element signature="e#15354#15355#0" expanded="true" />
+                <element signature="e#15099#15100#0" expanded="true" />
+                <element signature="e#15141#15142#0" expanded="true" />
                 <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
                 <element signature="method#init#0;class#GameGUI#0" expanded="false" />
                 <element signature="class#IntroGUI#0" expanded="false" />
-                <element signature="class#18404:18786" expanded="false" />
-                <element signature="method#mouseEntered#0;class#18404:18786" expanded="false" />
+                <element signature="class#18191:18573" expanded="false" />
+                <element signature="method#mouseEntered#0;class#18191:18573" expanded="false" />
                 <element signature="class#GameOverGUI#0" expanded="false" />
                 <element signature="class#HUD#0" expanded="false" />
                 <element signature="class#CharacterProperties#0" expanded="false" />
@@ -52,7 +46,6 @@
                 <element signature="class#BulletProperties#0" expanded="false" />
                 <element signature="class#Bullet#0" expanded="false" />
                 <element signature="class#BulletPane#0" expanded="false" />
-                <element signature="class#Ocelot#0" expanded="false" />
                 <element signature="class#Karmakazi#0" expanded="false" />
                 <element signature="class#RegularEnemy#0" expanded="false" />
                 <element signature="class#EnemyPane#0" expanded="false" />
@@ -68,21 +61,21 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="257" column="41" lean-forward="false" selection-start-line="257" selection-start-column="41" selection-end-line="257" selection-end-column="41" />
+            <state relative-caret-position="568">
+              <caret line="433" column="61" lean-forward="false" selection-start-line="433" selection-start-column="61" selection-end-line="433" selection-end-column="61" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="class#Bootstrap#0" expanded="false" />
                 <element signature="method#main#0;class#Bootstrap#0" expanded="false" />
                 <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
                 <element signature="method#checkConnection#0;class#Bootstrap#0" expanded="false" />
-                <element signature="method#connectionError#0;class#Bootstrap#0" expanded="false" />
-                <element signature="e#8858#9302#0" expanded="true" />
-                <element signature="e#9301#9302#0" expanded="true" />
-                <element signature="e#11320#11565#0" expanded="false" />
-                <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
-                <element signature="e#17057#17058#0" expanded="false" />
-                <element signature="e#17123#17124#0" expanded="false" />
+                <element signature="e#8927#9371#0" expanded="true" />
+                <element signature="e#9370#9371#0" expanded="true" />
+                <element signature="e#10465#11592#0" expanded="false" />
+                <element signature="e#12422#12667#0" expanded="false" />
+                <element signature="method#importLoadSequence#0;class#LoadingGUI#0" expanded="false" />
+                <element signature="method#purgeAnimation#0;class#LoadingGUI#0" expanded="false" />
+                <element signature="e#18742#18743#0" expanded="false" />
+                <element signature="e#18808#18809#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -99,10 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>over_heating</find>
-      <find>launcher</find>
-      <find>Resources/</find>
-      <find>space</find>
       <find>space_background</find>
       <find>shockWave</find>
       <find>heat</find>
@@ -127,8 +116,12 @@
       <find>Bootstrap.gameGUI</find>
       <find>bullet</find>
       <find>shockwave</find>
-      <find>purged</find>
       <find>loading</find>
+      <find>purged</find>
+      <find>JOptionPane</find>
+      <find>collisionDeath</find>
+      <find>explode</find>
+      <find>player.changeHealth</find>
     </findStrings>
     <replaceStrings>
       <replace>FriendlyPane</replace>
@@ -163,8 +156,8 @@
         <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/IDGenerator.java" />
-        <option value="$PROJECT_DIR$/src/SaveProcessor.java" />
         <option value="$PROJECT_DIR$/src/Asteroid.java" />
+        <option value="$PROJECT_DIR$/src/SaveProcessor.java" />
         <option value="$PROJECT_DIR$/src/Bootstrap.java" />
       </list>
     </option>
@@ -857,12 +850,12 @@
       <workItem from="1496418884323" duration="2115000" />
       <workItem from="1496433253994" duration="926000" />
       <workItem from="1496436354537" duration="16387000" />
-      <workItem from="1496497265338" duration="3383000" />
+      <workItem from="1496497265338" duration="5411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196300000" />
+    <option name="totallyTimeSpent" value="198328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -870,7 +863,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.6008584" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.6030043" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -882,11 +875,11 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.27181688" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.26752505" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.39914164" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.3969957" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38984263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1064,29 +1057,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SaveProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="454" column="0" lean-forward="true" selection-start-line="454" selection-start-column="0" selection-end-line="454" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="class#SaveProcessor#0" expanded="false" />
+            <element signature="class#StringEncryptor#0" expanded="false" />
+            <element signature="method#decrypt#0;class#StringEncryptor#0" expanded="false" />
+            <element signature="method#firstTimeInit#0;class#SaveManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="413" column="61" lean-forward="false" selection-start-line="413" selection-start-column="61" selection-end-line="413" selection-end-column="61" />
+        <state relative-caret-position="192">
+          <caret line="1784" column="39" lean-forward="false" selection-start-line="1784" selection-start-column="20" selection-end-line="1784" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#importBulletResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#importEnemyResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#importPlayerResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#importHUDResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#importSpaceResources#0;class#Resources#0" expanded="false" />
-            <element signature="method#importIntroResources#0;class#Resources#0" expanded="false" />
             <element signature="method#importData#0;class#Resources#0" expanded="false" />
             <element signature="method#readSaveFiles#0;class#Resources#0" expanded="false" />
-            <element signature="method#fileNotFound#0;class#Resources#0" expanded="false" />
-            <element signature="e#15312#15313#0" expanded="true" />
-            <element signature="e#15354#15355#0" expanded="true" />
+            <element signature="e#15099#15100#0" expanded="true" />
+            <element signature="e#15141#15142#0" expanded="true" />
             <element signature="method#bulletSound#0;class#Resources#0" expanded="false" />
             <element signature="method#init#0;class#GameGUI#0" expanded="false" />
             <element signature="class#IntroGUI#0" expanded="false" />
-            <element signature="class#18404:18786" expanded="false" />
-            <element signature="method#mouseEntered#0;class#18404:18786" expanded="false" />
+            <element signature="class#18191:18573" expanded="false" />
+            <element signature="method#mouseEntered#0;class#18191:18573" expanded="false" />
             <element signature="class#GameOverGUI#0" expanded="false" />
             <element signature="class#HUD#0" expanded="false" />
             <element signature="class#CharacterProperties#0" expanded="false" />
@@ -1096,7 +1103,6 @@
             <element signature="class#BulletProperties#0" expanded="false" />
             <element signature="class#Bullet#0" expanded="false" />
             <element signature="class#BulletPane#0" expanded="false" />
-            <element signature="class#Ocelot#0" expanded="false" />
             <element signature="class#Karmakazi#0" expanded="false" />
             <element signature="class#RegularEnemy#0" expanded="false" />
             <element signature="class#EnemyPane#0" expanded="false" />
@@ -1108,45 +1114,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SaveProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="506" column="37" lean-forward="false" selection-start-line="506" selection-start-column="37" selection-end-line="506" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="class#SaveProcessor#0" expanded="false" />
-            <element signature="class#StringEncryptor#0" expanded="false" />
-            <element signature="method#decrypt#0;class#StringEncryptor#0" expanded="false" />
-            <element signature="method#firstTimeInit#0;class#SaveManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="257" column="41" lean-forward="false" selection-start-line="257" selection-start-column="41" selection-end-line="257" selection-end-column="41" />
+        <state relative-caret-position="568">
+          <caret line="433" column="61" lean-forward="false" selection-start-line="433" selection-start-column="61" selection-end-line="433" selection-end-column="61" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="class#Bootstrap#0" expanded="false" />
             <element signature="method#main#0;class#Bootstrap#0" expanded="false" />
             <element signature="method#consoleInit#0;class#Bootstrap#0" expanded="false" />
             <element signature="method#checkConnection#0;class#Bootstrap#0" expanded="false" />
-            <element signature="method#connectionError#0;class#Bootstrap#0" expanded="false" />
-            <element signature="e#8858#9302#0" expanded="true" />
-            <element signature="e#9301#9302#0" expanded="true" />
-            <element signature="e#11320#11565#0" expanded="false" />
-            <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
-            <element signature="e#17057#17058#0" expanded="false" />
-            <element signature="e#17123#17124#0" expanded="false" />
+            <element signature="e#8927#9371#0" expanded="true" />
+            <element signature="e#9370#9371#0" expanded="true" />
+            <element signature="e#10465#11592#0" expanded="false" />
+            <element signature="e#12422#12667#0" expanded="false" />
+            <element signature="method#importLoadSequence#0;class#LoadingGUI#0" expanded="false" />
+            <element signature="method#purgeAnimation#0;class#LoadingGUI#0" expanded="false" />
+            <element signature="e#18742#18743#0" expanded="false" />
+            <element signature="e#18808#18809#0" expanded="false" />
           </folding>
         </state>
       </provider>

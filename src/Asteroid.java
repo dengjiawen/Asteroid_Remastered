@@ -112,7 +112,7 @@ class Resources {
                 }
             }
         } catch (java.io.IOException e) {
-            fileNotFound(e);
+            Bootstrap.loading.fileNotFound();
         }
     }
 
@@ -156,7 +156,7 @@ class Resources {
                 bullet_impact[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/bullet_impact/" + i + ".png"));
             }
         } catch (java.io.IOException e) {
-            fileNotFound(e);
+            Bootstrap.loading.fileNotFound();
         }
 
         Bootstrap.loading.notifyCompletion();
@@ -177,7 +177,7 @@ class Resources {
                 explosion[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/explosion/" + i + ".png"));
             }
         } catch (java.io.IOException e) {
-            fileNotFound(e);
+            Bootstrap.loading.fileNotFound();
         }
 
         Bootstrap.loading.notifyCompletion();
@@ -201,7 +201,7 @@ class Resources {
             player_sprite = ImageIO.read(Resources.class.getResource("/resources/sprite/spaceship_sprite.png"));
             shockwave = ImageIO.read(Resources.class.getResource("/resources/shockwave.png"));
         } catch (java.io.IOException e) {
-            fileNotFound(e);
+            Bootstrap.loading.fileNotFound();
         }
 
         Bootstrap.loading.notifyCompletion();
@@ -248,7 +248,7 @@ class Resources {
                 point_slot_init[i] = ImageIO.read(Resources.class.getResource("/resources/sequence/point_slot_init/" + i + ".png"));
             }
         } catch (java.io.IOException e) {
-            fileNotFound(e);
+            Bootstrap.loading.fileNotFound();
         }
 
         Bootstrap.loading.notifyCompletion();
@@ -279,7 +279,7 @@ class Resources {
             }
 
         } catch (java.io.IOException e) {
-            fileNotFound(e);
+            Bootstrap.loading.fileNotFound();
         }
 
         Bootstrap.loading.notifyCompletion();
@@ -301,7 +301,7 @@ class Resources {
             }
 
         } catch (java.io.IOException e) {
-            fileNotFound(e);
+            Bootstrap.loading.fileNotFound();
         }
 
         Bootstrap.loading.notifyCompletion();
@@ -334,14 +334,6 @@ class Resources {
         }
 
         return SaveProcessor.saveDecoder(ftp_address);
-
-    }
-
-    private static void fileNotFound(Exception e) {
-
-        JOptionPane.showMessageDialog(null,"One or more files required to run this program is missing.\n" +
-                "Please ensure that the \"resource\" folder is in the same folder as the java files.","Error",JOptionPane.ERROR_MESSAGE);
-        System.exit(20);
 
     }
 
