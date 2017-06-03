@@ -57,8 +57,9 @@ public class IDGenerator {
 
     public static String UDIDGenerator(){
 
-        String UDID = "";       //String holding UDID
+        String UDID;       //String holding UDID
 
+        Resources.outputSeperator();
         System.out.println("Generating UDID...");
         try {
             /* Retrieve MAC address from network hardware interface
@@ -72,8 +73,8 @@ public class IDGenerator {
              * into String with proper structure
              */
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < mac.length; i++) {
-                sb.append(String.format("%02X%s", mac[i], ""));
+            for (byte aMac : mac) {
+                sb.append(String.format("%02X%s", aMac, ""));
             }
             UDID = sb.toString().toLowerCase();
         }

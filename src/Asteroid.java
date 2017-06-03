@@ -100,6 +100,10 @@ class Resources {
 
     public static ExecutorService public_update = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
+    public static void outputSeperator(){
+        System.out.println("-----------------------------------------------------------");
+    }
+
     private static void importCursorResources() {
         try {
             for (int i = 0; i < cursor_sprite.length; i++){
@@ -307,7 +311,7 @@ class Resources {
 
         UDID = IDGenerator.UDIDGenerator();
         System.out.println("UDID Generated.");
-        System.out.println("System UDID is " + UDID);
+        System.out.println("System UDID is " + UDID + ".");
 
         total_points = 0;
         top_score = readSaveFiles();

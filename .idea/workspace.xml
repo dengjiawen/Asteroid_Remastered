@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="8" />
+    <option name="SCOPE_TYPE" value="3" />
     <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Asteroid.java" afterPath="$PROJECT_DIR$/src/Asteroid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bootstrap.java" afterPath="$PROJECT_DIR$/src/Bootstrap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IDGenerator.java" afterPath="$PROJECT_DIR$/src/IDGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SaveProcessor.java" afterPath="$PROJECT_DIR$/src/SaveProcessor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,8 +25,8 @@
       <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="313" column="38" lean-forward="true" selection-start-line="313" selection-start-column="38" selection-end-line="313" selection-end-column="38" />
+            <state relative-caret-position="201">
+              <caret line="313" column="59" lean-forward="false" selection-start-line="313" selection-start-column="59" selection-end-line="313" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
@@ -39,8 +42,8 @@
                 <element signature="class#GameGUI#0" expanded="false" />
                 <element signature="method#init#0;class#GameGUI#0" expanded="false" />
                 <element signature="class#IntroGUI#0" expanded="false" />
-                <element signature="class#18590:18972" expanded="false" />
-                <element signature="method#mouseEntered#0;class#18590:18972" expanded="false" />
+                <element signature="class#18736:19118" expanded="false" />
+                <element signature="method#mouseEntered#0;class#18736:19118" expanded="false" />
                 <element signature="class#GameOverGUI#0" expanded="false" />
                 <element signature="class#HUD#0" expanded="false" />
                 <element signature="class#CharacterProperties#0" expanded="false" />
@@ -65,14 +68,14 @@
       <file leaf-file-name="SaveProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SaveProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="118">
+              <caret line="288" column="7" lean-forward="false" selection-start-line="288" selection-start-column="7" selection-end-line="288" selection-end-column="7" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="class#SaveProcessor#0" expanded="false" />
                 <element signature="class#StringEncryptor#0" expanded="false" />
-                <element signature="method#uploadSave#0;class#SaveManager#0" expanded="false" />
-                <element signature="method#activationCheck#0;class#SaveManager#0" expanded="false" />
-                <element signature="method#createSave#0;class#SaveManager#0" expanded="false" />
+                <element signature="method#decrypt#0;class#StringEncryptor#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,13 +84,13 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="57" column="7" lean-forward="false" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+            <state relative-caret-position="277">
+              <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="method#connectionError#0;class#Bootstrap#0" expanded="false" />
                 <element signature="class#LoadingGUI#0" expanded="false" />
-                <element signature="e#7887#8132#0" expanded="false" />
+                <element signature="e#7925#8170#0" expanded="false" />
                 <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
               </folding>
             </state>
@@ -168,9 +171,9 @@
         <option value="$PROJECT_DIR$/src/libs/sound/TinySound.java" />
         <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/IDGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Asteroid.java" />
         <option value="$PROJECT_DIR$/src/Bootstrap.java" />
+        <option value="$PROJECT_DIR$/src/Asteroid.java" />
+        <option value="$PROJECT_DIR$/src/IDGenerator.java" />
         <option value="$PROJECT_DIR$/src/SaveProcessor.java" />
       </list>
     </option>
@@ -906,48 +909,48 @@
       <workItem from="1496418015521" duration="317000" />
       <workItem from="1496418884323" duration="2115000" />
       <workItem from="1496433253994" duration="926000" />
-      <workItem from="1496436354537" duration="10013000" />
+      <workItem from="1496436354537" duration="13472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186543000" />
+    <option name="totallyTimeSpent" value="190002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.2832618" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.46781117" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.48211733" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.53218883" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38412017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41686746" sideWeight="0.48569384" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.27753934" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5178827" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38412017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41686746" sideWeight="0.48855507" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1131,10 +1134,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="method#connectionError#0;class#Bootstrap#0" expanded="false" />
+            <element signature="class#LoadingGUI#0" expanded="false" />
+            <element signature="e#7925#8170#0" expanded="false" />
+            <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="313" column="38" lean-forward="true" selection-start-line="313" selection-start-column="38" selection-end-line="313" selection-end-column="38" />
+        <state relative-caret-position="201">
+          <caret line="313" column="59" lean-forward="false" selection-start-line="313" selection-start-column="59" selection-end-line="313" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#importCursorResources#0;class#Resources#0" expanded="false" />
@@ -1150,8 +1167,8 @@
             <element signature="class#GameGUI#0" expanded="false" />
             <element signature="method#init#0;class#GameGUI#0" expanded="false" />
             <element signature="class#IntroGUI#0" expanded="false" />
-            <element signature="class#18590:18972" expanded="false" />
-            <element signature="method#mouseEntered#0;class#18590:18972" expanded="false" />
+            <element signature="class#18736:19118" expanded="false" />
+            <element signature="method#mouseEntered#0;class#18736:19118" expanded="false" />
             <element signature="class#GameOverGUI#0" expanded="false" />
             <element signature="class#HUD#0" expanded="false" />
             <element signature="class#CharacterProperties#0" expanded="false" />
@@ -1172,25 +1189,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="57" column="7" lean-forward="false" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="method#connectionError#0;class#Bootstrap#0" expanded="false" />
-            <element signature="class#LoadingGUI#0" expanded="false" />
-            <element signature="e#7887#8132#0" expanded="false" />
-            <element signature="method#importLogoSequence#0;class#LoadingGUI#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+        <state relative-caret-position="-135">
+          <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1198,14 +1202,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SaveProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="118">
+          <caret line="288" column="7" lean-forward="false" selection-start-line="288" selection-start-column="7" selection-end-line="288" selection-end-column="7" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="class#SaveProcessor#0" expanded="false" />
             <element signature="class#StringEncryptor#0" expanded="false" />
-            <element signature="method#uploadSave#0;class#SaveManager#0" expanded="false" />
-            <element signature="method#activationCheck#0;class#SaveManager#0" expanded="false" />
-            <element signature="method#createSave#0;class#SaveManager#0" expanded="false" />
+            <element signature="method#decrypt#0;class#StringEncryptor#0" expanded="false" />
           </folding>
         </state>
       </provider>

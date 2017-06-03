@@ -90,7 +90,9 @@ class Bootstrap{
 
     public static boolean checkConnection(){
 
+        Resources.outputSeperator();
         System.out.println("Attempting to establish connection to server...");
+
         try (Socket server = new Socket()){
             System.out.println("Connecting to 185.176.43.78, port 80");
             server.connect(new InetSocketAddress("185.176.43.78",80),10000);
