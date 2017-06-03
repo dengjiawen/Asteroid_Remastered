@@ -9,7 +9,6 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.concurrent.*;
 
 class Resources {
@@ -117,31 +116,33 @@ class Resources {
         }
     }
 
-    public static void cursor_frameUpdate(ConcurrentHashMap<Integer,Hostile> enemies) {
+    public static void cursor_frameUpdate(ConcurrentHashMap<Integer,Hostile> enemies, GameGUI gameGUI) {
 
         importCursorResources();
 
         cursor_frameUpdate = new Timer(REFRESH_RATE, e -> {
 
-            cursor_onTarget = false;
+            public_update.submit(() -> {
+                cursor_onTarget = false;
 
-            cursor_hitBox.setBounds(mouse_location.x, mouse_location.y, 50, 50);
+                cursor_hitBox.setBounds(mouse_location.x, mouse_location.y, 50, 50);
 
-            enemies.forEach((a, enemy) -> {
-                if (cursor_hitBox.intersects(enemy.hitBox())) {
-                    cursor_onTarget = true;
+                enemies.forEach((a, enemy) -> {
+                    if (cursor_hitBox.intersects(enemy.hitBox())) {
+                        cursor_onTarget = true;
+                    }
+                });
+
+                gameGUI.getContentPane().setCursor(
+                        Toolkit.getDefaultToolkit().createCustomCursor(
+                                cursor_sprite[cursor_onTarget ? 1 : 0][cursor_frameCount], new Point(0, 0), null));
+
+                if (cursor_frameCount < 59) {
+                    cursor_frameCount++;
+                } else {
+                    cursor_frameCount = 0;
                 }
             });
-
-            Bootstrap.gameGUI.getContentPane().setCursor(
-                    Toolkit.getDefaultToolkit().createCustomCursor(
-                    cursor_sprite[cursor_onTarget? 1:0][cursor_frameCount],new Point(0,0),null));
-
-            if (cursor_frameCount < 59) {
-                cursor_frameCount++;
-            } else {
-                cursor_frameCount = 0;
-            }
         });
 
         cursor_frameUpdate.start();
@@ -410,7 +411,7 @@ class GameGUI extends JFrame{
         collision_logic = new CollisionLogic(enemy_pane.enemies, bullet_pane.bullets,
                 space.asteroids, space.asteroidFragments, player);
 
-        Resources.cursor_frameUpdate(enemy_pane.enemies);
+        Resources.cursor_frameUpdate(enemy_pane.enemies, this);
 
         add(introGUI);
         add(gameOver);

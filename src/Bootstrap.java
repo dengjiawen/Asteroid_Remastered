@@ -28,7 +28,7 @@
  * Author     : Jiawen Deng
  *
  *-----------------------------------------------------------------------------
- * Revision History (Release 3.0)
+ * Revision History (Release 2.0)
  *-----------------------------------------------------------------------------
  * VERSION     AUTHOR/      DESCRIPTION OF CHANGE
  * OLD/NEW     DATE
@@ -42,11 +42,11 @@
  * 0.2/1.0 | J.D.          | Added animation for the game studio,
  *         | 20-05-17      | as well as animation for during loading
  *---------|---------------|---------------------------------------------------
- * 0.3/0.4 | J.D.          |
+ * 1.0/1.1 | J.D.          | Added "tips".
  *         | 22-05-17      |
  *---------|---------------|---------------------------------------------------
- * 0.4/0.5 | J.D.          |
- *         | 02-06-17      |
+ * 1.1/2.0 | J.D.          | Added online functionalities.
+ *         | 02-06-17      | Hooked into SaveProcessor for cloud save.
  *---------|---------------|---------------------------------------------------
  *
  * This is a custom loader which plays a looped animation with music while the
@@ -69,42 +69,87 @@ import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Bootstrap class serves as entry point for
+ * program execution, and contains the
+ * launcher method for loading the loading
+ * screen.
+ */
 class Bootstrap{
 
-    public static LoadingGUI loading;
-    public static GameGUI gameGUI;
+    public static LoadingGUI loading;   //Instance of GUI for loading
+    public static GameGUI gameGUI;      //Instance of the actual game
 
+    /**
+     * Main method, entry point for program
+     * execution.
+     * @param args ~~~
+     */
     public static void main (String[] args){
 
-        TinySound.init();
+        TinySound.init();               //Initiate TinySound for music & sound
+        // ^^ THIS has to be the first line to be executed
 
-        //if (!checkConnection()){
-            //connectionError();
-        //} else {
-           // Resources.importData();
-        //}
+        System.out.println("Initializing audio components...");
 
-        loading = new LoadingGUI();
-        loading.setVisible(true);
+        consoleInit();
+
+        System.out.println("Loading the loading screen...");
+
+        loading = new LoadingGUI();     //Instantiate loading GUI
+        loading.setVisible(true);       //Make loading GUI visible
     }
 
+    /**
+     * Prints a welcome message to the console.
+     */
+    public static void consoleInit(){
+
+        Resources.outputSeperator();
+        System.out.println("Welcome to Asteroid: Remastered.");
+        System.out.println("Initializing Console.");
+        System.out.println("This is where devs will see the magic happen.");
+        Resources.outputSeperator();
+
+    }
+
+    /**
+     * Method used for checking connection to the
+     * cloud save & activation server.
+     * @return boolean to indicate whether a
+     *         connection can be successfully
+     *         established.
+     */
     public static boolean checkConnection(){
 
         Resources.outputSeperator();
         System.out.println("Attempting to establish connection to server...");
 
+        /* Using socket to ping the server at public port 80
+         * if pinging is successful within 10 seconds, connection
+         * should be OK.
+         */
         try (Socket server = new Socket()){
             System.out.println("Connecting to 185.176.43.78, port 80");
             server.connect(new InetSocketAddress("185.176.43.78",80),10000);
             System.out.println("Successfully connected.");
             return true;
         } catch (IOException e){
+
+            //If connection failed, output error message and return false.
+
             System.out.println("Error: Cannot connect to server. Status code 85.");
             return false;
         }
 
     }
 
+    /**
+     * If there had been an error while connecting
+     * to the server, this method displays a
+     * JOptionPane informing that the game
+     * cannot function without Internet access.
+     */
     public static void connectionError(){
 
         JOptionPane.showMessageDialog(null,
@@ -114,30 +159,45 @@ class Bootstrap{
                 JOptionPane.ERROR_MESSAGE);
 
         System.exit(85); //Status 85: Exit due to connection error
-
     }
-
 }
 
+/**
+ * LoadingGUI class contains GUI for the
+ * loading screen.
+ */
 class LoadingGUI extends JFrame{
 
-    private Timer logo_sequence;
-    private Timer load_sequence;
-    private Timer tips_sequence;
+    //Timer for animation regulation
+    private Timer logo_sequence;        //Executing logo sequence
+    private Timer load_sequence;        //Executing loading animation
+    private Timer tips_sequence;        //Loading tips
 
-    private int visual_frameCount;
-    private int ball_frameCount;
-    private int load_count;
-    private int tip_count;
+    //Timer for various frame counts
+    private int visual_frameCount;      //For counting logo & loading animation frames
+    private int ball_frameCount;        //For counting the ball loading animation
+    private int load_count;             //For counting the current step in the loading process
+    private int tip_count;              //For counting the current tips displayed.
 
+    /* The purged boolean indicates whether
+     * the loading sequence of the loading
+     * sequence had been completed (this
+     * refers to the short sequence before
+     * the loading animation loop).
+     *
+     * Once the sequence had been completed,
+     * all of its resources will be purged
+     * to conserve RAM, and the actual
+     * loading of game files will begin.
+     */
     private boolean purged;
 
-    private JPanel visual;
-    private JLabel status;
+    private JPanel visual;      //Displaying animations
+    private JLabel status;      //Displaying loading status
 
-    private BufferedImage visual_image;
-    private BufferedImage load_ball;
-    private BufferedImage tip;
+    private BufferedImage visual_image;     //For displaying animations
+    private BufferedImage load_ball;        //For displaying loading ball animation
+    private BufferedImage tip;              //For displaying tips
 
     private BufferedImage[] logo_seq;
     private BufferedImage[] load_seq;
@@ -403,7 +463,11 @@ class LoadingGUI extends JFrame{
 
             case 7:
                 import_pool_1.submit(() -> {
-                    Resources.importData();
+                    if (Bootstrap.checkConnection()) {
+                        Resources.importData();
+                    } else {
+                        Bootstrap.connectionError();
+                    }
                     status.setText("Herding Cows...");
                 });
 

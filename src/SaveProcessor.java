@@ -289,7 +289,7 @@ class SaveManager{
      * Method for uploading the save file to the FTP server.
      * @param save_file Takes the save file as the parameter.
      */
-    public static void uploadSave(File save_file){
+    private static void uploadSave(File save_file){
 
         Resources.outputSeperator();
         System.out.println("Initializing FTP client for save upload...");
@@ -409,7 +409,7 @@ class SaveManager{
      * @return boolean indicating whether the activation
      *         code had been accepted.
      */
-    public static boolean activationCheck(String code){
+    private static boolean activationCheck(String code){
 
         Resources.outputSeperator();
         System.out.println("Initializing activation checker...");
