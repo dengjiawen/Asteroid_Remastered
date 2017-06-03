@@ -286,30 +286,81 @@ class SaveManager{
     };
 
     /**
-     * 
-     * @param save_file
+     * Method for uploading the save file to the FTP server.
+     * @param save_file Takes the save file as the parameter.
      */
     public static void uploadSave(File save_file){
 
-        FTPClient ftp = new FTPClient();
+        Resources.outputSeperator();
+        System.out.println("Initializing FTP client for save upload...");
+
+        FTPClient ftp = new FTPClient();        //Initialize new FTP connection
 
         try {
 
+            System.out.println("Connecting to FTP server...");
+
+            //Connect to server using host information
             ftp.connect(SERVER,21);
             ftp.login(USERNAME,PASSWORD);
 
+            System.out.println("Successfully connected to FTP @ " + SERVER + ".");
+            System.out.println("Preparing file for upload...");
+            System.out.println("Uploading file...");
+
+            //Switch to dedicated save storage directory & upload file
             ftp.changeDirectory("/asteroidsave.royalwebhosting.net/game_save");
             ftp.upload(save_file);
 
+            System.out.println("File successfully uploaded.");
+
+            //Disconnect from FTP when done.
             ftp.disconnect(true);
 
+            System.out.println("Disconnected from FTP server.");
+            Resources.outputSeperator();
+
         } catch (Exception e){
-            e.printStackTrace();
+
+            /* There will only be an error if Internet connection
+             * is down. The FTP server is 24/7.
+             *
+             * If error occurs, check for connection, then try again.
+             */
+
+            System.out.println("Connection to FTP failed.");
+            System.out.println("Checking network connection...");
+
+            if (Bootstrap.checkConnection()){
+                System.out.println("Connection OK. Retrying...");
+                uploadSave(save_file);
+            } else {
+                System.out.println("Connection failed.");
+                Bootstrap.connectionError();
+            }
+
         }
 
     }
 
+    /**
+     * Method for walking the user through the game activation
+     * and save creation process.
+     * @param activated Takes boolean to check whether the game
+     *                  had already been activated previously.
+     */
     public static void firstTimeInit(boolean activated){
+
+        Resources.outputSeperator();
+        System.out.println("Initializing first time setup process...");
+        System.out.println("Waiting for user to input activation information...");
+
+        /* If activated boolean is not set as true,
+         * ask user for activation code.
+         */
+
+        // IF USER DON'T HAVE A VALID CODE, THEY WON'T BE ABLE TO EXIT THE PROGRAM.
+        // THIS IS NOT A CODING ERROR; THE SOFTWARE IS DESIGNED THIS WAY.
 
         while (!activated){
             activated =
@@ -319,74 +370,179 @@ class SaveManager{
                             "Activation", JOptionPane.INFORMATION_MESSAGE)
                     );
 
+            //Checking user's activation code.
+
             if (!activated){
+
+                //If code is not valid, display message.
+
                 JOptionPane.showMessageDialog(null,
                         "Your activation code is invalid.",
                         "Invalid Activation", JOptionPane.ERROR_MESSAGE);
             } else {
+
+                //If code is valid, display message.
+
                 JOptionPane.showMessageDialog(null,
                         "Your game had been activated.",
                         "Successful Activation", JOptionPane.INFORMATION_MESSAGE);
             }
         }
 
+        System.out.println("Activation complete.");
+        System.out.println("Initializing top score...");
+        System.out.println("Creating and uploading save data...");
+
         Resources.top_score = 0;
         uploadSave(createSave(Resources.top_score));
 
+        Resources.outputSeperator();
+
     }
 
+    /**
+     * Method for checking the activation code, comparing
+     * them against the record kept on the remote
+     * FTP server.
+     * @param code Takes the activation code entered by
+     *              the user as a parameter.
+     * @return boolean indicating whether the activation
+     *         code had been accepted.
+     */
     public static boolean activationCheck(String code){
 
+        Resources.outputSeperator();
+        System.out.println("Initializing activation checker...");
+        System.out.println("Loading activation codes from cloud...");
+
+        /* Create InputStream from activation record stored
+         * on the remote FTP server.
+         */
         try {
             InputStream input = new URL("http://asteroidsave.royalwebhosting.net/default_keys.txt").openStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+            // ^^ InputStream and BufferedReader to read remote save file
             String line;
+            // ^^ Temporary String for holding each recorded activation code
 
+            /* check every single recorded key against
+             * user intput. If one of the keys match,
+             * return true.
+             */
             while ((line = reader.readLine()) != null) {
-                if (StringEncryptor.decrypt(line).equals(code)){
+                if (StringEncryptor.decrypt(line).equals(code)){        //Recorded keys are encrypted; decryption required
+
+                    System.out.println("Activation code " + code + " is valid.");
+
                     return true;
                 }
             }
 
         } catch (Exception e){
-            return false;
+
+            /* If an exception occured, check connection.
+             *
+             * If connection is fine, treat error as a
+             * freak error and return false for user to
+             * try again.
+             *
+             * If connection failed, display connection
+             * error screen.
+             */
+
+            System.out.println("Activation process had encountered an error.");
+            System.out.println("Checking connection to activation server...");
+
+            if (Bootstrap.checkConnection()) {
+
+                System.out.println("Connection is OK.");
+                System.out.println("An unexpected error had occured.");
+                System.out.println("Error handled. Asking user to enter code again.");
+
+                return false;
+            } else {
+
+                System.out.println("Connection failed. Cannot connect to activation server.");
+
+                Bootstrap.connectionError();
+            }
+
         }
+
+        /* If true had not been returned by this point,
+         * assume that activation code is invalid and
+         * return false.
+         */
+
+        System.out.println("Activation code " + code + " is invalid.");
 
         return false;
 
     }
 
+    /**
+     * Method for generating a save file in the temporary
+     * directory on local storage.
+     * @param topScore Takes an Integer containing the top
+     *                 score as a parameter; writing the
+     *                 top score into the save file.
+     * @return file pointing to the save file.
+     */
     public static File createSave(int topScore){
 
+        Resources.outputSeperator();
+        System.out.println("Generating save file...");
+
+        //Initialize File pointing to temporary save
         File tempFile = null;
 
+        /* Try to create a temporary save file in the system's temporary directory.
+         * Print save header and top score information into the file using PrintWriter.
+         */
         try{
 
+            System.out.println("Preparing to write temporary save file to " + System.getProperty("java.io.tmpdir") + ".");
+
             tempFile = new File(System.getProperty("java.io.tmpdir") + "/" + Resources.UDID + ".txt");
-            tempFile.getParentFile().mkdirs();
+            tempFile.getParentFile().mkdirs();      //In case file is non-existent, create it.
             PrintWriter writer = new PrintWriter(tempFile);
 
             System.out.println("Writing save header...");
-            Resources.outputSeperator();
 
+            //For every line on the save header array, write to file
             for (String x : SAVE_HEADER){
                 writer.println(StringEncryptor.encrypt(x));
                 System.out.println(x);
             }
 
-            Resources.outputSeperator();
             System.out.println("Writing top score...");
 
+            //Write top score.
             writer.println(StringEncryptor.encrypt("TOP_SCORE " + topScore));
 
+            System.out.println("Write success!");
+            System.out.println("Closing writer.");
+
+            //Close writer when done.
             writer.close();
 
         } catch (IOException e) {
+
+            /* If an error had occured, inform the user that
+             * their progress will not be saved.
+             */
+
+            System.out.println("Error while saving.");
+
             JOptionPane.showMessageDialog(null,
                     "An error occured while saving files. Your game data will not be saved.",
                     "Error", JOptionPane.ERROR_MESSAGE);
         }
 
+        System.out.println("Sending save file to be uploaded.");
+        Resources.outputSeperator();
+
+        //return the file.
         return tempFile;
 
     }
