@@ -24,26 +24,29 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * Created on : 02-06-2017
+ * Created on : 25-05-2017
  * Author     : Jiawen Deng
  *
  *-----------------------------------------------------------------------------
- * Revision History (Release 0.4)
+ * Revision History (Release 1.0)
  *-----------------------------------------------------------------------------
  * VERSION     AUTHOR/      DESCRIPTION OF CHANGE
  * OLD/NEW     DATE
  *-----------------------------------------------------------------------------
  * --/0.1  | J.D.          | Initial creation of program
- *         | 02-06-17      |
+ *         | 25-05-17      |
  *---------|---------------|---------------------------------------------------
  * 0.1/0.2 | J.D.          | Offloaded string en/decrypt functionality into
- *         | 02-06-17      | generalized & encapsulated methods.
+ *         | 29-05-17      | generalized & encapsulated methods.
  *---------|---------------|---------------------------------------------------
  * 0.2/0.3 | J.D.          | Modified SaveProcessor class so that all methods
- *         | 02-06-17      | now take URL as parameters instead of File.
+ *         | 31-05-17      | now take URL as parameters instead of File.
  *---------|---------------|---------------------------------------------------
  * 0.3/0.4 | J.D.          | Added SaveManager class to manage FTP file
  *         | 02-06-17      | uploading.
+ *---------|---------------|---------------------------------------------------
+ * 0.4/1.0 | J.D.          | Major update: added activation feature, and
+ *         | 02-06-17      | first time setup methods.
  *---------|---------------|---------------------------------------------------
  *
  * This is a piece of custom code with a custom algorithm for encrypting and
@@ -75,8 +78,8 @@ class SaveProcessor {
         //ArrayList for holding String downloaded from save file
         ArrayList<String> save_content = new ArrayList<>();
 
-        /*
-         * 
+        /* Create InputStream from
+         *
          */
         try {
             InputStream input = save_file_directory.openStream();

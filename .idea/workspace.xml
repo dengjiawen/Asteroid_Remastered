@@ -6,34 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0050dbdb-231e-4dfc-b115-e49246a57a41" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IDGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Asteroid.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Asteroid.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/AsteroidFragment.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/AsteroidFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Bootstrap.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Bootstrap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Bullet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletPane.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/BulletProperties.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/CharacterProperties.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/CollisionLogic.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/CollisionLogic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/EnemyPane.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/GameGUI.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/GameGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/HUD.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Karmakazi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/LoadingGUI$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/LoadingGUI$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/LoadingGUI.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/LoadingGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Ocelot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/RegularEnemy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Resources.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Resources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KillEveryone/Space.class" afterPath="$PROJECT_DIR$/out/production/KillEveryone/Space.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Asteroid.java" afterPath="$PROJECT_DIR$/src/Asteroid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bootstrap.java" afterPath="$PROJECT_DIR$/src/Bootstrap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SaveProcessor.java" afterPath="$PROJECT_DIR$/src/SaveProcessor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,10 +65,9 @@
       <file leaf-file-name="SaveProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SaveProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="78" column="11" lean-forward="false" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+            <state relative-caret-position="-2">
+              <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="class#StringEncryptor#0" expanded="false" />
                 <element signature="method#uploadSave#0;class#SaveManager#0" expanded="false" />
@@ -934,12 +906,12 @@
       <workItem from="1496418015521" duration="317000" />
       <workItem from="1496418884323" duration="2115000" />
       <workItem from="1496433253994" duration="926000" />
-      <workItem from="1496436354537" duration="9643000" />
+      <workItem from="1496436354537" duration="10013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186173000" />
+    <option name="totallyTimeSpent" value="186543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1159,17 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="81" column="28" lean-forward="false" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -1225,12 +1186,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IDGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SaveProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="78" column="11" lean-forward="false" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+        <state relative-caret-position="-2">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="class#StringEncryptor#0" expanded="false" />
             <element signature="method#uploadSave#0;class#SaveManager#0" expanded="false" />
