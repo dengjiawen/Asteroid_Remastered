@@ -1,6 +1,9 @@
 ## Kill_Everyone
 A modern take on the decade old game "Asteroid".
 
+This game requires at least 3.5GB of Java heap space in order to run.
+Enter java -Xms3500M Bootstrap to run the compiled classes.
+
 This is the result of over **1 week of development**,
 and **tens of minutes of manpower**.
 It will be constantly improved upon with new features and GUI.
