@@ -307,19 +307,25 @@ class LoadingGUI extends JFrame{
 
         });
 
+        //Timer for regulating loading animation
         load_sequence = new Timer(Resources.REFRESH_RATE, e -> {
 
+            //set visual image as #visual_frameCount item on the load array
             visual_image = load_seq[visual_frameCount];
 
+            //if primary animation is done (purged),play ball animation
             if (purged) {
                 load_ball = ball_seq[ball_frameCount];
             }
 
             repaint();
 
+            //update visual_frameCount as needed
             if (visual_frameCount < 450){
                 visual_frameCount ++;
             } else {
+                //if primary animation is done, cleanup
+                //and notify completion
                 if (!purged){
                     purgeAnimation();
                     notifyCompletion();
@@ -328,6 +334,7 @@ class LoadingGUI extends JFrame{
                 visual_frameCount = 300;
             }
 
+            //update ball animation frameCount as needed
             if (purged) {
                 if (ball_frameCount < 94 - 1) {
                     ball_frameCount++;
@@ -338,11 +345,14 @@ class LoadingGUI extends JFrame{
 
         });
 
+        //Timer for regulating tips
         tips_sequence = new Timer(5000, e -> {
 
+            //only display tips if primary animation is done
             if (purged) {
                 tip = tips[tip_count];
 
+                //regulate tip_count as needed
                 if (tip_count < 3) {
                     tip_count++;
                 } else {
@@ -352,36 +362,50 @@ class LoadingGUI extends JFrame{
         });
         tips_sequence.setInitialDelay(0);
 
+        //start the logo sequence
+        //play logo music
         logo_sequence.start();
         Resources.logoTheme();
 
+        //add JPanel and JLabel
         add(status);
         add(visual);
 
     }
 
+    /**
+     * Using all three ThreadPools to import loading
+     * animation resources in parallel.
+     */
     private void importLoadSequence(){
 
+        System.out.println("Importing loading animation.");
+
+        //Using ImageIO to read images
+        //import frame 0 - 250
         import_pool_1.submit(() -> {
             try {
                 for (int i = 0; i < 251; i++) {
                     load_seq[i] = ImageIO.read(getClass().getResource("resources/intro_seq/load/" + i + ".jpeg"));
                 }
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                fileNotFound();
             }
         });
 
+        //import frame 250 - 500
         import_pool_2.submit(() -> {
             try {
                 for (int i = 251; i < 501; i++) {
                     load_seq[i] = ImageIO.read(getClass().getResource("resources/intro_seq/load/" + i + ".jpeg"));
                 }
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                fileNotFound();
             }
         });
 
+        //import frame 500 - end
+        //import ball animation and tips
         import_pool_3.submit(() -> {
             try {
                 for (int i = 501; i < load_seq.length; i++) {
@@ -393,8 +417,8 @@ class LoadingGUI extends JFrame{
                 for (int i = 0; i < tips.length; i++){
                     tips[i] = ImageIO.read(getClass().getResource("/resources/tips/" + i + ".png"));
                 }
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                fileNotFound();
             }
         });
 
@@ -420,29 +444,43 @@ class LoadingGUI extends JFrame{
             }
         });
 
+        //Pool 2: Import image 100 - 200
         import_pool_2.submit(() -> {
             try {
                 for (int i = 101; i < 201; i++) {
                     logo_seq[i] = ImageIO.read(getClass().getResource("resources/intro_seq/logo/" + i + ".jpeg"));
                 }
-            } catch (IOException e){
-                System.out.println(e.getMessage());
+            } catch (Exception e){
+                fileNotFound();
             }
         });
 
+        //Pool 3: Import image 2 - end
         import_pool_3.submit(() -> {
             try {
                 for (int i = 201; i < logo_seq.length; i++) {
                     logo_seq[i] = ImageIO.read(getClass().getResource("resources/intro_seq/logo/" + i + ".jpeg"));
                 }
-            } catch (IOException e){
-                System.out.println(e.getMessage());
+            } catch (Exception e){
+                fileNotFound();
             }
         });
 
     }
 
+    /**
+     * Method for purging unnecessary files
+     * after primary animations are done
+     */
     private void purgeAnimation(){
+
+        System.out.println("Cleaning up animation files.");
+
+        /* Set unnecessary files to null
+         * Shutdown unnecessary thread pools
+         * Call garbage collector
+         */
+
         import_pool_1.submit(() -> {
             for (int i = 0; i < 300; i++){
                 load_seq[i] = null;
@@ -458,18 +496,40 @@ class LoadingGUI extends JFrame{
         });
     }
 
+    /**
+     * Display a pop up stating that files
+     * are missing.
+     */
     public void fileNotFound() {
+
+        System.out.println("Error: file not found. Status 80.");
 
         JOptionPane.showMessageDialog(this,"One or more files required to run this program is missing.\n" +
                 "Please ensure that the \"resource\" folder is in the same folder as the java files.","Error",JOptionPane.ERROR_MESSAGE);
-        System.exit(80);
+        System.exit(80);        //Status 80: File Not Found
 
     }
 
+    /**
+     * Method for loading various files
+     * necessary for the game to run.
+     *
+     * This method does so in a sequencial
+     * manner, since importing so many files
+     * (approx. 5000+ files) in parallel may
+     * cause unwanted performance panelty
+     * and overheads, resulting in lowered
+     * performance.
+     */
     public void notifyCompletion(){
 
+        //Everytime method is called,
+        //advance the load count
         load_count ++;
 
+        //Depending on the stage of loading,
+        //perform different things.
+        //The method names should be self explainatory.
         switch (load_count){
 
             case 1:
@@ -532,10 +592,19 @@ class LoadingGUI extends JFrame{
                 break;
 
             case 9:
+
+                /* When at step 9, setup a hot key
+                 * linked to the enter key.
+                 *
+                 * Ask user to press enter key in order
+                 * to proceed to step 10.
+                 */
+
                 status.setText("Almost There...");
                 tips_sequence.stop();
                 tip = tips[4];
 
+                //Adding hot key to JFrame
                 getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
                         KeyStroke.getKeyStroke(KeyEvent.VK_ENTER,0),"enter");
                 getRootPane().getActionMap().put("enter", new AbstractAction() {
