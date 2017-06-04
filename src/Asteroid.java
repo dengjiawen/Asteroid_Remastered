@@ -688,6 +688,14 @@ class GameOverGUI extends JPanel{
 
     public void init(){
         visual_frameUpdate.start();
+
+        if (Resources.total_points > Resources.top_score){
+            Resources.public_update.submit(() -> {
+                SaveManager.uploadSave(SaveManager.createSave(Resources.total_points));
+            });
+            Resources.top_score = Resources.total_points;
+        }
+
         setVisible(true);
     }
 

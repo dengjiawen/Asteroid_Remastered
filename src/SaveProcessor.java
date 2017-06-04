@@ -289,7 +289,7 @@ class SaveManager{
      * Method for uploading the save file to the FTP server.
      * @param save_file Takes the save file as the parameter.
      */
-    private static void uploadSave(File save_file){
+    public static void uploadSave(File save_file){
 
         Resources.outputSeperator();
         System.out.println("Initializing FTP client for save upload...");
